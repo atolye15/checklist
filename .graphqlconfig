@@ -1,0 +1,12 @@
+{
+  "name": "Gatsby Schema",
+  "schemaPath": "schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Endpoint": {
+        "url": "http://localhost:8000/___graphql",
+        "introspect": true
+      }
+    }
+  }
+}
