@@ -31,6 +31,17 @@ module.exports = {
     },
 
     'gatsby-plugin-typescript',
+
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'checklists',
+        path: `${__dirname}/src/checklists`,
+      },
+    },
+
+    'gatsby-transformer-remark',
+    'gatsby-plugin-graphql-codegen',
   ],
 };
 
