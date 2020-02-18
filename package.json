@@ -10,6 +10,7 @@
     "gatsby-plugin-graphql-codegen": "^2.2.2",
     "gatsby-plugin-manifest": "^2.2.41",
     "gatsby-plugin-react-helmet": "^3.1.22",
+    "gatsby-plugin-sass": "^2.1.28",
     "gatsby-plugin-sharp": "^2.4.5",
     "gatsby-plugin-typescript": "^2.1.27",
     "gatsby-source-filesystem": "^2.1.48",

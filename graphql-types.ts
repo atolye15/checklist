@@ -690,6 +690,7 @@ export type FileFieldsEnum =
   'childMarkdownRemark___id' |
   'childMarkdownRemark___frontmatter___title' |
   'childMarkdownRemark___frontmatter___category' |
+  'childMarkdownRemark___frontmatter___date' |
   'childMarkdownRemark___frontmatter___tags' |
   'childMarkdownRemark___excerpt' |
   'childMarkdownRemark___rawMarkdownBody' |
@@ -1457,6 +1458,7 @@ export type MarkdownRemarkFieldsEnum =
   'id' |
   'frontmatter___title' |
   'frontmatter___category' |
+  'frontmatter___date' |
   'frontmatter___tags' |
   'excerpt' |
   'rawMarkdownBody' |
@@ -1587,12 +1589,22 @@ export type MarkdownRemarkFilterInput = {
 export type MarkdownRemarkFrontmatter = {
   title?: Maybe<Scalars['String']>,
   category?: Maybe<Scalars['String']>,
+  date?: Maybe<Scalars['Date']>,
   tags?: Maybe<Array<Maybe<Scalars['String']>>>,
+};
+
+
+export type MarkdownRemarkFrontmatterDateArgs = {
+  formatString?: Maybe<Scalars['String']>,
+  fromNow?: Maybe<Scalars['Boolean']>,
+  difference?: Maybe<Scalars['String']>,
+  locale?: Maybe<Scalars['String']>
 };
 
 export type MarkdownRemarkFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>,
   category?: Maybe<StringQueryOperatorInput>,
+  date?: Maybe<DateQueryOperatorInput>,
   tags?: Maybe<StringQueryOperatorInput>,
 };
 
@@ -2116,10 +2128,18 @@ export type SitePageConnectionGroupArgs = {
 };
 
 export type SitePageContext = {
+  limit?: Maybe<Scalars['Int']>,
+  skip?: Maybe<Scalars['Int']>,
+  numPages?: Maybe<Scalars['Int']>,
+  currentPage?: Maybe<Scalars['Int']>,
   slug?: Maybe<Scalars['String']>,
 };
 
 export type SitePageContextFilterInput = {
+  limit?: Maybe<IntQueryOperatorInput>,
+  skip?: Maybe<IntQueryOperatorInput>,
+  numPages?: Maybe<IntQueryOperatorInput>,
+  currentPage?: Maybe<IntQueryOperatorInput>,
   slug?: Maybe<StringQueryOperatorInput>,
 };
 
@@ -2222,6 +2242,10 @@ export type SitePageFieldsEnum =
   'internal___owner' |
   'internal___type' |
   'isCreatedByStatefulCreatePages' |
+  'context___limit' |
+  'context___skip' |
+  'context___numPages' |
+  'context___currentPage' |
   'context___slug' |
   'pluginCreator___id' |
   'pluginCreator___parent___id' |
@@ -2642,21 +2666,6 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>,
 };
 
-export type Unnamed_1_QueryVariables = {};
-
-
-export type Unnamed_1_Query = { placeholderImage: Maybe<{ childImageSharp: Maybe<{ fluid: Maybe<GatsbyImageSharpFluidFragment> }> }> };
-
-export type SiteTitleQueryQueryVariables = {};
-
-
-export type SiteTitleQueryQuery = { site: Maybe<{ siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
-
-export type Unnamed_2_QueryVariables = {};
-
-
-export type Unnamed_2_Query = { site: Maybe<{ siteMetadata: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
-
 export type ChecklistDetailQueryVariables = {
   slug: Scalars['String']
 };
@@ -2666,6 +2675,23 @@ export type ChecklistDetailQuery = { markdownRemark: Maybe<(
     Pick<MarkdownRemark, 'html'>
     & { frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'tags' | 'category'>>, fields: Maybe<Pick<MarkdownRemarkFields, 'todoCount'>> }
   )> };
+
+export type HomePageQueryQueryVariables = {
+  skip: Scalars['Int'],
+  limit: Scalars['Int']
+};
+
+
+export type HomePageQueryQuery = { checklists: (
+    Pick<MarkdownRemarkConnection, 'totalCount'>
+    & { nodes: Array<(
+      Pick<MarkdownRemark, 'excerpt'>
+      & { frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'category' | 'tags'>>, fields: Maybe<Pick<MarkdownRemarkFields, 'slug' | 'todoCount'>> }
+    )> }
+  ), tags: { group: Array<(
+      Pick<MarkdownRemarkGroupConnection, 'totalCount'>
+      & { tag: MarkdownRemarkGroupConnection['fieldValue'] }
+    )> } };
 
 export type GatsbyImageSharpFixedFragment = Pick<ImageSharpFixed, 'base64' | 'width' | 'height' | 'src' | 'srcSet'>;
 
