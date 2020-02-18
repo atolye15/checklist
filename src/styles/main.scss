@@ -1,4 +1,7 @@
+$color: #fff;
+$background: #181c27;
+
 body {
-  background-color: #181C27;
-  color: #fff;
+  background-color: $background;
+  color: $color;
 }
