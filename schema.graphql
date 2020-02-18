@@ -475,6 +475,7 @@ type MarkdownRemarkEdge {
 }
 
 type MarkdownRemarkFields {
+  categorySlug: String
   slug: String
   todoCount: Int
 }
@@ -609,11 +610,13 @@ type SitePageConnection {
 }
 
 type SitePageContext {
+  category: String
   currentPage: Int
   limit: Int
   numPages: Int
   skip: Int
   slug: String
+  tag: String
 }
 
 type SitePageEdge {
@@ -959,6 +962,7 @@ enum FileFieldsEnum {
   childMarkdownRemark___children___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMarkdownRemark___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMarkdownRemark___excerptAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  childMarkdownRemark___fields___categorySlug @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMarkdownRemark___fields___slug @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMarkdownRemark___fields___todoCount @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMarkdownRemark___fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1337,6 +1341,7 @@ enum MarkdownRemarkFieldsEnum {
   children___parent___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   excerptAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  fields___categorySlug @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   fields___slug @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   fields___todoCount @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1553,11 +1558,13 @@ enum SitePageFieldsEnum {
   component
   componentChunkName
   componentPath
+  context___category
   context___currentPage
   context___limit
   context___numPages
   context___skip
   context___slug
+  context___tag
   id
   internalComponentName
   internal___content
@@ -2066,6 +2073,7 @@ input MarkdownHeadingFilterListInput {
 }
 
 input MarkdownRemarkFieldsFilterInput {
+  categorySlug: StringQueryOperatorInput
   slug: StringQueryOperatorInput
   todoCount: IntQueryOperatorInput
 }
@@ -2144,11 +2152,13 @@ input SiteFilterInput {
 }
 
 input SitePageContextFilterInput {
+  category: StringQueryOperatorInput
   currentPage: IntQueryOperatorInput
   limit: IntQueryOperatorInput
   numPages: IntQueryOperatorInput
   skip: IntQueryOperatorInput
   slug: StringQueryOperatorInput
+  tag: StringQueryOperatorInput
 }
 
 input SitePageFilterInput {

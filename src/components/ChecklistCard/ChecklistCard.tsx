@@ -10,11 +10,20 @@ interface Props {
   slug: string;
   description: string;
   tags: string[];
+  categorySlug: string;
 }
 
-const ChecklistCard: FC<Props> = ({ category, todoCount, title, slug, description, tags }) => (
+const ChecklistCard: FC<Props> = ({
+  category,
+  todoCount,
+  title,
+  slug,
+  description,
+  tags,
+  categorySlug,
+}) => (
   <div>
-    <strong>Category: </strong> {category}
+    <Link to={`/category/${categorySlug}`}>{category}</Link>
     <br />
     {todoCount} {todoCount === 1 ? <span>To-do</span> : <span>To-do&apos;s</span>}
     <br />
