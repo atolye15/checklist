@@ -2,41 +2,15 @@ import React, { FC } from 'react';
 import { graphql } from 'gatsby';
 import slug from 'slug';
 
-import { CategoriesQuery, MarkdownRemarkFrontmatter, Maybe } from '../../graphql-types';
+import { CategoriesQuery } from '../../graphql-types';
+import { getDescription, getMostUsedTags } from '../utils/category';
+
 import Layout from '../components/Layout';
-import { getDescription } from '../utils/category';
 import CategoryCard from '../components/CategoryCard';
 
 interface Props {
   data: CategoriesQuery;
 }
-
-const getTags = (
-  nodes: Array<{ frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'tags'>> }>,
-): string[] => {
-  const items: Record<string, number> = {};
-
-  nodes.forEach(node => {
-    if (!node.frontmatter) {
-      return;
-    }
-
-    (node.frontmatter.tags || []).forEach(tag => {
-      const tagName = tag || '';
-      if (items[tagName]) {
-        items[tagName] += 1;
-        return;
-      }
-
-      items[tagName] = 1;
-    });
-  });
-
-  return Object.entries(items)
-    .sort((i1, i2) => i2[1] - i1[1])
-    .map(i => i[0])
-    .slice(0, 4);
-};
 
 const Categories: FC<Props> = ({ data }) => {
   const { categories } = data;
@@ -47,7 +21,7 @@ const Categories: FC<Props> = ({ data }) => {
       slug: slug(c.fieldValue || '', { lower: true }),
       description: getDescription(c.fieldValue || ''),
       checklistCount: c.totalCount,
-      tags: getTags(c.nodes),
+      tags: getMostUsedTags(c.nodes),
     }));
 
   return (

@@ -2727,7 +2727,10 @@ export type TagsQueryQuery = { tags: { group: Array<(
 export type CategoriesQueryVariables = {};
 
 
-export type CategoriesQuery = { categories: { group: Array<Pick<MarkdownRemarkGroupConnection, 'fieldValue' | 'totalCount'>> } };
+export type CategoriesQuery = { categories: { group: Array<(
+      Pick<MarkdownRemarkGroupConnection, 'fieldValue' | 'totalCount'>
+      & { nodes: Array<{ frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'tags'>> }> }
+    )> } };
 
 export type CategoryDetailQueryVariables = {
   category: Scalars['String']

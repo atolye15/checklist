@@ -1,4 +1,5 @@
-// eslint-disable-next-line import/prefer-default-export
+import { MarkdownRemarkFrontmatter, Maybe } from '../../graphql-types';
+
 export const getDescription = (title: string): string => {
   switch (title) {
     case 'Design':
@@ -25,4 +26,31 @@ export const getDescription = (title: string): string => {
     default:
       return 'A checklist category!';
   }
+};
+
+export const getMostUsedTags = (
+  nodes: Array<{ frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'tags'>> }>,
+): string[] => {
+  const items: Record<string, number> = {};
+
+  nodes.forEach(node => {
+    if (!node.frontmatter) {
+      return;
+    }
+
+    (node.frontmatter.tags || []).forEach(tag => {
+      const tagName = tag || '';
+      if (items[tagName]) {
+        items[tagName] += 1;
+        return;
+      }
+
+      items[tagName] = 1;
+    });
+  });
+
+  return Object.entries(items)
+    .sort((i1, i2) => i2[1] - i1[1])
+    .map(i => i[0])
+    .slice(0, 4);
 };
