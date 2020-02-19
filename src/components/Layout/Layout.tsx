@@ -3,6 +3,8 @@ import React, { FC, ReactNode } from 'react';
 import Header from '../Header';
 import Footer from '../Footer';
 
+import '../../styles/main.scss';
+
 interface Props {
   children: ReactNode;
 }

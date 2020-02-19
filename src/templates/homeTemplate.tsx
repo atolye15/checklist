@@ -1,43 +1,36 @@
-import React, { FC, Fragment } from 'react';
+import React, { FC } from 'react';
 import { graphql } from 'gatsby';
 
 import { HomePageQueryQuery } from '../../graphql-types';
 
+import TagListContainer from '../containers/TagList';
+
 import Layout from '../components/Layout';
-import ChecklistCard from '../components/ChecklistCard';
-import TagList from '../components/TagList';
+import Checklists from '../components/Checklists';
+import Pagination from '../components/Pagination';
+
+interface HomePageContext {
+  totalPages: number;
+  currentPage: number;
+}
 
 interface Props {
   data: HomePageQueryQuery;
+  pageContext: HomePageContext;
 }
 
-const Home: FC<Props> = ({ data }) => {
-  const { checklists, tags } = data;
+const Home: FC<Props> = ({ data, pageContext }) => {
+  const { checklists } = data;
 
-  const sortedTags = tags.group.sort((t1, t2) => t2.totalCount - t1.totalCount);
-
-  /* eslint-disable @typescript-eslint/no-explicit-any */
   return (
     <Layout>
-      <TagList tags={sortedTags.map(t => t.tag || '')} />
+      <TagListContainer />
       <hr />
       {checklists.totalCount} Checklists
-      {checklists.nodes.map(checklist => (
-        <Fragment key={checklist.fields?.slug || ''}>
-          <ChecklistCard
-            category={checklist.frontmatter?.category || ''}
-            description={checklist.excerpt || ''}
-            slug={checklist.fields?.slug || ''}
-            tags={checklist.frontmatter?.tags as any}
-            title={checklist.frontmatter?.title || ''}
-            todoCount={checklist.fields?.todoCount || 0}
-          />
-          <hr />
-        </Fragment>
-      ))}
+      <Checklists items={checklists.nodes} />
+      <Pagination totalPages={pageContext.totalPages} currentPage={pageContext.currentPage} />
     </Layout>
   );
-  /* eslint-enable @typescript-eslint/no-explicit-any */
 };
 
 export const pageQuery = graphql`
@@ -49,23 +42,7 @@ export const pageQuery = graphql`
     ) {
       totalCount
       nodes {
-        excerpt
-        frontmatter {
-          title
-          category
-          tags
-        }
-        fields {
-          slug
-          todoCount
-        }
-      }
-    }
-
-    tags: allMarkdownRemark {
-      group(field: frontmatter___tags) {
-        tag: fieldValue
-        totalCount
+        ...Checklist
       }
     }
   }

@@ -9,10 +9,15 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const homeTemplate = path.resolve(`src/templates/homeTemplate.tsx`);
   const checklistTemplate = path.resolve(`src/templates/checklistTemplate.tsx`);
+  const tagTemplate = path.resolve(`src/templates/tagTemplate.tsx`);
+  const categoryTemplate = path.resolve(`src/templates/categoryTemplate.tsx`);
 
   const result = await graphql(`
     query AllChecklists {
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 1000) {
+      checklists: allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: 2000
+      ) {
         edges {
           node {
             fields {
@@ -21,8 +26,21 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
             frontmatter {
               title
+              category
             }
           }
+        }
+      }
+
+      tags: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
+
+      categories: allMarkdownRemark(limit: 2000) {
+        group(field: frontmatter___category) {
+          fieldValue
         }
       }
     }
@@ -32,32 +50,56 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     reporter.panicOnBuild('Error while running GraphQL query.');
   }
 
-  const { edges } = result.data.allMarkdownRemark;
+  const { edges: checklists } = result.data.checklists;
 
   // Home pagination
   const checklistPerPage = 2;
-  const numPages = Math.ceil(edges.length / checklistPerPage);
+  const totalPages = Math.ceil(checklists.length / checklistPerPage);
 
-  Array.from({ length: numPages }).forEach((_, i) => {
+  Array.from({ length: totalPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? '/' : `/checklists/${i + 1}`,
       component: homeTemplate,
       context: {
         limit: checklistPerPage,
         skip: i * checklistPerPage,
-        numPages,
+        totalPages,
         currentPage: i + 1,
       },
     });
   });
 
   // Checklist details
-  edges.forEach(({ node }) => {
+  checklists.forEach(({ node }) => {
     createPage({
       path: `/checklist/${node.fields.slug}`,
       component: checklistTemplate,
       context: {
         slug: node.fields.slug,
+      },
+    });
+  });
+
+  // Tag Details
+  result.data.tags.group.forEach(tag => {
+    createPage({
+      path: `/tag/${tag.fieldValue}`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
+      },
+    });
+  });
+
+  // Category Details
+  result.data.categories.group.forEach(category => {
+    const categorySlug = slug(category.fieldValue, { lower: true });
+
+    createPage({
+      path: `/category/${categorySlug}`,
+      component: categoryTemplate,
+      context: {
+        category: category.fieldValue,
       },
     });
   });
@@ -70,7 +112,7 @@ exports.onCreateNode = ({ actions, getNodes }) => {
   nodes
     .filter(n => n.internal.type === 'MarkdownRemark')
     .forEach(node => {
-      const { title } = node.frontmatter;
+      const { title, category } = node.frontmatter;
       const todoCount = (node.rawMarkdownBody || '').match(/- \[ ] (.*)/g).length;
 
       createNodeField({
@@ -83,6 +125,12 @@ exports.onCreateNode = ({ actions, getNodes }) => {
         node,
         name: 'todoCount',
         value: todoCount,
+      });
+
+      createNodeField({
+        node,
+        name: 'categorySlug',
+        value: slug(category, { lower: true }),
       });
     });
 };
