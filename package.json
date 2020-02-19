@@ -64,6 +64,7 @@
     "format:ts": "prettier --write 'src/**/*.{ts,tsx,md}' && yarn lint:eslint --fix",
     "format:css": "yarn lint:css --fix",
     "format": "yarn run format:ts && yarn run format:css",
+    "format:check": "prettier -c 'src/**/*.{ts,tsx}'",
     "start": "yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
