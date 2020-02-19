@@ -1,0 +1,29 @@
+//
+// We use this to create isosceles triangles
+// $triangle-size - Used to set border-size. No default, set a px or em size.
+// $triangle-color - Used to set border-color which makes up triangle. No default
+// $triangle-direction - Used to determine which direction triangle points. Options: top, bottom, left, right
+
+@mixin css-triangle($triangle-size, $triangle-color, $triangle-direction) {
+  display: block;
+  width: 0;
+  height: 0;
+  border: inset $triangle-size;
+  content: '';
+  @if ($triangle-direction == top) {
+    border-color: $triangle-color transparent transparent;
+    border-top-style: solid;
+  }
+  @if ($triangle-direction == bottom) {
+    border-bottom-style: solid;
+    border-color: transparent transparent $triangle-color;
+  }
+  @if ($triangle-direction == left) {
+    border-color: transparent transparent transparent $triangle-color;
+    border-left-style: solid;
+  }
+  @if ($triangle-direction == right) {
+    border-color: transparent $triangle-color transparent transparent;
+    border-right-style: solid;
+  }
+}

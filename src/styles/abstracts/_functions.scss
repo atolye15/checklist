@@ -1,0 +1,128 @@
+@function gap($size: normal) {
+  @return map-get($g-gaps, $size);
+}
+
+@function pad($size: normal) {
+  @return map-get($g-pads, $size);
+}
+
+//
+// Remove the unit of a length
+// @param {Number} $number - Number to remove unit from
+// @return {Number} - Unitless number
+//
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// Converts px to rem
+@function px-to-rem($value, $base-value: $g-font-size-root) {
+  // If you haven't set the root font size, then it is the browser default, which is often 16px.
+  @if $base-value == null {
+    // stylelint-disable-next-line meowtec/no-px
+    $base-value: 16px;
+  }
+
+  @if type-of($value) != 'number' {
+    @warn 'value: #{$value} is not a number';
+    @return null;
+  }
+
+  @if type-of($base-value) != 'number' {
+    @warn 'base-value: #{$base-value} is not a number';
+    @return null;
+  }
+
+  // If the base font size is a %, then multiply it by 16px
+  // This is because 100% font size = 16px in most all browsers
+  @if unit($base-value) == '%' {
+    // stylelint-disable-next-line meowtec/no-px
+    $base-value: ($base-value / 100%) * 16px;
+  }
+
+  // Using rem as base allows correct scaling
+  @if unit($base-value) == 'rem' or unit($base-value) == 'em' {
+    // stylelint-disable-next-line meowtec/no-px
+    $base-value: strip-unit($base-value) * 16px;
+  }
+
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+
+  // Turn 0rem into 0
+  @if (strip-unit($value) == 0) {
+    $value: 0;
+  }
+
+  @return $value;
+}
+
+// Converts rem to px
+@function rem-to-px($value, $base-value: $g-font-size-root) {
+  // If you haven't set the root font size, then it is the browser default, which is often 16px.
+  @if $base-value == null {
+    // stylelint-disable-next-line meowtec/no-px
+    $base-value: 16px;
+  }
+
+  @if type-of($value) != 'number' {
+    @warn 'value: #{$value} is not a number';
+    @return null;
+  }
+
+  @if type-of($base-value) != 'number' {
+    @warn 'base-value: #{$base-value} is not a number';
+    @return null;
+  }
+
+  // If the base font size is a %, then multiply it by 16px
+  // This is because 100% font size = 16px in most all browsers
+  @if unit($base-value) == '%' {
+    // stylelint-disable-next-line meowtec/no-px
+    $base-value: ($base-value / 100%) * 16px;
+  }
+
+  // Using rem as base allows correct scaling
+  @if unit($base-value) == 'rem' or unit($base-value) == 'em' {
+    // stylelint-disable-next-line meowtec/no-px
+    $base-value: strip-unit($base-value) * 16px;
+  }
+
+  $value: strip-unit($value) * strip-unit($base-value) * 1px;
+
+  // Turn 0px into 0
+  @if (strip-unit($value) == 0) {
+    $value: 0;
+  }
+
+  @return $value;
+}
+
+//
+// Px to Em Mixin
+//
+
+@function px-to-em($value, $base-value: $g-font-size-base) {
+  $unit: unit($base-value);
+  @if ($unit == rem) {
+    $base-value: rem-to-px($base-value);
+  }
+  @return ($value / $base-value) * 1em;
+}
+
+//
+// Color Palette
+//
+// @param: {String} $palete - Palette Name
+// @param: {Number} $weight - Color Weight
+//
+// @returns {Color} the requested color from the color palette
+//
+
+@function color-palette($palette: 'gray', $weight: 100) {
+  @return map-get(map-get($g-color-palettes, $palette), $weight);
+}

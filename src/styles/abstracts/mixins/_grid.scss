@@ -1,0 +1,93 @@
+//
+// Flexbox Grid Mixins
+// Generate semantic grid columns with these mixins.
+// -------------------------
+
+@mixin make-grid-container($gutter: $grid-gutter-width) {
+  padding-right: ($gutter / 2);
+  padding-left: ($gutter / 2);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// For each breakpoint, define the maximum width of the container in a media query
+@mixin make-grid-container-max-widths(
+  $max-widths: $container-max-widths,
+  $breakpoints: $grid-breakpoints
+) {
+  @each $breakpoint, $container-max-width in $max-widths {
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      max-width: $container-max-width;
+    }
+  }
+}
+
+@mixin make-grid-row($gutter: $grid-gutter-width) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: ($gutter / -2);
+  margin-left: ($gutter / -2);
+}
+
+@mixin make-grid-col-ready($gutter: $grid-gutter-width) {
+  position: relative;
+  // Prevent columns from becoming too narrow when at smaller grid tiers by
+  // always setting `width: 100%;`. This works because we use `flex` values
+  // later on to override this initial width.
+  width: 100%;
+  padding-right: $gutter / 2;
+  padding-left: $gutter / 2;
+}
+
+@mixin make-grid-col($size, $columns: $grid-columns, $gutter: $grid-gutter-width) {
+  // Add a `max-width` to ensure content within each column does not blow out
+  // the width of the column. Applies to IE10+ and Firefox. Chrome and Safari
+  // do not appear to require this.
+  max-width: percentage($size / $columns);
+  flex: 0 0 percentage($size / $columns);
+}
+
+@mixin make-grid-col-offset($size, $columns: $grid-columns) {
+  $num: $size / $columns;
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `$grid-columns`.
+
+@mixin make-grid-columns(
+  $columns: $grid-columns,
+  $gutter: $grid-gutter-width,
+  $breakpoints: $grid-breakpoints
+) {
+  $breakpoint-counter: 0;
+  @each $breakpoint in map-keys($breakpoints) {
+    $breakpoint-counter: ($breakpoint-counter + 1);
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      &--#{$breakpoint} {
+        max-width: 100%;
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+
+      @for $i from 1 through $columns {
+        &--#{$breakpoint}-#{$i} {
+          @include make-grid-col($i, $columns, $gutter);
+        }
+      }
+
+      // `$columns - 1` because offsetting by the width of an entire row isn't possible
+      @for $i from 0 through ($columns - 1) {
+        // Avoid emitting useless .offset-xs-0
+        @if $breakpoint-counter != 1 or $i != 0 {
+          &--offset-#{$breakpoint}-#{$i} {
+            @include make-grid-col-offset($i, $columns);
+          }
+        }
+      }
+    }
+  }
+}
