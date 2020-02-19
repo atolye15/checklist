@@ -2714,6 +2714,11 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>,
 };
 
+export type CategoryListFragment = { group: Array<(
+    Pick<MarkdownRemarkGroupConnection, 'fieldValue' | 'totalCount'>
+    & { nodes: Array<{ frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'tags'>> }> }
+  )> };
+
 export type ChecklistFragment = { frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'category' | 'tags' | 'description'>>, fields: Maybe<Pick<MarkdownRemarkFields, 'slug' | 'categorySlug' | 'todoCount'>> };
 
 export type TagsQueryQueryVariables = {};
@@ -2727,10 +2732,7 @@ export type TagsQueryQuery = { tags: { group: Array<(
 export type CategoriesQueryVariables = {};
 
 
-export type CategoriesQuery = { categories: { group: Array<(
-      Pick<MarkdownRemarkGroupConnection, 'fieldValue' | 'totalCount'>
-      & { nodes: Array<{ frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'tags'>> }> }
-    )> } };
+export type CategoriesQuery = { categories: CategoryListFragment };
 
 export type CategoryDetailQueryVariables = {
   category: Scalars['String']
@@ -2743,7 +2745,7 @@ export type CategoryDetailQuery = { checklists: (
       Pick<MarkdownRemarkGroupConnection, 'totalCount'>
       & { tag: MarkdownRemarkGroupConnection['fieldValue'] }
     )> }
-  ) };
+  ), categories: CategoryListFragment };
 
 export type ChecklistDetailQueryVariables = {
   slug: Scalars['String']
