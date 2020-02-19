@@ -3,7 +3,7 @@ import { MarkdownRemarkFrontmatter, Maybe } from '../../graphql-types';
 export const getDescription = (title: string): string => {
   switch (title) {
     case 'Design':
-      return 'These checklists ensure that we have standardized both visual design and User Experience design principals. Front-End Development';
+      return 'These checklists ensure that we have standardized both visual design and User Experience design principals.';
 
     case 'Front-End':
       return 'Checklists that are mainly used by our Front-End developers.';
