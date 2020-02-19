@@ -492,6 +492,7 @@ type MarkdownRemarkFrontmatter {
     #Configures the locale Moment.js will use to format the date.
     locale: String
   ): Date
+  description: String
   tags: [String]
   title: String
 }
@@ -613,10 +614,10 @@ type SitePageContext {
   category: String
   currentPage: Int
   limit: Int
-  numPages: Int
   skip: Int
   slug: String
   tag: String
+  totalPages: Int
 }
 
 type SitePageEdge {
@@ -968,6 +969,7 @@ enum FileFieldsEnum {
   childMarkdownRemark___fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMarkdownRemark___frontmatter___category
   childMarkdownRemark___frontmatter___date
+  childMarkdownRemark___frontmatter___description
   childMarkdownRemark___frontmatter___tags
   childMarkdownRemark___frontmatter___title
   childMarkdownRemark___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1347,6 +1349,7 @@ enum MarkdownRemarkFieldsEnum {
   fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   frontmatter___category
   frontmatter___date
+  frontmatter___description
   frontmatter___tags
   frontmatter___title
   headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1561,10 +1564,10 @@ enum SitePageFieldsEnum {
   context___category
   context___currentPage
   context___limit
-  context___numPages
   context___skip
   context___slug
   context___tag
+  context___totalPages
   id
   internalComponentName
   internal___content
@@ -2100,6 +2103,7 @@ input MarkdownRemarkFilterInput {
 input MarkdownRemarkFrontmatterFilterInput {
   category: StringQueryOperatorInput
   date: DateQueryOperatorInput
+  description: StringQueryOperatorInput
   tags: StringQueryOperatorInput
   title: StringQueryOperatorInput
 }
@@ -2155,10 +2159,10 @@ input SitePageContextFilterInput {
   category: StringQueryOperatorInput
   currentPage: IntQueryOperatorInput
   limit: IntQueryOperatorInput
-  numPages: IntQueryOperatorInput
   skip: IntQueryOperatorInput
   slug: StringQueryOperatorInput
   tag: StringQueryOperatorInput
+  totalPages: IntQueryOperatorInput
 }
 
 input SitePageFilterInput {

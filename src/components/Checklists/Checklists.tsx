@@ -10,11 +10,11 @@ interface Props {
 
 export const checklistDetailFragment = graphql`
   fragment Checklist on MarkdownRemark {
-    excerpt
     frontmatter {
       title
       category
       tags
+      description
     }
     fields {
       slug
@@ -31,7 +31,7 @@ const Checklists: FC<Props> = ({ items }) => (
       <Fragment key={checklist.fields?.slug || ''}>
         <ChecklistCard
           category={checklist.frontmatter?.category || ''}
-          description={checklist.excerpt || ''}
+          description={checklist.frontmatter?.description || ''}
           slug={checklist.fields?.slug || ''}
           tags={checklist.frontmatter?.tags as any}
           title={checklist.frontmatter?.title || ''}

@@ -3,9 +3,8 @@ title: Example 2
 category: Project Management
 date: "2020-02-17"
 tags: ['tag1', 'tag2']
+description: This is a sample description!
 ---
-
-This is a sample description!
 
 - [ ] Step 1
 - [ ] Step 2
