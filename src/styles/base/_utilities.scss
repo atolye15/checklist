@@ -73,19 +73,19 @@ $g-utilities: (
     property: color,
     values: (
       'muted': $g-text-muted-color,
-      'primary': $primary-color,
-      'success': $success-color,
-      'alert': $alert-color,
-      'warning': $warning-color,
+      'primary': $color-primary,
+      'success': $color-success,
+      'danger': $color-danger,
+      'warning': $color-warning,
     ),
   ),
   'background-color': (
     property: background-color,
     values: (
-      'primary': $primary-color,
-      'success': $success-color,
-      'alert': $alert-color,
-      'warning': $warning-color,
+      'primary': $color-primary,
+      'success': $color-success,
+      'danger': $color-danger,
+      'warning': $color-warning,
     ),
   ),
   'display': (
