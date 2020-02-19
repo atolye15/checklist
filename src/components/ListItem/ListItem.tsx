@@ -15,12 +15,15 @@ const ListItem: FC<Props> = ({ className, children, ...rest }) => {
   };
 
   if (className === 'task-list-item' && Array.isArray(children)) {
+    const [, title, , description] = children;
+
     return (
       <li className={cx(className, { 'is-checked': isChecked })} {...rest}>
         {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
         <label>
           <input type="checkbox" checked={isChecked} onChange={updateCheckStatus} />
-          {children.slice(1)}
+          <h3>{title}</h3>
+          {description && <p>{description}</p>}
         </label>
       </li>
     );
