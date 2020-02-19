@@ -40,7 +40,13 @@ module.exports = {
       },
     },
 
-    'gatsby-transformer-remark',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: ['gatsby-remark-component'],
+      },
+    },
+
     'gatsby-plugin-graphql-codegen',
     'gatsby-plugin-sass',
   ],

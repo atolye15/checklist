@@ -1,6 +1,18 @@
 import React, { FC } from 'react';
 import { graphql } from 'gatsby';
+import RehypeReact from 'rehype-react';
+
 import { ChecklistDetailQuery } from '../../graphql-types';
+
+import ListItem from '../components/ListItem';
+import Layout from '../components/Layout';
+
+const renderAst = new RehypeReact({
+  createElement: React.createElement,
+  components: {
+    li: ListItem,
+  },
+}).Compiler;
 
 interface Props {
   data: ChecklistDetailQuery;
@@ -15,17 +27,24 @@ const ChecklistTemplate: FC<Props> = ({ data }) => {
     return null;
   }
 
+  const html = renderAst(markdownRemark?.htmlAst);
+
   return (
-    <h1>
-      {frontmatter.title} ({markdownRemark?.fields?.todoCount})
-    </h1>
+    <Layout>
+      <h1>
+        {frontmatter.title} ({markdownRemark?.fields?.todoCount})
+      </h1>
+
+      <hr />
+      <div>{html}</div>
+    </Layout>
   );
 };
 
 export const pageQuery = graphql`
   query ChecklistDetail($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+      htmlAst
       frontmatter {
         title
         tags
