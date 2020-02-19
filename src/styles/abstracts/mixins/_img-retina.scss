@@ -1,0 +1,15 @@
+//
+// Retina Image
+//
+// Short retina mixin for setting background-image and -size.
+//
+// $file-2x - 2x Image url e.g 'img/logo-retina.png'
+// $width- - Image 1x width
+// $height - Image 1x height
+
+@mixin img-retina($file-2x, $width, $height) {
+  @media only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    background-image: url($file-2x);
+    background-size: $width $height;
+  }
+}

@@ -1,0 +1,174 @@
+//
+// Variables
+// --------------------------------------------------
+
+//
+// Transition
+// -------------------------
+
+$g-transition-duration: 0.4s !default;
+
+//
+// Links
+// -------------------------
+
+$g-link-transition: null !default;
+$g-link-hover-decoration: underline !default;
+
+//
+// Typography
+// -------------------------
+
+$g-font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$g-font-family-base: $g-font-family-sans-serif !default;
+
+// $g-font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
+// $g-font-size-base effects the font size of the body text
+$g-font-size-root: null !default;
+$g-font-size-base: 1rem !default;
+
+$g-line-height-base: 1.5 !default;
+
+$g-font-size-h1: px-to-rem(36px) !default;
+$g-font-size-h2: px-to-rem(30px) !default;
+$g-font-size-h3: px-to-rem(24px) !default;
+$g-font-size-h4: px-to-rem(18px) !default;
+$g-font-size-h5: 1rem !default;
+$g-font-size-h6: px-to-rem(14px) !default;
+
+$g-headings-font-family: inherit !default;
+$g-headings-font-weight: 500 !default;
+$g-headings-line-height: 1.1 !default;
+$g-headings-margin-bottom: 1rem !default;
+
+//
+// Font Sizing
+//
+
+$g-font-size-small: $g-font-size-base - px-to-rem(2px) !default;
+$g-font-size-xsmall: $g-font-size-base - px-to-rem(4px) !default;
+$g-font-size-2xsmall: $g-font-size-base - px-to-rem(6px) !default;
+$g-font-size-medium: $g-font-size-base + px-to-rem(2px) !default;
+$g-font-size-large: $g-font-size-base + px-to-rem(4px) !default;
+$g-font-size-xlarge: $g-font-size-base + px-to-rem(8px) !default;
+
+$g-hr-margin-ends: 1.5rem !default;
+
+//
+// Paragraphs
+// -------------------------
+
+$g-paragraph-margin-top: 1rem !default;
+
+//
+// Spacing
+// -------------------------
+
+// Gaps
+//
+// normal: 24px
+// small:  16px
+// xsmall: 8px
+// 2xsmall: 4px
+// medium: 32px
+// large: 40px
+// xlarge:  48px
+
+$g-base-gap: 1.5rem !default;
+$g-gaps: (
+  normal: $g-base-gap,
+  small: (
+    $g-base-gap / 1.5,
+  ),
+  xsmall: (
+    $g-base-gap / 3,
+  ),
+  2xsmall: (
+    $g-base-gap / 6,
+  ),
+  medium: (
+    $g-base-gap * (4 / 3),
+  ),
+  large: (
+    $g-base-gap * (5 / 3),
+  ),
+  xlarge: (
+    $g-base-gap * 2,
+  ),
+);
+
+// Paddings
+//
+// medium: 40px | large: 48px | xlarge: 64px | 2xlarge: 96px
+// normal: 32px
+// small: 24px | xsmall: 16px | 2xsmall: 8px
+
+$g-base-padding: 2rem !default;
+$g-pads: (
+  normal: $g-base-padding,
+  small: (
+    $g-base-padding * 0.75,
+  ),
+  xsmall: (
+    $g-base-padding / 2,
+  ),
+  2xsmall: (
+    $g-base-padding / 4,
+  ),
+  medium: (
+    $g-base-padding * 1.25,
+  ),
+  large: (
+    $g-base-padding * 1.5,
+  ),
+  xlarge: (
+    $g-base-padding * 2,
+  ),
+  2xlarge: (
+    $g-base-padding * 3,
+  ),
+);
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+// -------------------------
+
+// While SCSS Starter uses ems or rems for defining most sizes,
+// `px`s are used for grid breakpoints and container widths.
+// This is because the viewport width is in pixels and does not change with the font size.
+// See: https://drafts.csswg.org/mediaqueries-3/#units
+
+// stylelint-disable-next-line meowtec/no-px
+$grid-breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+) !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// stylelint-disable-next-line meowtec/no-px
+$container-max-widths: (
+  sm: 576px,
+  md: 720px,
+  lg: 940px,
+  xl: 1140px,
+) !default;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12 !default;
+$grid-gutter-width: px-to-rem(32px) !default;
+
+// `z-index` values
+//
+//  Global `z-index` values should be defined below
+// -------------------------

@@ -1,0 +1,40 @@
+//
+//  FLEX GRID
+//  Inspired by Bootstrap Grid (v4)
+//  --------------------------------------------------
+
+.container {
+  @include make-grid-container();
+  @include make-grid-container-max-widths();
+}
+
+.container-fluid {
+  @include make-grid-container();
+}
+
+.row {
+  @include make-grid-row();
+
+  //
+  // Elements
+  // ------------------------
+
+  //
+  // Modifiers
+  // -------------------------
+
+  &--no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+
+    > .col {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+
+.col {
+  @include make-grid-columns();
+  @include make-grid-col-ready();
+}
