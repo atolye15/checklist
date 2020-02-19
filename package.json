@@ -62,7 +62,7 @@
     "build": "gatsby build",
     "develop": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "format:ts": "prettier --write 'src/**/*.{ts,tsx,md}' && yarn lint:eslint --fix",
-    "format:css": "stylelint --fix --syntax scss \"src/**/*.scss\"",
+    "format:css": "yarn lint:css --fix",
     "format": "yarn run format:ts && yarn run format:css",
     "start": "yarn develop",
     "serve": "gatsby serve",
