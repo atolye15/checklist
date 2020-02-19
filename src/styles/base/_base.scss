@@ -1,0 +1,165 @@
+//
+// BASE
+// --------------------------------------------------
+
+//
+// Scaffolding
+// -------------------------
+
+// Body reset
+// 1. Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
+// 2. Change the default tap highlight to be completely transparent in iOS.
+
+html {
+  box-sizing: border-box; // 1
+  -webkit-tap-highlight-color: transparent; // 2
+}
+
+// Reset the box-sizing
+//
+// Heads up! This reset may cause conflicts with some third-party widgets.
+// For recommendations on resolving such conflicts, see
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+// IE10+ doesn't honor `<meta name="viewport">` in some cases.
+@at-root {
+  // stylelint-disable at-rule-no-vendor-prefix
+  @-ms-viewport {
+    width: device-width;
+  }
+}
+
+// Root
+//
+// 1. Ability to the value of the root font sizes, affecting the value of `rem`.
+//    null by default, thus nothing is generated.
+
+:root {
+  font-size: $g-font-size-root; // 1
+}
+
+//
+// Body
+//
+// 1. Set an explicit initial text-align value so that we can later use the
+//    the `inherit` value on things like `<th>` elements.
+
+body {
+  background-color: $g-body-bg;
+  color: $g-text-color;
+  font-family: $g-font-family-base;
+  font-size: $g-font-size-base;
+  line-height: $g-line-height-base;
+  text-align: left; // 1
+}
+
+[role='button'] {
+  cursor: pointer;
+}
+
+// Links
+
+a {
+  color: $g-link-color;
+  text-decoration: none;
+  transition: $g-link-transition;
+
+  &:hover {
+    color: $g-link-hover-color;
+    text-decoration: $g-link-hover-decoration;
+  }
+}
+
+// Figures
+//
+// We reset this here because previously Normalize had no `figure` margins. This
+// ensures we don't break anyone's use of the element.
+
+figure {
+  margin: 0;
+}
+
+// Images
+
+img {
+  vertical-align: middle;
+}
+
+// Horizontal rules
+
+hr {
+  border: 0;
+  border-top: 1px solid;
+  margin-top: $g-hr-margin-ends;
+  margin-bottom: $g-hr-margin-ends;
+  color: $g-hr-border-color;
+}
+
+// Typography
+//
+// 1. Remove top margins from headings
+//    By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
+//    margin for easier control within type scales as it avoids margin collapsing.
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+.heading {
+  @include heading-styles();
+
+  margin-top: 0; // 1
+  margin-bottom: $g-headings-margin-bottom;
+}
+
+h1,
+.h1 {
+  font-size: $g-font-size-h1;
+}
+
+h2,
+.h2 {
+  font-size: $g-font-size-h2;
+}
+
+h3,
+.h3 {
+  font-size: $g-font-size-h3;
+}
+
+h4,
+.h4 {
+  font-size: $g-font-size-h4;
+}
+
+h5,
+.h5 {
+  font-size: $g-font-size-h5;
+}
+
+h6,
+.h6 {
+  font-size: $g-font-size-h6;
+}
+
+//
+// Body text
+//
+
+p {
+  margin-top: $g-paragraph-margin-top;
+  margin-bottom: 0;
+}

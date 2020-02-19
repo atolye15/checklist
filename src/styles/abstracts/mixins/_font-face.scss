@@ -1,0 +1,22 @@
+//
+// Font Face Mixin for modern browsers
+// IE 9+
+//
+
+@mixin font-face(
+  $font-name,
+  $font-folder,
+  $font-file-name,
+  $font-weight: normal,
+  $font-style: normal
+) {
+  @font-face {
+    font-display: swap;
+    font-family: $font-name;
+    font-style: $font-style;
+    font-weight: $font-weight;
+    src: url('#{$font-folder}/#{$font-file-name}.woff2') format('woff2'),
+      url('#{$font-folder}/#{$font-file-name}.woff') format('woff'),
+      url('#{$font-folder}/#{$font-file-name}.ttf') format('truetype'); // Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }
+}

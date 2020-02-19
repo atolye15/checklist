@@ -1,0 +1,195 @@
+//
+// Generate Utility Functions
+// --------------------------------------------------
+
+//
+// Normalize Utility Breakpoints
+// @param: {Boolean|Map|List} $responsive - Responsivity data of the utility class
+//
+// @return {Map} Normalize utility breakpoints
+
+@function normalize-utility-breakpoints($responsive) {
+  $breakpoints: ();
+
+  @if $responsive == false {
+    @return ();
+  }
+
+  @if $responsive == true {
+    $responsive: map-keys($grid-breakpoints);
+  }
+
+  // When there is only one value in the list and the value type is map
+  // $responsive value type transforms to map, so we need to convert it to list again.
+  @if type-of($responsive) == 'map' {
+    $responsive: append((), $responsive);
+  }
+
+  @each $breakpoint in $responsive {
+    @if type-of($breakpoint) == 'map' {
+      @each $key, $value in $breakpoint {
+        $breakpoints: append(
+          $breakpoints,
+          (
+            'breakpoint': $key,
+            'direction': $value,
+          )
+        );
+      }
+    } @else {
+      $breakpoints: append(
+        $breakpoints,
+        (
+          'breakpoint': $breakpoint,
+          'direction': 'all',
+        )
+      );
+    }
+  }
+
+  @return $breakpoints;
+}
+
+//
+// Transform Spaces Map To Utilty Values
+// @param: {Map} $spaces - $g-gaps or $g-pads
+//
+// @return {Map} Transformed map
+
+@function transform-spaces-map-to-utilty-values($spaces) {
+  $result: ();
+
+  @each $key, $value in $spaces {
+    @if $key == 'normal' {
+      $key: '';
+    }
+
+    $result: map-merge(
+      $result,
+      (
+        $key: (
+          value: $value,
+          responsive: true,
+        ),
+      )
+    );
+  }
+
+  @return $result;
+}
+
+//
+// Generate Utility mixins
+// --------------------------------------------------
+
+@mixin generate-utility-responsive-up($breakpoints: map-keys($grid-breakpoints)) {
+  $grid-breakpoints-first: nth(map-keys($grid-breakpoints), 1);
+  @each $point in $breakpoints {
+    // Skip if first element(xs)
+    @if not($point == $grid-breakpoints-first) {
+      @include media-breakpoint-up($point) {
+        &\@#{$point}-up {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+@mixin generate-utility-responsive-down($breakpoints: map-keys($grid-breakpoints)) {
+  $grid-breakpoints-keys: map-keys($grid-breakpoints);
+  $grid-breakpoints-last: nth($grid-breakpoints-keys, length($grid-breakpoints-keys));
+  @each $point in $breakpoints {
+    // Skip if last element(xl)
+    @if not($point == $grid-breakpoints-last) {
+      @include media-breakpoint-down($point) {
+        &\@#{$point}-down {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+@mixin generate-utility-responsive($responsive) {
+  $breakpoints: normalize-utility-breakpoints($responsive);
+
+  @each $breakpoint in $breakpoints {
+    @if map-get($breakpoint, 'direction') == 'all' or map-get($breakpoint, 'direction') == 'up' {
+      @include generate-utility-responsive-up(map-get($breakpoint, 'breakpoint')) {
+        @content;
+      }
+    }
+    @if map-get($breakpoint, 'direction') == 'all' or map-get($breakpoint, 'direction') == 'down' {
+      @include generate-utility-responsive-down(map-get($breakpoint, 'breakpoint')) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin generate-utility($utility, $property-class) {
+  $properties: map-get($utility, property);
+  $values: map-get($utility, values);
+
+  $property-value: ();
+  $property-responsive: ();
+  $property-class-modifier: ();
+
+  @if type-of($values) == 'list' {
+    @each $value in $values {
+      @if type-of($value) == 'map' {
+        $property-value: append($property-value, map-get($value, value));
+        $property-responsive: append($property-responsive, map-get($value, responsive));
+      } @else {
+        $property-value: append($property-value, $value);
+        $property-responsive: append($property-responsive, false);
+      }
+    }
+  } @else if type-of($values) == 'map' {
+    @each $key, $value in $values {
+      $property-class-modifier: append($property-class-modifier, $key);
+
+      @if type-of($value) == 'map' {
+        $property-value: append($property-value, map-get($value, value));
+        $property-responsive: append($property-responsive, map-get($value, responsive));
+      } @else {
+        $property-value: append($property-value, $value);
+        $property-responsive: append($property-responsive, false);
+      }
+    }
+  } @else {
+    $property-value: append($property-value, $values);
+    $property-responsive: append($property-responsive, false);
+  }
+
+  @each $value in $property-value {
+    $modifier: if(
+      length($property-class-modifier) == 0,
+      $value,
+      nth($property-class-modifier, index($property-value, $value))
+    );
+
+    @if $modifier != '' {
+      $modifier: '-' + $modifier;
+    }
+
+    .u-#{$property-class + $modifier } {
+      @each $property in $properties {
+        // stylelint-disable-next-line declaration-no-important
+        #{$property}: $value !important;
+      }
+
+      $responsive: nth($property-responsive, index($property-value, $value));
+
+      @if $responsive {
+        @include generate-utility-responsive($responsive) {
+          @each $property in $properties {
+            // stylelint-disable-next-line declaration-no-important
+            #{$property}: $value !important;
+          }
+        }
+      }
+    }
+  }
+}
