@@ -5,6 +5,7 @@ import RehypeReact from 'rehype-react';
 import { ChecklistDetailQuery } from '../../graphql-types';
 
 import ListItem from '../components/ListItem';
+import Layout from '../components/Layout';
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -29,14 +30,14 @@ const ChecklistTemplate: FC<Props> = ({ data }) => {
   const html = renderAst(markdownRemark?.htmlAst);
 
   return (
-    <>
+    <Layout>
       <h1>
         {frontmatter.title} ({markdownRemark?.fields?.todoCount})
       </h1>
 
       <hr />
       <div>{html}</div>
-    </>
+    </Layout>
   );
 };
 
