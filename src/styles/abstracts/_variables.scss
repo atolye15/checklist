@@ -202,7 +202,7 @@ $container-max-widths: (
   sm: 576px,
   md: 720px,
   lg: 940px,
-  xl: 1140px,
+  xl: 1168px,
 ) !default;
 
 // Grid columns
@@ -210,7 +210,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns: 12 !default;
-$grid-gutter-width: px-to-rem(32px) !default;
+$grid-gutter-width: px-to-rem(16px) !default;
 
 // `z-index` values
 //
