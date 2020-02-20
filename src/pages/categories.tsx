@@ -1,44 +1,28 @@
 import React, { FC } from 'react';
-import { graphql, Link } from 'gatsby';
-import slug from 'slug';
+import { graphql } from 'gatsby';
 
 import { CategoriesQuery } from '../../graphql-types';
+
 import Layout from '../components/Layout';
+import Categories from '../components/Categories/Categories';
 
 interface Props {
   data: CategoriesQuery;
 }
 
-const Categories: FC<Props> = ({ data }) => {
-  const { categories } = data;
-  const sortedCategories = categories.group
-    .sort((c1, c2) => c2.totalCount - c1.totalCount)
-    .map(c => ({
-      title: c.fieldValue,
-      slug: slug(c.fieldValue || '', { lower: true }),
-    }));
-
-  return (
-    <Layout>
-      <h1>Categories</h1>
-      {sortedCategories.map(category => (
-        <div key={category.slug}>
-          <Link to={`/category/${category.slug}`}>{category.title}</Link>
-        </div>
-      ))}
-    </Layout>
-  );
-};
+const CategoriesPage: FC<Props> = ({ data }) => (
+  <Layout>
+    <h1>Categories</h1>
+    <Categories categories={data.categories} />
+  </Layout>
+);
 
 export const pageQuery = graphql`
   query Categories {
     categories: allMarkdownRemark(limit: 1000) {
-      group(field: frontmatter___category) {
-        fieldValue
-        totalCount
-      }
+      ...CategoryList
     }
   }
 `;
 
-export default Categories;
+export default CategoriesPage;

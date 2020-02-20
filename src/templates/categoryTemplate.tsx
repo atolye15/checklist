@@ -6,6 +6,8 @@ import { CategoryDetailQuery } from '../../graphql-types';
 import Layout from '../components/Layout';
 import Checklists from '../components/Checklists';
 import TagList from '../components/TagList';
+import { getDescription } from '../utils/category';
+import Categories from '../components/Categories/Categories';
 
 interface CategoryTemplateContext {
   category: string;
@@ -17,17 +19,25 @@ interface Props {
 }
 
 const CategoryTemplate: FC<Props> = ({ data, pageContext }) => {
-  const { checklists } = data;
+  const { checklists, categories } = data;
+
+  const title = pageContext.category;
+  const checklistCount = checklists.totalCount;
 
   const sortedTags = checklists.tags.sort((t1, t2) => t2.totalCount - t1.totalCount);
 
   return (
     <Layout>
-      <h1>{pageContext.category}</h1>
-      <TagList tags={sortedTags.map(t => t.tag || '')} />
-      {checklists.totalCount} Checklists
+      <h1>{title}</h1>
+      <br />
+      {checklistCount} {checklistCount === 1 ? <span>Checklist</span> : <span>Checklists</span>}{' '}
+      <br />
+      {getDescription(title)}
+      <TagList tags={sortedTags.map(t => t.tag || '')} /> <br />
       <Link to="/">Go to home</Link>
       <Checklists items={checklists.nodes} />
+      <hr />
+      <Categories categories={categories} current={title} />
     </Layout>
   );
 };
@@ -48,6 +58,10 @@ export const pageQuery = graphql`
         tag: fieldValue
         totalCount
       }
+    }
+
+    categories: allMarkdownRemark(limit: 1000) {
+      ...CategoryList
     }
   }
 `;
