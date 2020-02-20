@@ -3,6 +3,7 @@
 
   &:hover {
     background-color: $bg-hover;
+    color: color-palette('primary', 50);
     text-decoration: none;
   }
 }
