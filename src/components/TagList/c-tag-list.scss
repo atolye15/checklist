@@ -1,0 +1,7 @@
+@import '../../styles/abstracts/index';
+
+.c-tag-list {
+  &__item {
+    margin-left: gap(xsmall);
+  }
+}

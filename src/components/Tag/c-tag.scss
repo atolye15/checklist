@@ -1,0 +1,54 @@
+@import '../../styles/abstracts/index';
+
+.c-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: px-to-rem(2px);
+  color: $color-white;
+  transition: background-color 0.2s;
+
+  &--theme-default {
+    @include link-theme-select(color-palette('primary', 700), color-palette('primary', 500));
+  }
+
+  &--theme-front-end {
+    @include link-theme-select($color-dodger-blue, $color-denim);
+  }
+
+  &--theme-back-end {
+    @include link-theme-select($color-electric-violet, $color-electric-violet-dark-1);
+  }
+
+  &--theme-design {
+    @include link-theme-select($color-rose, $color-razzmatazz);
+  }
+
+  &--theme-human-resources {
+    @include link-theme-select($color-clementine, $color-tenn);
+  }
+
+  &--theme-project-management {
+    @include link-theme-select($color-purple-heart, $color-blue-gem);
+  }
+
+  &--theme-marketing {
+    @include link-theme-select($color-gossamer, $color-salem);
+  }
+
+  &--theme-general {
+    @include link-theme-select($color-blue, $color-dark-blue);
+  }
+
+  &--size-normal {
+    @include text-style(small);
+
+    padding: px-to-rem(4px) px-to-rem(8px);
+  }
+
+  &--size-medium {
+    @include text-style(body);
+
+    padding: px-to-rem(7px) px-to-rem(8px);
+  }
+}

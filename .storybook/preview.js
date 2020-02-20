@@ -1,6 +1,16 @@
 import { addDecorator } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 
+global.___loader = {
+  enqueue: () => {},
+  hovering: () => {},
+};
+
+global.__PATH_PREFIX__ = '';
+
+import '../src/styles/main.scss';
+import './storybook.scss';
+
 addDecorator(
   withInfo({
     styles: {
