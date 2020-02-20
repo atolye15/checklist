@@ -710,9 +710,18 @@ type SitePluginPluginOptions {
   name: String
   path: String
   pathCheck: Boolean
+  plugins: [SitePluginPluginOptionsPlugins]
   short_name: String
   start_url: String
   theme_color: String
+}
+
+type SitePluginPluginOptionsPlugins {
+  id: String
+  name: String
+  pluginFilepath: String
+  resolve: String
+  version: String
 }
 
 type SiteSiteMetadata {
@@ -1684,6 +1693,12 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___name
   pluginCreator___pluginOptions___path
   pluginCreator___pluginOptions___pathCheck
+  pluginCreator___pluginOptions___plugins
+  pluginCreator___pluginOptions___plugins___id
+  pluginCreator___pluginOptions___plugins___name
+  pluginCreator___pluginOptions___plugins___pluginFilepath
+  pluginCreator___pluginOptions___plugins___resolve
+  pluginCreator___pluginOptions___plugins___version
   pluginCreator___pluginOptions___short_name
   pluginCreator___pluginOptions___start_url
   pluginCreator___pluginOptions___theme_color
@@ -1805,6 +1820,12 @@ enum SitePluginFieldsEnum {
   pluginOptions___name
   pluginOptions___path
   pluginOptions___pathCheck
+  pluginOptions___plugins
+  pluginOptions___plugins___id
+  pluginOptions___plugins___name
+  pluginOptions___plugins___pluginFilepath
+  pluginOptions___plugins___resolve
+  pluginOptions___plugins___version
   pluginOptions___short_name
   pluginOptions___start_url
   pluginOptions___theme_color
@@ -2250,9 +2271,22 @@ input SitePluginPluginOptionsFilterInput {
   name: StringQueryOperatorInput
   path: StringQueryOperatorInput
   pathCheck: BooleanQueryOperatorInput
+  plugins: SitePluginPluginOptionsPluginsFilterListInput
   short_name: StringQueryOperatorInput
   start_url: StringQueryOperatorInput
   theme_color: StringQueryOperatorInput
+}
+
+input SitePluginPluginOptionsPluginsFilterInput {
+  id: StringQueryOperatorInput
+  name: StringQueryOperatorInput
+  pluginFilepath: StringQueryOperatorInput
+  resolve: StringQueryOperatorInput
+  version: StringQueryOperatorInput
+}
+
+input SitePluginPluginOptionsPluginsFilterListInput {
+  elemMatch: SitePluginPluginOptionsPluginsFilterInput
 }
 
 input SitePluginSortInput {
