@@ -1,5 +1,15 @@
 import { MarkdownRemarkFrontmatter, Maybe } from '../../graphql-types';
 
+export type Category =
+  | 'front-end'
+  | 'back-end'
+  | 'design'
+  | 'project-management'
+  | 'human-resources'
+  | 'marketing'
+  | 'general'
+  | 'default';
+
 export const getDescription = (title: string): string => {
   switch (title) {
     case 'Design':

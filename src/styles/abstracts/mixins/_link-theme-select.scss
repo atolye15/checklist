@@ -1,0 +1,8 @@
+@mixin link-theme-select($bg, $bg-hover) {
+  background-color: $bg;
+
+  &:hover {
+    background-color: $bg-hover;
+    text-decoration: none;
+  }
+}
