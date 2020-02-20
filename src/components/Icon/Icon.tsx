@@ -5,7 +5,25 @@ import sprite from './sprite.svg';
 
 import './c-icon.scss';
 
-export type IconName = {};
+export type IconName =
+  | 'behance'
+  | 'dribbble'
+  | 'facebook'
+  | 'github'
+  | 'instagram'
+  | 'linkedin'
+  | 'medium'
+  | 'meetup'
+  | 'twitter'
+  | 'youtube'
+  | 'atolye15-logo'
+  | 'arrow-left'
+  | 'arrow-right'
+  | 'check-circle'
+  | 'close'
+  | 'logo-mark'
+  | 'menu'
+  | 'search';
 
 export interface Props {
   name: IconName;
