@@ -1,0 +1,14 @@
+//
+// Icon
+//
+
+.c-icon {
+  display: inline-block;
+  // Allows sizing by changing the icon’s font-size
+  width: 1em;
+  height: 1em;
+  // Default path fill = value of the color property
+  fill: currentColor;
+  // Nice visual alignment for icons alongside text
+  vertical-align: -0.15em;
+}
