@@ -25,9 +25,15 @@ const Tag: FC<Props> = ({
 }: Props) => (
   <Link
     to={`/tag/${tag}`}
-    className={cx('c-tag', `c-tag--theme-${theme}`, `c-tag--size-${size}`, className)}
+    className={cx(
+      'c-tag',
+      `c-tag--theme-${theme}`,
+      `c-tag--size-${size}`,
+      { 'is-selected': selected },
+      className,
+    )}
   >
-    {tag} {selected && <span>[x]</span>}
+    {tag}
   </Link>
 );
 

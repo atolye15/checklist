@@ -9,7 +9,7 @@
   transition: background-color 0.2s;
 
   &--theme-default {
-    @include link-theme-select(color-palette('primary', 700), $color-denim);
+    @include link-theme-select(color-palette('primary', 700), color-palette('primary', 500));
   }
 
   &--theme-front-end {

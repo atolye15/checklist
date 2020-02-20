@@ -6,4 +6,8 @@
     color: color-palette('primary', 50);
     text-decoration: none;
   }
+
+  &.is-selected {
+    background-color: $bg-hover;
+  }
 }
