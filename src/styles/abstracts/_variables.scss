@@ -19,27 +19,71 @@ $g-link-hover-decoration: underline !default;
 // Typography
 // -------------------------
 
+$g-font-primary: Inter;
 $g-font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
-$g-font-family-base: $g-font-family-sans-serif !default;
+$g-font-family-base: $g-font-primary, $g-font-family-sans-serif !default;
 
 // $g-font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
 // $g-font-size-base effects the font size of the body text
 $g-font-size-root: null !default;
 $g-font-size-base: 1rem !default;
-
 $g-line-height-base: 1.5 !default;
 
-$g-font-size-h1: px-to-rem(36px) !default;
-$g-font-size-h2: px-to-rem(30px) !default;
-$g-font-size-h3: px-to-rem(24px) !default;
-$g-font-size-h4: px-to-rem(18px) !default;
-$g-font-size-h5: 1rem !default;
-$g-font-size-h6: px-to-rem(14px) !default;
+$g-text-styles: (
+  'hero': (
+    font-size: px-to-rem(64px),
+    font-weight: 700,
+    line-height: 72/64,
+  ),
+  'large-title': (
+    font-size: px-to-rem(48px),
+    font-weight: 700,
+    line-height: 64/48,
+  ),
+  'title': (
+    font-size: px-to-rem(32px),
+    font-weight: 700,
+    line-height: 48/32,
+  ),
+  'small-title': (
+    font-size: px-to-rem(24px),
+    font-weight: 700,
+    line-height: 32/24,
+  ),
+  'subtitle': (
+    font-size: px-to-rem(20px),
+    font-weight: 700,
+    line-height: 28/20,
+  ),
+  'large-body': (
+    font-size: px-to-rem(18px),
+    line-height: 26/18,
+  ),
+  'body': (
+    font-size: $g-font-size-base,
+    line-height: $g-line-height-base,
+  ),
+  'small': (
+    font-size: px-to-rem(14px),
+    line-height: 18/14,
+  ),
+  'tiny': (
+    font-size: px-to-rem(12px),
+    line-height: 16/12,
+  ),
+);
 
 $g-headings-font-family: inherit !default;
-$g-headings-font-weight: 500 !default;
-$g-headings-line-height: 1.1 !default;
 $g-headings-margin-bottom: 1rem !default;
+$g-headings-font-weight: null !default;
+$g-headings-line-height: null !default;
+
+$g-text-style-h1: 'large-title' !default;
+$g-text-style-h2: 'title' !default;
+$g-text-style-h3: 'small-title' !default;
+$g-text-style-h4: 'large-body' !default;
+$g-text-style-h5: 'body' !default;
+$g-text-style-h6: 'small' !default;
 
 //
 // Font Sizing
@@ -158,7 +202,7 @@ $container-max-widths: (
   sm: 576px,
   md: 720px,
   lg: 940px,
-  xl: 1140px,
+  xl: 1168px,
 ) !default;
 
 // Grid columns
@@ -166,7 +210,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns: 12 !default;
-$grid-gutter-width: px-to-rem(32px) !default;
+$grid-gutter-width: px-to-rem(16px) !default;
 
 // `z-index` values
 //

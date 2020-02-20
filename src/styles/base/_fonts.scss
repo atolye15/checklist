@@ -19,3 +19,6 @@
 //  Mixin Usage
 //  @include font-face($fontName, $fontFolder, $fontFileName, $fontWeight: normal, $fontStyle: normal);
 //
+
+@include font-face(Inter, '../fonts/Inter', 'Inter-Regular');
+@include font-face(Inter, '../fonts/Inter', 'Inter-Bold', 700);
