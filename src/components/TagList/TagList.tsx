@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import cx from 'classnames';
 
 import Tag from '../Tag';
 
@@ -12,10 +13,11 @@ interface Props {
   theme?: Category;
   size?: TagSize;
   current?: string;
+  className?: string;
 }
 
-const TagList: FC<Props> = ({ tags, current, theme, size }) => (
-  <div className="c-tag-list">
+const TagList: FC<Props> = ({ tags, current, theme, size, className }) => (
+  <div className={cx('c-tag-list', className)}>
     {tags.map(tag => (
       <Tag
         key={tag}

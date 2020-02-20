@@ -1,0 +1,77 @@
+@import '../../styles/abstracts/index';
+
+.c-checklist-card {
+  padding: px-to-rem(18px) pad() pad();
+  background-color: color-palette('primary', 700);
+  border-radius: px-to-rem(4px);
+  border-top-color: transparent;
+  border-top-style: solid;
+  border-top-width: px-to-rem(6px);
+  transition: background-color $g-transition-duration;
+
+  &:hover {
+    background-color: color-palette('primary', 600);
+  }
+
+  &--theme-frontend-development {
+    border-top-color: $color-dodger-blue;
+  }
+
+  &--theme-backend-development {
+    border-top-color: $color-electric-violet;
+  }
+
+  &--theme-design {
+    border-top-color: $color-rose;
+  }
+
+  &--theme-project-management {
+    border-top-color: $color-clementine;
+  }
+
+  &--theme-human-resources {
+    border-top-color: $color-purple-heart;
+  }
+
+  &--theme-marketing {
+    border-top-color: $color-gossamer;
+  }
+
+  &--theme-general {
+    border-top-color: $color-blue;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    color: $g-text-muted-color;
+  }
+
+  &__category-link {
+    color: $g-text-muted-color;
+
+    &:hover {
+      color: color-palette('primary', 50);
+      text-decoration: none;
+    }
+  }
+
+  &__body {
+    padding-right: pad(xlarge);
+    margin-top: gap();
+  }
+
+  &__title {
+    color: color-palette('primary', 50);
+
+    &:hover {
+      color: $color-white;
+      text-decoration: none;
+    }
+  }
+
+  &__description {
+    margin-top: gap(xsmall);
+    color: $color-secondary;
+  }
+}

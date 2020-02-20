@@ -24,9 +24,15 @@ const Home: FC<Props> = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <TagListContainer />
+      <div className="container">
+        <TagListContainer />
+      </div>
       <hr />
-      {checklists.totalCount} Checklists
+      <div className="container">
+        <div>
+          <h2>{checklists.totalCount} Checklists</h2>
+        </div>
+      </div>
       <Checklists items={checklists.nodes} />
       <Pagination totalPages={pageContext.totalPages} currentPage={pageContext.currentPage} />
     </Layout>

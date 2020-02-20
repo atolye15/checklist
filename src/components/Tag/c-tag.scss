@@ -12,11 +12,11 @@
     @include link-theme-select(color-palette('primary', 700), color-palette('primary', 500));
   }
 
-  &--theme-front-end {
+  &--theme-frontend-development {
     @include link-theme-select($color-dodger-blue, $color-denim);
   }
 
-  &--theme-back-end {
+  &--theme-backend-development {
     @include link-theme-select($color-electric-violet, $color-electric-violet-dark-1);
   }
 
@@ -24,11 +24,11 @@
     @include link-theme-select($color-rose, $color-razzmatazz);
   }
 
-  &--theme-human-resources {
+  &--theme-project-management {
     @include link-theme-select($color-clementine, $color-tenn);
   }
 
-  &--theme-project-management {
+  &--theme-human-resources {
     @include link-theme-select($color-purple-heart, $color-blue-gem);
   }
 
