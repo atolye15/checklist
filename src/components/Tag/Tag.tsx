@@ -6,12 +6,14 @@ import { Category } from '../../utils/category';
 
 import './c-tag.scss';
 
+export type TagSize = 'normal' | 'medium';
+
 interface Props {
   tag: string;
-  className: string;
+  className?: string;
   selected: boolean;
   theme?: Category;
-  size?: 'normal' | 'medium';
+  size?: TagSize;
 }
 
 const Tag: FC<Props> = ({
