@@ -1,5 +1,5 @@
-import Icon, { Props } from './Icon';
+import Icon from './Icon';
 
-export type IconProps = Props;
+export * from './Icon';
 
 export default Icon;

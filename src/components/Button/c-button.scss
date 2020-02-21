@@ -1,0 +1,54 @@
+@import '../../styles/abstracts/index';
+
+//
+// Buttons
+//
+// Check buttono's documentation for more configs
+// https://github.com/hsnaydd/buttono#documentation
+//
+
+.c-button {
+  @import '../../../node_modules/buttono/buttono';
+
+  $buttono-padding: px-to-rem(8px) px-to-rem(24px);
+  $buttono-opacity-disabled: null;
+  $buttono-border-radius: px-to-rem(4px);
+  $buttono-font-size: $g-font-size-medium;
+  $buttono-line-height: 26 / 18;
+  $buttono-transition-duration: $g-transition-duration;
+
+  @include buttono-block($display: inline-flex);
+
+  min-height: px-to-rem(56px);
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+
+  //
+  // Elements
+  // -------------------------
+
+  //
+  // Modifiers
+  // -------------------------
+
+  &--primary {
+    @include buttono-style-modifier(
+      $background-color: $color-brand,
+      $background-color-hover: $color-brand-dark-1,
+      $opacity-disabled: 0.5
+    );
+  }
+
+  &--secondary {
+    @include buttono-style-modifier(
+      $background-color: color-palette('primary', 900),
+      $background-color-hover: color-palette('primary', 500),
+      $background-color-disabled: color-palette('primary', 200)
+    );
+  }
+
+  &--medium {
+    min-height: px-to-rem(72px);
+  }
+}

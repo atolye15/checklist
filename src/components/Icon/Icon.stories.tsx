@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react';
-import { storiesOf } from '@storybook/react';
 
 import Icon from './Icon';
 
@@ -40,12 +39,17 @@ const Box = ({ children }: { children: ReactNode }) => (
   </div>
 );
 
-storiesOf('Icon', module).add('list', () => (
+export default {
+  title: 'Icon',
+};
+
+export const list = () => (
   <div
     style={{
       display: 'grid',
       gridGap: 12,
       gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr) )',
+      padding: 8,
     }}
   >
     {icons.map((icon: any) => (
@@ -65,4 +69,4 @@ storiesOf('Icon', module).add('list', () => (
       </Box>
     ))}
   </div>
-));
+);
