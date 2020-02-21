@@ -1,6 +1,6 @@
 ---
 title: Example 3
-category: Frontend Development
+category: Front-End
 date: "2020-02-15"
 tags: ['tag1', 'tag3']
 description: This is a sample description!
