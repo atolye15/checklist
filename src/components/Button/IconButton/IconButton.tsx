@@ -10,7 +10,6 @@ interface Props extends ButtonProps {
 }
 
 const IconButton: FC<Props> = ({ className, iconName, ...rest }) => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
   <Button className={cx('c-icon-button', className)} {...rest}>
     <Icon className="c-icon-button__icon" name={iconName} />
   </Button>

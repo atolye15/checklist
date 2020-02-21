@@ -25,7 +25,6 @@ const LinkButton: FC<Props> = ({
         },
         className,
       )}
-      // eslint-disable-next-line react/jsx-props-no-spreading
       {...rest}
     >
       {children}
