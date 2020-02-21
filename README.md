@@ -12,7 +12,7 @@ We love to automate anything if it can be automated. For the things we can’t a
 
 We have been designing, developing & managing projects that vary in size for over 10 years now. Working on a different scale projects brought us some priceless experiences that led us to a greater success on the following projects. We updated our workflow, the way we work, even the hours we work. We try to adapt to the ongoing growth on technology and we are always on track with keeping our protocols updated.
 
-This was an internal tool that we still use on every department but we’ve decided to share this with the community so that we can help each other out, please feel free to suggest a checklist or an improvement on a checklist (on its own page). We will consider every suggestion and implement the ones that we think fits our needs and the way we work.
+This was an internal tool that we still use on every department but we’ve decided to share this with the community so that we can help each other out, please feel free to suggest a checklist or an improvement on a checklist. We will consider every suggestion and implement the ones that we think fits our needs and the way we work.
 
 ## Contributing
 
@@ -33,27 +33,28 @@ Now the project is running on https://localhost:8000 with live-reload server.
 
 Here is the some useful commands;
 
-* `yarn lint`
+#### `yarn lint` 
 It lints TypeScript, runs ESLint and Stylelint.
 
-* `yarn format`  
+
+#### `yarn format`  
 It runs Prettier.
 
-* `yarn test`
+#### `yarn test`
 It runs tests.
 
-* `yarn storybook`
+#### `yarn storybook`
 It runs [Storybook](https://storybook.js.org/)
 
 You need to follow these steps to open a new pull request;
 
-- Make your changes
-- Run `yarn lint`
-- Run `yarn format`
-- Run `yarn test`
-- Commit your changes
-- Publish your branch
-- Open a PR 🎉
+- [ ] Make your changes
+- [ ] Run `yarn lint`
+- [ ] Run `yarn format`
+- [ ] Run `yarn test`
+- [ ] Commit your changes
+- [ ] Publish your branch
+- [ ] Open a PR 🎉
 
 ## License
 
