@@ -1,6 +1,6 @@
 ---
 title: Example 4
-category: Backend Development
+category: Back-End
 date: "2020-02-16"
 tags: ['tag4', 'tag5']
 description: This is a sample description!
