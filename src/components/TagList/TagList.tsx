@@ -1,28 +1,25 @@
 import React, { FC } from 'react';
 
-import Tag from '../Tag';
-
 import { Category } from '../../utils/category';
-import { TagSize } from '../Tag/Tag';
 
 import './c-tag-list.scss';
+import CategoryTagLink from '../CategoryTagLink';
 
 interface Props {
   tags: string[];
-  theme?: Category;
-  size?: TagSize;
+  category?: Category;
   current?: string;
 }
 
-const TagList: FC<Props> = ({ tags, current, theme, size }) => (
+const TagList: FC<Props> = ({ tags, current, category }) => (
   <div className="c-tag-list">
     {tags.map(tag => (
-      <Tag
+      <CategoryTagLink
         key={tag}
-        tag={tag}
-        theme={theme}
-        size={size}
-        selected={tag === current}
+        category={category}
+        to={`tag/${tag}`}
+        size="normal"
+        active={tag === current}
         className="c-tag-list__item"
       />
     ))}

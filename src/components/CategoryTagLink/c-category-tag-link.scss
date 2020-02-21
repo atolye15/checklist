@@ -1,0 +1,42 @@
+@import '../../styles/abstracts/index';
+
+//
+// Category Tag Link
+//
+
+.c-category-tag-link {
+  $categories: 'default', 'general', 'front-end', 'back-end', 'design', 'project-management',
+    'human-resources', 'marketing';
+
+  @include link-theme-select($color-dodger-blue, $color-denim);
+  display: inline-flex;
+  background-color: var(--c-category-tag-link-background-color);
+  border-radius: px-to-rem(2px);
+  color: color-palette('primary', 50);
+  font-weight: 600;
+  transition: background-color $g-transition-duration;
+
+  &:hover,
+  &.is-active {
+    background-color: var(--c-category-tag-link-background-color-hover);
+    color: color-palette('primary', 50);
+    text-decoration: none;
+  }
+
+  &--size-small {
+    @include text-style('tiny');
+    padding: px-to-rem(4px) pad(2xsmall);
+  }
+
+  &--size-normal {
+    @include text-style('small');
+    padding: pad(2xsmall);
+  }
+
+  @each $category in $categories {
+    &--#{$category} {
+      --c-category-tag-link-background-color: #{category-color($category, 'normal')};
+      --c-category-tag-link-background-color-hover: #{category-color($category, 'hover')};
+    }
+  }
+}

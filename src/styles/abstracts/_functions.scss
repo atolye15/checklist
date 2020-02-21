@@ -126,3 +126,16 @@
 @function color-palette($palette: 'gray', $weight: 100) {
   @return map-get(map-get($g-color-palettes, $palette), $weight);
 }
+
+//
+// Category Color
+//
+// @param: {String} $category -Category name
+// @param: {String} $key - Category color key
+//
+// @returns {Color} the requested color from the category colors
+//
+
+@function category-color($category: 'default', $key: 'normal') {
+  @return map-get(map-get($g-category-colors, $category), $key);
+}
