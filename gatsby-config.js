@@ -36,7 +36,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'checklists',
-        path: `${__dirname}/src/checklists`,
+        path: `${__dirname}/checklists`,
       },
     },
 
