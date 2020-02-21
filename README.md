@@ -20,8 +20,6 @@ If you would like to contribute to this project, please refer to [CONTRIBUTING.m
 
 ## Development
 
-### Developing
-
 You need to run the command below for the development server.
 
 ```bash
@@ -35,7 +33,6 @@ Here is the some useful commands;
 
 #### `yarn lint` 
 It lints TypeScript, runs ESLint and Stylelint.
-
 
 #### `yarn format`  
 It runs Prettier.
