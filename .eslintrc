@@ -24,7 +24,7 @@
         ]
       }
     ],
-    "react/jsx-props-no-spreading": "of"
+    "react/jsx-props-no-spreading": "off"
   },
   "overrides": [
     {
