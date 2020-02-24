@@ -79,8 +79,11 @@ There are two ways for you to contribute.
 ## From GitHub
 
 - [ ] Navigate to [checklists](https://github.com/atolye15/checklist/blob/master/checklists) directory
-- [ ] Create a new md file via [Create New File](https://github.com/atolye15/checklist/new/master/checklists) button or click the md file you wish to edit. Please click the pencil icon on the page.
+- [ ] Create a new md file via [Create New File](https://github.com/atolye15/checklist/new/master/checklists) button or for editing an existing file, click the md file you wish to edit and click the pencil icon on the page.
 - [ ] Create or update the content
+- [ ] If you create a new file, you should give a file name which has to be lowercased without whitespaces and ends with **.md**
+- [ ] Checklist title should be in the title case format.
+- [ ] Preview the content with **Preview** button. 
 - [ ] Give a meaningful name to your branch
 - [ ] Click on "Create a new branch for this commit and start a pull request"
 - [ ] Start a new PR 
