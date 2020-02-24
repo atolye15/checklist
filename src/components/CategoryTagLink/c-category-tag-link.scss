@@ -5,9 +5,6 @@
 //
 
 .c-category-tag-link {
-  $categories: 'default', 'general', 'front-end', 'back-end', 'design', 'project-management',
-    'human-resources', 'marketing';
-
   display: inline-flex;
   background-color: var(--c-category-tag-link-background-color);
   border-radius: px-to-rem(2px);
@@ -32,10 +29,10 @@
     padding: pad(2xsmall);
   }
 
-  @each $category in $categories {
-    &--#{$category} {
-      --c-category-tag-link-background-color: #{category-color($category, 'normal')};
-      --c-category-tag-link-background-color-hover: #{category-color($category, 'hover')};
+  @each $name, $colors in $g-category-colors {
+    &--#{$name} {
+      --c-category-tag-link-background-color: #{category-color($name, 'normal')};
+      --c-category-tag-link-background-color-hover: #{category-color($name, 'hover')};
     }
   }
 }
