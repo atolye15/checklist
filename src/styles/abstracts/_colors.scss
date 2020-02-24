@@ -60,6 +60,8 @@ $color-red-ribbon: #e60042;
 $color-robins-egg-blue: #00d0e6;
 $color-gossamer: #079668;
 $color-salem: #09714f;
+$color-fuzzy-wuzzy-brown: #c54d52;
+$color-medium-carmine: #b73a3f;
 
 $color-brand: #fe2d5b;
 $color-brand-dark-1: #e6004d;
@@ -104,6 +106,10 @@ $g-category-colors: (
   'back-end': (
     normal: $color-electric-violet,
     hover: $color-electric-violet-dark-1,
+  ),
+  'devops': (
+    normal: $color-fuzzy-wuzzy-brown,
+    hover: $color-medium-carmine,
   ),
   'design': (
     normal: $color-rose,

@@ -30,6 +30,9 @@ const DemoItem = ({ size }: { size?: any }) => (
     <CategoryTagLink to="./" category="marketing" size={size} className="u-margin-2xsmall">
       #marketing
     </CategoryTagLink>
+    <CategoryTagLink to="./" category="devops" size={size} className="u-margin-2xsmall">
+      #devops
+    </CategoryTagLink>
   </div>
 );
 
