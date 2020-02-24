@@ -31,7 +31,7 @@
 
   @each $name, $colors in $g-category-colors {
     &--#{$name} {
-      --c-category-tag-link-background-color: #{category-color($name, 'normal')};
+      --c-category-tag-link-background-color: #{category-color($name)};
       --c-category-tag-link-background-color-hover: #{category-color($name, 'hover')};
     }
   }

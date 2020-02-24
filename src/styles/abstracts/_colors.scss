@@ -60,6 +60,8 @@ $color-red-ribbon: #e60042;
 $color-robins-egg-blue: #00d0e6;
 $color-gossamer: #079668;
 $color-salem: #09714f;
+$color-fuzzy-wuzzy-brown: #c54d52;
+$color-medium-carmine: #b73a3f;
 
 $color-brand: #fe2d5b;
 $color-brand-dark-1: #e6004d;
@@ -90,35 +92,39 @@ $g-hr-border-color: $g-border-color !default;
 
 $g-category-colors: (
   'default': (
-    normal: color-palette('primary', 700),
+    idle: color-palette('primary', 700),
     hover: color-palette('primary', 500),
   ),
   'general': (
-    normal: $color-blue,
+    idle: $color-blue,
     hover: $color-dark-blue,
   ),
   'front-end': (
-    normal: $color-dodger-blue,
+    idle: $color-dodger-blue,
     hover: $color-denim,
   ),
   'back-end': (
-    normal: $color-electric-violet,
+    idle: $color-electric-violet,
     hover: $color-electric-violet-dark-1,
   ),
+  'devops': (
+    idle: $color-fuzzy-wuzzy-brown,
+    hover: $color-medium-carmine,
+  ),
   'design': (
-    normal: $color-rose,
+    idle: $color-rose,
     hover: $color-razzmatazz,
   ),
   'project-management': (
-    normal: $color-purple-heart,
+    idle: $color-purple-heart,
     hover: $color-blue-gem,
   ),
   'human-resources': (
-    normal: $color-clementine,
+    idle: $color-clementine,
     hover: $color-tenn,
   ),
   'marketing': (
-    normal: $color-gossamer,
+    idle: $color-gossamer,
     hover: $color-salem,
   ),
 );

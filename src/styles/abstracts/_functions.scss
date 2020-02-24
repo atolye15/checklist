@@ -136,6 +136,6 @@
 // @returns {Color} the requested color from the category colors
 //
 
-@function category-color($category: 'default', $key: 'normal') {
+@function category-color($category: 'default', $key: 'idle') {
   @return map-get(map-get($g-category-colors, $category), $key);
 }
