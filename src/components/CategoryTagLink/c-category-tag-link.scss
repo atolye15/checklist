@@ -8,7 +8,6 @@
   $categories: 'default', 'general', 'front-end', 'back-end', 'design', 'project-management',
     'human-resources', 'marketing';
 
-  @include link-theme-select($color-dodger-blue, $color-denim);
   display: inline-flex;
   background-color: var(--c-category-tag-link-background-color);
   border-radius: px-to-rem(2px);
