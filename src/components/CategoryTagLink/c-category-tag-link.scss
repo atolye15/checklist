@@ -1,0 +1,38 @@
+@import '../../styles/abstracts/index';
+
+//
+// Category Tag Link
+//
+
+.c-category-tag-link {
+  display: inline-flex;
+  background-color: var(--c-category-tag-link-background-color);
+  border-radius: px-to-rem(2px);
+  color: color-palette('primary', 50);
+  font-weight: 600;
+  transition: background-color $g-transition-duration;
+
+  &:hover,
+  &.is-active {
+    background-color: var(--c-category-tag-link-background-color-hover);
+    color: color-palette('primary', 50);
+    text-decoration: none;
+  }
+
+  &--size-small {
+    @include text-style('tiny');
+    padding: px-to-rem(4px) pad(2xsmall);
+  }
+
+  &--size-normal {
+    @include text-style('small');
+    padding: pad(2xsmall);
+  }
+
+  @each $name, $colors in $g-category-colors {
+    &--#{$name} {
+      --c-category-tag-link-background-color: #{category-color($name, 'normal')};
+      --c-category-tag-link-background-color-hover: #{category-color($name, 'hover')};
+    }
+  }
+}

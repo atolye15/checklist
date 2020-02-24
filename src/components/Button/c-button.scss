@@ -16,6 +16,8 @@
   $buttono-font-size: $g-font-size-medium;
   $buttono-line-height: 26 / 18;
   $buttono-transition-duration: $g-transition-duration;
+  $buttono-color: color-palette('primary', 50);
+  $buttono-color-alt: color-palette('primary', 800);
 
   @include buttono-block($display: inline-flex);
 

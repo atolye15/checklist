@@ -87,3 +87,38 @@ $g-link-hover-color: $color-azure-radiance !default;
 $g-border-color: color-palette('primary', 900) !default;
 $g-text-muted-color: $color-lynch !default;
 $g-hr-border-color: $g-border-color !default;
+
+$g-category-colors: (
+  'default': (
+    normal: color-palette('primary', 700),
+    hover: color-palette('primary', 500),
+  ),
+  'general': (
+    normal: $color-blue,
+    hover: $color-dark-blue,
+  ),
+  'front-end': (
+    normal: $color-dodger-blue,
+    hover: $color-denim,
+  ),
+  'back-end': (
+    normal: $color-electric-violet,
+    hover: $color-electric-violet-dark-1,
+  ),
+  'design': (
+    normal: $color-rose,
+    hover: $color-razzmatazz,
+  ),
+  'project-management': (
+    normal: $color-purple-heart,
+    hover: $color-blue-gem,
+  ),
+  'human-resources': (
+    normal: $color-clementine,
+    hover: $color-tenn,
+  ),
+  'marketing': (
+    normal: $color-gossamer,
+    hover: $color-salem,
+  ),
+);
