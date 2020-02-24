@@ -18,4 +18,6 @@ You need to provide the result that you get when you follow the steps to reprodu
 - [ ] Provide expected result  
 You need to provide expected behaviour when you follow the steps to reproduce.
 
+- [ ] Provide the environment  
+You need to say that on which device or browser, you faced with.
 - [ ] Be sure that all the relevant attachments are uploaded.
