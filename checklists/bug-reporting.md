@@ -1,5 +1,5 @@
 ---
-title: Bug reporting
+title: Bug Reporting
 category: Project Management
 date: "2020-02-24"
 tags: ['jira', 'bug', 'issue']
