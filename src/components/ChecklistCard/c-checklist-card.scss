@@ -34,6 +34,7 @@
 
   &__category {
     @include text-style('large-body');
+    
     position: relative;
     z-index: $z-index-level-1;
     font-weight: 500;
