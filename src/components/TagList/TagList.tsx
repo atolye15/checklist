@@ -1,29 +1,40 @@
 import React, { FC } from 'react';
+import cx from 'classnames';
 
-import { Category } from '../../utils/category';
+import { Theme } from '../../utils/theme';
+import Tag, { TagSize } from '../Tag';
 
 import './c-tag-list.scss';
-import CategoryTagLink from '../CategoryTagLink';
 
 interface Props {
+  className?: string;
+  itemClassName?: string;
   tags: string[];
-  category?: Category;
+  theme?: Theme;
+  size?: TagSize;
   current?: string;
+  prefix?: string;
 }
 
-const TagList: FC<Props> = ({ tags, current, category }) => (
-  <div className="c-tag-list">
+const TagList: FC<Props> = ({
+  className,
+  itemClassName,
+  tags,
+  current,
+  prefix = '#',
+  size,
+  theme,
+}) => (
+  <ul className={cx('c-tag-list', className)}>
     {tags.map(tag => (
-      <CategoryTagLink
-        key={tag}
-        category={category}
-        to={`tag/${tag}`}
-        size="normal"
-        active={tag === current}
-        className="c-tag-list__item"
-      />
+      <li className={cx('c-tag-list__item', itemClassName)}>
+        <Tag size={size} key={tag} theme={theme} to={`tag/${tag}`} active={tag === current}>
+          {prefix}
+          {tag}
+        </Tag>
+      </li>
     ))}
-  </div>
+  </ul>
 );
 
 export default TagList;
