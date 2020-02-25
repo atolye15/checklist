@@ -1,4 +1,5 @@
 import { MarkdownRemarkFrontmatter, Maybe } from '../../graphql-types';
+import { Theme } from './theme';
 
 export type Category =
   | 'front-end'
@@ -10,6 +11,18 @@ export type Category =
   | 'marketing'
   | 'general'
   | 'default';
+
+export const categoryTheme: { [key in Category]: Theme } = {
+  default: 'default',
+  'front-end': 'dodger-blue',
+  'back-end': 'electric-violet',
+  devops: 'fuzzy-wuzzy-brown',
+  design: 'rose',
+  'project-management': 'clementine',
+  'human-resources': 'purple-heart',
+  marketing: 'gossamer',
+  general: 'blue',
+};
 
 export const getDescription = (title: string): string => {
   switch (title) {

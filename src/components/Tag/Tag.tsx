@@ -2,28 +2,30 @@ import React, { FC } from 'react';
 import cx from 'classnames';
 import { Link, GatsbyLinkProps } from 'gatsby';
 
-import { Category } from '../../utils/category';
-import './c-category-tag-link.scss';
+import { Theme } from '../../utils/theme';
+import './c-tag.scss';
+
+export type TagSize = 'normal' | 'small';
 
 type Props = Omit<GatsbyLinkProps<{}>, 'ref'> & {
-  category?: Category;
-  size?: 'normal' | 'small';
+  theme?: Theme;
+  size?: TagSize;
   active?: boolean;
 };
 
-const CategoryTagLink: FC<Props> = ({
+const Tag: FC<Props> = ({
   className,
   children,
-  category = 'default',
+  theme = 'default',
   size = 'normal',
   active,
   ...rest
 }) => (
   <Link
     className={cx(
-      'c-category-tag-link',
-      `c-category-tag-link--${category}`,
-      `c-category-tag-link--size-${size}`,
+      'c-tag',
+      `c-tag--theme-${theme}`,
+      `c-tag--size-${size}`,
       { 'is-active': active },
       className,
     )}
@@ -33,4 +35,4 @@ const CategoryTagLink: FC<Props> = ({
   </Link>
 );
 
-export default CategoryTagLink;
+export default Tag;

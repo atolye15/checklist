@@ -1,7 +1,27 @@
 @import '../../styles/abstracts/index';
 
+//
+// Tag List
+//
+
 .c-tag-list {
+  // we use nth function here because the gap function returns map :/
+  $gap: nth(gap(xsmall), 1);
+
+  @include list-unstyled($margin-bottom: 0, $margin-top: 0);
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -($gap / 2);
+  margin-left: -($gap / 2);
+
+  //
+  // Elements
+  // -------------------------
   &__item {
-    margin-left: gap(xsmall);
+    display: flex;
+    padding-right: $gap / 2;
+    padding-left: $gap / 2;
+    margin-top: $gap / 2;
+    margin-bottom: $gap / 2;
   }
 }

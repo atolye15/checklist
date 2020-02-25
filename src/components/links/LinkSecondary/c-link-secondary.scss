@@ -1,0 +1,20 @@
+@import '../../../styles/abstracts/index';
+
+//
+// Link Secondary
+//
+
+.c-link-secondary {
+  color: $g-text-color;
+
+  &:hover,
+  &.is-active {
+    color: color-palette('primary', 50);
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: px-to-rem(2px) dotted color-palette('primary', 50);
+    outline-offset: px-to-rem(2px);
+  }
+}
