@@ -23,7 +23,8 @@ export type IconName =
   | 'close'
   | 'logo-mark'
   | 'menu'
-  | 'search';
+  | 'search'
+  | 'checkmark';
 
 export interface Props {
   name: IconName;
