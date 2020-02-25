@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 
 import { ChecklistFragment } from '../../../graphql-types';
 import ChecklistCard from '../ChecklistCard';
+import { Category } from '../../utils/category';
 
 interface Props {
   items: ChecklistFragment[];
@@ -36,7 +37,7 @@ const Checklists: FC<Props> = ({ items }) => (
           tags={checklist.frontmatter?.tags as any}
           title={checklist.frontmatter?.title || ''}
           todoCount={checklist.fields?.todoCount || 0}
-          categorySlug={checklist.fields?.categorySlug || ''}
+          categorySlug={checklist.fields?.categorySlug as Category}
         />
         <hr />
       </Fragment>

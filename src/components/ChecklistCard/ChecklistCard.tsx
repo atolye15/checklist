@@ -10,7 +10,7 @@ import LinkWhite from '../links/LinkWhite';
 type Props = {
   className?: string;
   category: string;
-  categorySlug: Category;
+  categorySlug?: Category;
   todoCount: number;
   title: string;
   slug: string;
@@ -21,7 +21,7 @@ type Props = {
 const ChecklistCard: FC<Props> = ({
   className,
   category,
-  categorySlug,
+  categorySlug = 'default',
   todoCount,
   title,
   description,
@@ -31,7 +31,7 @@ const ChecklistCard: FC<Props> = ({
   <div
     className={cx(
       'c-checklist-card',
-      `c-checklist-card--theme-${categoryTheme[categorySlug]}`,
+      `c-checklist-card--theme-${categoryTheme[categorySlug] || 'default'}`,
       className,
     )}
   >
