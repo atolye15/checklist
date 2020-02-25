@@ -4,9 +4,9 @@
 // Category Tag Link
 //
 
-.c-category-tag-link {
+.c-tag {
   display: inline-flex;
-  background-color: var(--c-category-tag-link-background-color);
+  background-color: var(--c-tag-background-color);
   border-radius: px-to-rem(2px);
   color: color-palette('primary', 50);
   font-weight: 600;
@@ -14,9 +14,14 @@
 
   &:hover,
   &.is-active {
-    background-color: var(--c-category-tag-link-background-color-hover);
+    background-color: var(--c-tag-background-color-hover);
     color: color-palette('primary', 50);
     text-decoration: none;
+  }
+
+  &:focus {
+    outline: px-to-rem(2px) dotted color-palette('primary', 50);
+    outline-offset: px-to-rem(2px);
   }
 
   &--size-small {
@@ -29,10 +34,10 @@
     padding: pad(2xsmall);
   }
 
-  @each $name, $colors in $g-category-colors {
-    &--#{$name} {
-      --c-category-tag-link-background-color: #{category-color($name)};
-      --c-category-tag-link-background-color-hover: #{category-color($name, 'hover')};
+  @each $name, $colors in $g-theme-colors {
+    &--theme-#{$name} {
+      --c-tag-background-color: #{theme-color($name)};
+      --c-tag-background-color-hover: #{theme-color($name, 'hover')};
     }
   }
 }
