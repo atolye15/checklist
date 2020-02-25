@@ -82,12 +82,12 @@ $color-info: $color-robins-egg-blue;
 // -------------------------
 
 $g-body-background-color: color-palette('primary', 800) !default;
-$g-text-color: color-palette('primary', 50) !default;
-$g-headings-color: $color-white !default;
+$g-text-color: $color-lynch !default;
+$g-headings-color: color-palette('primary', 50) !default;
 $g-link-color: $color-dodger-blue-light-1 !default;
 $g-link-hover-color: $color-azure-radiance !default;
 $g-border-color: color-palette('primary', 900) !default;
-$g-text-muted-color: $color-lynch !default;
+$g-text-muted-color: color-palette('primary', 300) !default;
 $g-hr-border-color: $g-border-color !default;
 
 $g-category-colors: (
