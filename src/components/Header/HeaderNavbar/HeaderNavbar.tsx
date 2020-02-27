@@ -15,7 +15,7 @@ interface Props {
 const HeaderNavbar: FC<Props> = ({ className }) => (
   <nav className={cx('c-header-navbar', className)}>
     <div className="c-header-navbar__logo-area">
-      <LinkLight to="./">
+      <LinkLight to="/">
         <Logo />
       </LinkLight>
     </div>
