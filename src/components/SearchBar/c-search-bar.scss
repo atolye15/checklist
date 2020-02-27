@@ -30,6 +30,14 @@
       opacity: 1;
     }
 
+    &:focus {
+      border-bottom-color: color-palette('primary', 500);
+
+      + .c-search-bar__icon {
+        color: $g-text-color-light;
+      }
+    }
+
     &::-webkit-search-decoration,
     &::-webkit-search-cancel-button,
     &::-webkit-search-results-button,
@@ -43,6 +51,7 @@
     top: 50%;
     right: px-to-rem(8px);
     font-size: $g-font-size-xlarge;
+    pointer-events: none;
     transform: translateY(-50%);
   }
 
