@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import cx from 'classnames';
 
+import FooterSocialMenu from './FooterSocialMenu';
+import LinkSecondary from '../links/LinkSecondary';
+
 import atolye15Logo from '../../images/atolye15-logo.svg';
 
 import '../links/LinkLight/c-link-light.scss';
 import '../links/LinkSecondary/c-link-secondary.scss';
 import './c-footer.scss';
-import FooterSocialMenu from './FooterSocialMenu';
-import LinkSecondary from '../links/LinkSecondary';
-// import LinkSecondary from '../links/LinkSecondary';
 
 interface Props {
   className?: string;
