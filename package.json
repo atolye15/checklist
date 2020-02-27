@@ -77,7 +77,7 @@
     "start": "yarn develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "lint": "yarn run lint:ts && yarn lint:css",
     "lint:ts": "tsc --noEmit && yarn lint:eslint",
     "lint:eslint": "eslint 'src/**/*.{ts,tsx}'",
