@@ -24,7 +24,7 @@ const SearchBar = ({ className, value, onChange, onFocus, id }: Props) => (
     >
       {/* eslint-disable-next-line jsx-a11y/label-has-associated-control, jsx-a11y/label-has-for */}
       <label className="u-visually-hidden" htmlFor={`${id}-query`}>
-        Search query
+        Search Checklists
       </label>
       <input
         id={`${id}-query`}
@@ -33,7 +33,7 @@ const SearchBar = ({ className, value, onChange, onFocus, id }: Props) => (
         onChange={onChange}
         onFocus={onFocus}
         value={value}
-        placeholder="Search..."
+        placeholder="Search Checklists"
         autoCorrect="off"
         autoCapitalize="off"
         autoComplete="off"
