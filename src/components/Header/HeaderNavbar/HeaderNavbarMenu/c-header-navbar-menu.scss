@@ -1,0 +1,25 @@
+@import '../../../../styles/abstracts/index';
+
+//
+// Header Navbar Menu
+//
+.c-header-navbar-menu {
+  @include list-unstyled($margin-bottom: 0, $margin-top: 0);
+  display: flex;
+  align-items: center;
+
+  &__item {
+    display: flex;
+    &:not(:first-child) {
+      margin-left: var(--c-header-navbar-menu-gap, #{gap(medium)});
+    }
+  }
+
+  &__link-text {
+    @include text-style('large-body');
+  }
+
+  &__link-icon {
+    font-size: px-to-rem(32px);
+  }
+}
