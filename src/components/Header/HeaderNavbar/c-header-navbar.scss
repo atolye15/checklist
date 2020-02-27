@@ -12,6 +12,7 @@
   column-gap: $grid-gutter-width;
 
   &__logo-area {
+    display: flex;
     grid-column: 1/3;
   }
 
