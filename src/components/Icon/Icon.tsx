@@ -29,10 +29,11 @@ export type IconName =
 export interface Props {
   name: IconName;
   className?: string;
+  ariaHidden?: boolean;
 }
 
-const Icon: FC<Props> = ({ name, className }) => (
-  <svg className={cx('c-icon', className)}>
+const Icon: FC<Props> = ({ name, className, ariaHidden }) => (
+  <svg className={cx('c-icon', className)} aria-hidden={ariaHidden}>
     <use xlinkHref={`${sprite}#icon-${name}`} />
   </svg>
 );

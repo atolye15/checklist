@@ -1,5 +1,14 @@
 import React, { FC } from 'react';
+import HeaderNavbar from './HeaderNavbar';
 
-const Header: FC = () => <h1>Header</h1>;
+import './c-header.scss';
+
+const Header: FC = () => (
+  <header className="c-header">
+    <div className="container">
+      <HeaderNavbar />
+    </div>
+  </header>
+);
 
 export default Header;

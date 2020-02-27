@@ -1,0 +1,20 @@
+@import '../../../styles/abstracts/index';
+
+//
+// Link White
+//
+
+.c-link-brand {
+  color: color-palette('primary', 50);
+
+  &:hover,
+  &.is-active {
+    color: $color-brand;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: px-to-rem(2px) dotted color-palette('primary', 50);
+    outline-offset: px-to-rem(2px);
+  }
+}

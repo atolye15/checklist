@@ -19,6 +19,10 @@
   text-decoration: none !important;
 }
 
+.u-visually-hidden {
+  @include visually-hidden();
+}
+
 //
 // Utilities
 //

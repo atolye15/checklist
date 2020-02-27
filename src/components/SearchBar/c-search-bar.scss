@@ -1,0 +1,61 @@
+@import '../../styles/abstracts/index';
+
+//
+// Search Bar
+//
+
+.c-search-bar {
+  //
+  // Elements
+  // -------------------------
+  &__form {
+    position: relative;
+    z-index: 0;
+  }
+
+  &__input {
+    @include text-style('large-body');
+    display: block;
+    width: 100%;
+    height: px-to-rem(46px);
+    padding: pad(2xsmall) pad(2xsmall);
+    background-color: transparent;
+    border-color: transparent transparent color-palette('primary', 900);
+    border-width: px-to-rem(2px) 0;
+    color: $g-text-color-light;
+    font-family: inherit;
+
+    &::placeholder {
+      color: $g-text-color;
+      opacity: 1;
+    }
+
+    &:focus {
+      border-bottom-color: color-palette('primary', 500);
+
+      + .c-search-bar__icon {
+        color: $g-text-color-light;
+      }
+    }
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      display: none;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    right: px-to-rem(8px);
+    font-size: $g-font-size-xlarge;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+
+  //
+  // Modifiers
+  // -------------------------
+}

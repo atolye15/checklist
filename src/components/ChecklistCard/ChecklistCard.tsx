@@ -5,7 +5,7 @@ import { Category, categoryTheme } from '../../utils/category';
 import LinkSecondary from '../links/LinkSecondary';
 import TagList from '../TagList';
 import './c-checklist-card.scss';
-import LinkWhite from '../links/LinkWhite';
+import LinkLight from '../links/LinkLight';
 
 type Props = {
   className?: string;
@@ -48,9 +48,9 @@ const ChecklistCard: FC<Props> = ({
       </div>
 
       <h4 className="c-checklist-card-header__title">
-        <LinkWhite className="c-checklist-card__title-link" to={`/checklist/${slug}`}>
+        <LinkLight className="c-checklist-card__title-link" to={`/checklist/${slug}`}>
           {title}
-        </LinkWhite>
+        </LinkLight>
       </h4>
     </header>
     <p className="c-checklist-card__description">{description}</p>
