@@ -2,9 +2,13 @@ import React from 'react';
 
 import Footer from './Footer';
 
+const Wrapper = (storyFn: any) => (
+  <div style={{ padding: 8, backgroundColor: '#101013' }}>{storyFn()}</div>
+);
+
 export default {
-  component: Footer,
   title: 'Footer',
+  decorators: [Wrapper],
 };
 
-export const withDefault = () => <Footer />;
+export const defaultView = () => <Footer />;

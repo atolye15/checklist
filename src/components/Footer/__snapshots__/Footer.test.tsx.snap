@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Footer renders correctly 1`] = `
-<h1
-  className="Footer"
->
-  Footer
-</h1>
-`;
