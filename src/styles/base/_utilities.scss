@@ -23,6 +23,10 @@
   @include visually-hidden();
 }
 
+.u-text-style-large-body {
+  @include text-style('large-body');
+}
+
 //
 // Utilities
 //
@@ -78,9 +82,11 @@ $g-utilities: (
     values: (
       'muted': $g-text-muted-color,
       'primary': $color-primary,
+      'secondary': $color-secondary,
       'success': $color-success,
       'danger': $color-danger,
       'warning': $color-warning,
+      'primary-900': color-palette('primary', 900),
     ),
   ),
   'background-color': (

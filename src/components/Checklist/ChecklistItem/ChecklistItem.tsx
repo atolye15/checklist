@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import cx from 'classnames';
 
 import Icon from '../../Icon';
@@ -12,8 +12,8 @@ enum KEY_CODES {
 
 type Props = {
   className?: string;
-  title: string;
-  description?: string;
+  title: ReactNode;
+  description?: ReactNode;
   checked?: boolean;
   id: string;
   onClick?: JSX.IntrinsicElements['div']['onClick'];

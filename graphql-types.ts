@@ -2754,7 +2754,7 @@ export type ChecklistDetailQueryVariables = {
 
 export type ChecklistDetailQuery = { markdownRemark: Maybe<(
     Pick<MarkdownRemark, 'htmlAst'>
-    & { frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'tags' | 'category'>>, fields: Maybe<Pick<MarkdownRemarkFields, 'todoCount'>> }
+    & { frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'tags' | 'category' | 'description'>>, fields: Maybe<Pick<MarkdownRemarkFields, 'categorySlug'>> }
   )> };
 
 export type HomePageQueryQueryVariables = {

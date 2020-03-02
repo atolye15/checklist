@@ -15,6 +15,7 @@ const Button: FC<Props> = ({
   size = 'normal',
   children,
   theme = 'primary',
+  type = 'button',
   className,
   ...rest
 }: Props) => {
@@ -28,6 +29,7 @@ const Button: FC<Props> = ({
         },
         className,
       )}
+      type={type}
       {...rest}
     >
       {children}

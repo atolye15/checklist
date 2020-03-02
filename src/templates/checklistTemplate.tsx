@@ -3,13 +3,21 @@ import { graphql } from 'gatsby';
 import RehypeReact from 'rehype-react';
 
 import { ChecklistDetailQuery } from '../../graphql-types';
+import { categoryTheme, Category } from '../utils/category';
 
 import ListItem from '../components/ListItem';
 import Layout from '../components/Layout';
+import TagList from '../components/TagList';
+import Checklist from '../components/Checklist';
+import Button from '../components/Button';
+import LinkButton from '../components/Button/LinkButton';
+import ChecklistCard from '../components/ChecklistCard';
+import LinkCategory from '../components/links/LinkCategory';
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
   components: {
+    ul: Checklist,
     li: ListItem,
   },
 }).Compiler;
@@ -22,8 +30,13 @@ const ChecklistTemplate: FC<Props> = ({ data }) => {
   const { markdownRemark } = data;
 
   const frontmatter = markdownRemark?.frontmatter;
+  const fields = markdownRemark?.fields;
 
-  if (!frontmatter || !frontmatter.title) {
+  if (!frontmatter || !frontmatter.title || !frontmatter.tags || !frontmatter.description) {
+    return null;
+  }
+
+  if (!fields || !fields.categorySlug) {
     return null;
   }
 
@@ -31,12 +44,74 @@ const ChecklistTemplate: FC<Props> = ({ data }) => {
 
   return (
     <Layout>
-      <h1>
-        {frontmatter.title} ({markdownRemark?.fields?.todoCount})
-      </h1>
+      <div className="row u-justify-content-center u-padding-top-xlarge u-padding-bottom-2xlarge">
+        <div className="col col--lg-8">
+          <LinkCategory category={fields.categorySlug} size="medium">
+            {frontmatter.category}
+          </LinkCategory>
 
-      <hr />
-      <div>{html}</div>
+          <h1 className="u-margin-ends-small">{frontmatter.title}</h1>
+          <TagList
+            tags={frontmatter.tags as string[]}
+            size="small"
+            theme={categoryTheme[fields.categorySlug as Category]}
+          />
+          <p className="u-margin-top u-text-style-large-body u-color-secondary">
+            {frontmatter.description}
+          </p>
+
+          <div className="u-padding-ends-xlarge">{html}</div>
+          <div className="u-display-flex">
+            <Button>Reset</Button>
+            <LinkButton className="u-margin-left-small" theme="secondary" to="./">
+              Improve This Checklist
+            </LinkButton>
+          </div>
+        </div>
+      </div>
+      <hr className="u-margin-ends-0 u-color-primary-900" />
+      <div className="u-padding-ends-2xlarge">
+        <h2 className="u-margin-bottom-medium">Related Checklists</h2>
+        <div className="row">
+          {/* TODO: Related checklists should be requested from the server */}
+          <div className="col col--lg-6 u-margin-top-small">
+            <ChecklistCard
+              category="Front-End"
+              categorySlug="front-end"
+              todoCount={3}
+              title="Releasing a Stage Project for a Web Project"
+              description="At vero eos censes tantas res gessisse sine causa, mox videro; interea hoc epicurus in animis
+          nostris inesse notionem."
+              tags={['css', 'buttono']}
+              slug="slug"
+            />
+          </div>
+          <div className="col col--lg-6 u-margin-top-small">
+            <ChecklistCard
+              category="Front-End"
+              categorySlug="front-end"
+              todoCount={3}
+              title="Releasing a Stage Project for a Web Project"
+              description="At vero eos censes tantas res gessisse sine causa, mox videro; interea hoc epicurus in animis
+          nostris inesse notionem."
+              tags={['css', 'buttono']}
+              slug="slug"
+            />
+          </div>
+          <div className="col col--lg-6 u-margin-top-small">
+            <ChecklistCard
+              category="Front-End"
+              categorySlug="front-end"
+              todoCount={3}
+              title="Releasing a Stage Project for a Web Project"
+              description="At vero eos censes tantas res gessisse sine causa, mox videro; interea hoc epicurus in animis
+          nostris inesse notionem."
+              tags={['css', 'buttono']}
+              slug="slug"
+            />
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 };
@@ -49,9 +124,10 @@ export const pageQuery = graphql`
         title
         tags
         category
+        description
       }
       fields {
-        todoCount
+        categorySlug
       }
     }
   }
