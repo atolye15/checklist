@@ -6,7 +6,7 @@ tags: ['jira', 'bug', 'issue']
 description: The protocol we follow when we report a bug. This checklist is vital for assignee to understand the problem and reproduce it.
 ---
 
-- [ ] Open an issue on Jira.  
+- [ ] Open an issue on Jira  
 Issue type must be **bug**. 
 
 - [ ] Provide steps to reproduce  
@@ -20,4 +20,4 @@ You need to provide expected behaviour when you follow the steps to reproduce.
 
 - [ ] Provide the environment  
 You need to say that on which device or browser, you faced with.
-- [ ] Be sure that all the relevant attachments are uploaded.
+- [ ] Be sure that all the relevant attachments are uploaded
