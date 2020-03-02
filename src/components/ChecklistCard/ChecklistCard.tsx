@@ -2,10 +2,10 @@ import React, { FC } from 'react';
 import cx from 'classnames';
 
 import { Category, categoryTheme } from '../../utils/category';
-import LinkSecondary from '../links/LinkSecondary';
 import TagList from '../TagList';
 import './c-checklist-card.scss';
 import LinkLight from '../links/LinkLight';
+import LinkCategory from '../links/LinkCategory';
 
 type Props = {
   className?: string;
@@ -37,9 +37,10 @@ const ChecklistCard: FC<Props> = ({
   >
     <header className={cx('c-checklist-card__header', className)}>
       <div className="c-checklist-card__details">
-        <LinkSecondary className="c-checklist-card__category" to={`/category/${categorySlug}`}>
+        <LinkCategory className="c-checklist-card__category" category={categorySlug}>
           {category}
-        </LinkSecondary>
+        </LinkCategory>
+
         {todoCount && (
           <span className="c-checklist-card__todo-count">
             {todoCount} To-Do{`${todoCount > 0 ? "'s" : ''}`}
