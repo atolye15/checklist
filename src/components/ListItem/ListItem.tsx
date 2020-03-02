@@ -1,5 +1,4 @@
 import React, { FC, ReactNode, useState } from 'react';
-import cx from 'classnames';
 import CheckListItem from '../Checklist/ChecklistItem/ChecklistItem';
 
 interface Props {
@@ -33,7 +32,7 @@ const ListItem: FC<Props> = ({ className, children, key }) => {
   }
 
   return (
-    <li className={className} {...rest}>
+    <li className={className} key={key}>
       {children}
     </li>
   );
