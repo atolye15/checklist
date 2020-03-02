@@ -6,6 +6,7 @@
 
 .c-checklist-item {
   display: flex;
+  cursor: pointer;
 
   &:not(:last-child) {
     margin-bottom: gap(medium);
@@ -41,18 +42,19 @@
     margin-right: gap(small);
     border-radius: 50%;
     color: $g-text-color-light;
-    cursor: pointer;
     font-size: $g-font-size-xlarge;
   }
 
   &__title {
     @include heading-styles();
     @include text-style('subtitle');
+
     text-decoration: var(--c-checklist-item-text-decoration);
   }
 
   &__description {
     @include text-style('large-body');
+
     margin-top: gap(xsmall);
     text-decoration: var(--c-checklist-item-text-decoration);
   }
