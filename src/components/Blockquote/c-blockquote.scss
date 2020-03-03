@@ -1,0 +1,14 @@
+@import '../../styles/abstracts/index';
+
+//
+// Blockquote
+//
+
+.c-blockquote {
+  padding: pad(2xsmall) pad(small);
+  margin: 0;
+  border-left-color: $color-rose;
+  border-left-style: solid;
+  border-left-width: px-to-rem(4px);
+  border-radius: px-to-rem(4px);
+}
