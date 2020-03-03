@@ -6,7 +6,7 @@ import '../c-button.scss';
 
 import { Props as ButtonProps } from '..';
 
-type Props = ButtonProps<Omit<GatsbyLinkProps<{}>, 'ref'>>;
+export type Props = ButtonProps<Omit<GatsbyLinkProps<{}>, 'ref'>>;
 
 const LinkButton: FC<Props> = ({
   size = 'normal',
