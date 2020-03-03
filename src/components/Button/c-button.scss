@@ -50,6 +50,14 @@
     );
   }
 
+  &--tertiary {
+    @include buttono-style-modifier(
+      $background-color: color-palette('primary', 900),
+      $background-color-hover: color-palette('primary', 800),
+      $background-color-disabled: color-palette('primary', 200)
+    );
+  }
+
   &--medium {
     min-height: px-to-rem(72px);
   }
