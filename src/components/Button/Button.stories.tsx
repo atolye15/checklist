@@ -60,6 +60,7 @@ const ButtonDemo: SFC<Props> = ({ theme, size, children }) => (
 
 export const primary = () => <ButtonDemo theme="primary">Button</ButtonDemo>;
 export const secondary = () => <ButtonDemo theme="secondary">Button</ButtonDemo>;
+export const tertiary = () => <ButtonDemo theme="tertiary">Button</ButtonDemo>;
 export const medium = () => (
   <ButtonDemo theme="primary" size="medium">
     Button

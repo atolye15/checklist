@@ -1,0 +1,12 @@
+@import '../styles/abstracts/index';
+
+//
+// Checklists Heading
+//
+
+.o-checklists-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: gap(xlarge);
+}

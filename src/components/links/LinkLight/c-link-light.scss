@@ -9,7 +9,7 @@
 
   &:hover,
   &.is-active {
-    color: color-palette('primary', 50);
+    color: $color-white;
     text-decoration: none;
   }
 

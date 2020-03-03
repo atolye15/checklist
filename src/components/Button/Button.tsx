@@ -3,7 +3,7 @@ import cx from 'classnames';
 
 import './c-button.scss';
 
-export type ButtonTheme = 'primary' | 'secondary';
+export type ButtonTheme = 'primary' | 'secondary' | 'tertiary';
 export type ButtonSize = 'normal' | 'medium';
 
 export type Props<T = JSX.IntrinsicElements['button']> = T & {

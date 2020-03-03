@@ -24,7 +24,8 @@ export type IconName =
   | 'logo-mark'
   | 'menu'
   | 'search'
-  | 'checkmark';
+  | 'checkmark'
+  | 'external-link';
 
 export interface Props {
   name: IconName;
