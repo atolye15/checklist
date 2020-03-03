@@ -1,4 +1,5 @@
-import React, { FC, Fragment } from 'react';
+import React, { FC } from 'react';
+import cx from 'classnames';
 import { graphql } from 'gatsby';
 
 import { ChecklistFragment } from '../../../graphql-types';
@@ -6,6 +7,7 @@ import ChecklistCard from '../ChecklistCard';
 import { Category } from '../../utils/category';
 
 interface Props {
+  className?: string;
   items: ChecklistFragment[];
 }
 
@@ -25,24 +27,21 @@ export const checklistDetailFragment = graphql`
   }
 `;
 
-const Checklists: FC<Props> = ({ items }) => (
-  <div>
-    {/* eslint-disable @typescript-eslint/no-explicit-any */}
+const Checklists: FC<Props> = ({ className, items }) => (
+  <div className={cx('row', className)}>
     {items.map(checklist => (
-      <Fragment key={checklist.fields?.slug || ''}>
+      <div className="col col--lg-6 u-margin-top-small" key={checklist.fields?.slug || ''}>
         <ChecklistCard
           category={checklist.frontmatter?.category || ''}
           description={checklist.frontmatter?.description || ''}
           slug={checklist.fields?.slug || ''}
-          tags={checklist.frontmatter?.tags as any}
+          tags={checklist.frontmatter?.tags as string[]}
           title={checklist.frontmatter?.title || ''}
           todoCount={checklist.fields?.todoCount || 0}
           categorySlug={checklist.fields?.categorySlug as Category}
         />
-        <hr />
-      </Fragment>
+      </div>
     ))}
-    {/* eslint-enable @typescript-eslint/no-explicit-any */}
   </div>
 );
 
