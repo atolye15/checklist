@@ -43,7 +43,12 @@ const About: FC = () => (
           </p>
         </div>
 
-        <ButtonAsAnchor href="https://www.atolye15.com" className="u-margin-top-xlarge">
+        <ButtonAsAnchor
+          href="https://www.atolye15.com"
+          className="u-margin-top-xlarge"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           atolye15.com
         </ButtonAsAnchor>
       </div>

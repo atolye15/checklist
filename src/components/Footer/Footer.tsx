@@ -19,7 +19,12 @@ const Footer: FC<Props> = ({ className }) => (
     <div className="container">
       <div className="row">
         <div className="col col--sm-6 u-padding-ends">
-          <LinkLightAsAnchor className="c-footer__brand-logo-link" href="https://www.atolye15.com">
+          <LinkLightAsAnchor
+            className="c-footer__brand-logo-link"
+            href="https://www.atolye15.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img className="c-footer__brand-logo" src={atolye15Logo} alt="Atölye15" />
           </LinkLightAsAnchor>
 
@@ -41,22 +46,38 @@ const Footer: FC<Props> = ({ className }) => (
             </h6>
             <ul className="c-footer__menu">
               <li className="u-margin-top-2xsmall">
-                <LinkSecondaryAsAnchor href="https://www.atolye15.com/about-us">
+                <LinkSecondaryAsAnchor
+                  href="https://www.atolye15.com/about-us"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Get to Know Us
                 </LinkSecondaryAsAnchor>
               </li>
               <li className="u-margin-top-2xsmall">
-                <LinkSecondaryAsAnchor href="https://www.atolye15.com/events">
+                <LinkSecondaryAsAnchor
+                  href="https://www.atolye15.com/events"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Explore Our Events
                 </LinkSecondaryAsAnchor>
               </li>
               <li className="u-margin-top-2xsmall">
-                <LinkSecondaryAsAnchor href="https://www.atolye15.com/career">
+                <LinkSecondaryAsAnchor
+                  href="https://www.atolye15.com/career"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Open Positions
                 </LinkSecondaryAsAnchor>
               </li>
               <li className="u-margin-top-2xsmall">
-                <LinkSecondaryAsAnchor href="https://www.atolye15.com/contact">
+                <LinkSecondaryAsAnchor
+                  href="https://www.atolye15.com/contact"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Contact Us
                 </LinkSecondaryAsAnchor>
               </li>
@@ -73,22 +94,30 @@ const Footer: FC<Props> = ({ className }) => (
                 <LinkSecondary to="/about">About</LinkSecondary>
               </li>
               <li className="u-margin-top-2xsmall">
-                <LinkSecondaryAsAnchor href="https://github.com/atolye15/checklist/blob/master/CODE_OF_CONDUCT.md">
+                <LinkSecondaryAsAnchor
+                  href="https://github.com/atolye15/checklist/blob/master/CODE_OF_CONDUCT.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Code of Conduct
                 </LinkSecondaryAsAnchor>
               </li>
               <li className="u-margin-top-2xsmall">
-                <LinkSecondaryAsAnchor href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md">
+                <LinkSecondaryAsAnchor
+                  href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Contributing
                 </LinkSecondaryAsAnchor>
               </li>
               <li className="u-margin-top-2xsmall">
-                <LinkSecondary to="/checklist/checklist-checklist">
+                <LinkSecondary to="/checklist/suggesting-a-checklist">
                   Checklist Checklist
                 </LinkSecondary>
               </li>
               <li className="u-margin-top-2xsmall">
-                <LinkSecondary to="/checklist/improvement-checklist">
+                <LinkSecondary to="/checklist/suggesting-an-improvement-on-a-checklist">
                   Improvement Checklist
                 </LinkSecondary>
               </li>

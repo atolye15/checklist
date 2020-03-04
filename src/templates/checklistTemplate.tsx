@@ -67,6 +67,8 @@ const ChecklistTemplate: FC<Props> = ({ data }) => {
               theme="secondary"
               href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
               className="u-margin-left-small"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Improve this Checklist
             </ButtonAsAnchor>

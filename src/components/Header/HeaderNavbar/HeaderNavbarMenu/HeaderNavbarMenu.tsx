@@ -28,6 +28,8 @@ const HeaderNavbarMenu: FC<Props> = ({ className }) => (
       <LinkSecondaryAsAnchor
         href="https://github.com/atolye15/checklist/"
         className="c-header-navbar-menu__link-icon"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <Icon name="github" className="u-display-block" />
       </LinkSecondaryAsAnchor>
@@ -36,6 +38,8 @@ const HeaderNavbarMenu: FC<Props> = ({ className }) => (
       <LinkBrandAsAnchor
         href="https://www.atolye15.com/"
         className="c-header-navbar-menu__link-icon"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <Icon name="atolye15-logo" className="u-display-block" />
       </LinkBrandAsAnchor>
