@@ -9,8 +9,8 @@ import Layout from '../components/Layout';
 import Checklists from '../components/Checklists';
 import Pagination from '../components/Pagination';
 import Icon from '../components/Icon';
+import LinkLightAsAnchor from '../components/links/LinkLight/LinkLightAsAnchor';
 
-import '../components/links/LinkLight/c-link-light.scss';
 import './o-checklists-heading.scss';
 import './o-suggest-a-checklist.scss';
 
@@ -34,10 +34,11 @@ const Home: FC<Props> = ({ data, pageContext }) => {
 
         <div className="o-checklists-heading">
           <h2 className="u-margin-bottom-0">Checklists</h2>
-          <a className="c-link-light o-suggest-a-checklist" href="./">
+
+          <LinkLightAsAnchor className="o-suggest-a-checklist" href="./">
             Suggest a Checklist{' '}
             <Icon className="o-suggest-a-checklist__icon" name="external-link" ariaHidden />
-          </a>
+          </LinkLightAsAnchor>
         </div>
         <div className="u-text-style-large-body">
           There are {checklists.totalCount} of them and counting!

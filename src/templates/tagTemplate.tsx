@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import TagListContainer from '../containers/TagList';
 import Checklists from '../components/Checklists';
 import Icon from '../components/Icon';
+import LinkLightAsAnchor from '../components/links/LinkLight/LinkLightAsAnchor';
 
 interface TagTemplateContext {
   tag: string;
@@ -26,13 +27,13 @@ const TagTemplate: FC<Props> = ({ data, pageContext }) => {
 
         <div className="o-checklists-heading">
           <h2 className="u-margin-bottom-0">#{tag}</h2>
-          <a
-            className="c-link-light o-suggest-a-checklist"
+          <LinkLightAsAnchor
+            className="o-suggest-a-checklist"
             href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
           >
             Suggest a Checklist{' '}
             <Icon className="o-suggest-a-checklist__icon" name="external-link" ariaHidden />
-          </a>
+          </LinkLightAsAnchor>
         </div>
         <div className="u-text-style-large-body">
           There are {checklists.totalCount} of them and counting!

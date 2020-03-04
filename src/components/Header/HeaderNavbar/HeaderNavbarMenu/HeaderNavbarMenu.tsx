@@ -3,10 +3,10 @@ import cx from 'classnames';
 
 import LinkSecondary from '../../../links/LinkSecondary';
 import Icon from '../../../Icon';
+import LinkSecondaryAsAnchor from '../../../links/LinkSecondary/LinkSecondaryAsAnchor';
+import LinkBrandAsAnchor from '../../../links/LinkBrand/LinkBrandAsAnchor';
 
 import './c-header-navbar-menu.scss';
-import '../../../links/LinkBrand/c-link-brand.scss';
-import '../../../links/LinkLight/c-link-light.scss';
 
 interface Props {
   className?: string;
@@ -25,17 +25,20 @@ const HeaderNavbarMenu: FC<Props> = ({ className }) => (
       </LinkSecondary>
     </li>
     <li className="c-header-navbar-menu__item">
-      <a
+      <LinkSecondaryAsAnchor
         href="https://github.com/atolye15/checklist/"
-        className="c-link-light c-header-navbar-menu__link-icon"
+        className="c-header-navbar-menu__link-icon"
       >
         <Icon name="github" className="u-display-block" />
-      </a>
+      </LinkSecondaryAsAnchor>
     </li>
     <li className="c-header-navbar-menu__item">
-      <a href="https://www.atolye15.com/" className="c-link-brand c-header-navbar-menu__link-icon">
+      <LinkBrandAsAnchor
+        href="https://www.atolye15.com/"
+        className="c-header-navbar-menu__link-icon"
+      >
         <Icon name="atolye15-logo" className="u-display-block" />
-      </a>
+      </LinkBrandAsAnchor>
     </li>
   </ul>
 );
