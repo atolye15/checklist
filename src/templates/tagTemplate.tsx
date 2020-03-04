@@ -7,6 +7,9 @@ import Checklists from '../components/Checklists';
 import Icon from '../components/Icon';
 import LinkLightAsAnchor from '../components/links/LinkLight/LinkLightAsAnchor';
 
+import './o-checklists-heading.scss';
+import './o-suggest-a-checklist.scss';
+
 interface TagTemplateContext {
   tag: string;
 }
@@ -23,7 +26,7 @@ const TagTemplate: FC<Props> = ({ data, pageContext }) => {
   return (
     <Layout>
       <div className="u-padding-ends-xlarge">
-        <TagListContainer current={tag} />
+        <TagListContainer current={tag} className="u-margin-bottom-xlarge" />
 
         <div className="o-checklists-heading">
           <h2 className="u-margin-bottom-0">#{tag}</h2>

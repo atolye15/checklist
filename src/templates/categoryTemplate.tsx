@@ -11,6 +11,9 @@ import { getDescription } from '../utils/category';
 import Icon from '../components/Icon';
 import LinkLightAsAnchor from '../components/links/LinkLight/LinkLightAsAnchor';
 
+import './o-checklists-heading.scss';
+import './o-suggest-a-checklist.scss';
+
 interface CategoryTemplateContext {
   category: string;
 }
@@ -31,7 +34,7 @@ const CategoryTemplate: FC<Props> = ({ data, pageContext }) => {
   return (
     <Layout>
       <div className="u-padding-ends-xlarge">
-        <div className="o-checklists-heading u-margin-top-0">
+        <div className="o-checklists-heading">
           <h2 className="u-margin-bottom-0">
             {title} ({checklistCount})
           </h2>
