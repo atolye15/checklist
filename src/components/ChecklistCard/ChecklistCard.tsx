@@ -3,9 +3,10 @@ import cx from 'classnames';
 
 import { Category, categoryTheme } from '../../utils/category';
 import TagList from '../TagList';
-import './c-checklist-card.scss';
-import LinkLight from '../links/LinkLight';
 import LinkCategory from '../links/LinkCategory';
+import Card, { CardHeader, CardTitle, CardFooter } from '../Card';
+
+import './c-checklist-card.scss';
 
 type Props = {
   className?: string;
@@ -28,14 +29,11 @@ const ChecklistCard: FC<Props> = ({
   slug,
   tags,
 }) => (
-  <div
-    className={cx(
-      'c-checklist-card',
-      `c-checklist-card--theme-${categoryTheme[categorySlug] || 'default'}`,
-      className,
-    )}
+  <Card
+    className={cx('c-checklist-card', className)}
+    theme={categoryTheme[categorySlug] || 'default'}
   >
-    <header className={cx('c-checklist-card__header', className)}>
+    <CardHeader>
       <div className="c-checklist-card__details">
         <LinkCategory className="c-checklist-card__category" category={categorySlug}>
           {category}
@@ -48,22 +46,22 @@ const ChecklistCard: FC<Props> = ({
         )}
       </div>
 
-      <h4 className="c-checklist-card-header__title">
-        <LinkLight className="c-checklist-card__title-link" to={`/checklist/${slug}`}>
-          {title}
-        </LinkLight>
-      </h4>
-    </header>
+      <CardTitle className="c-checklist-card__title" to={`/checklist/${slug}`}>
+        {title}
+      </CardTitle>
+    </CardHeader>
+
     <p className="c-checklist-card__description">{description}</p>
-    <footer className="c-checklist-card__footer">
+
+    <CardFooter>
       <TagList
         tags={tags}
         theme={categoryTheme[categorySlug]}
         size="small"
         itemClassName="c-checklist-card__tag"
       />
-    </footer>
-  </div>
+    </CardFooter>
+  </Card>
 );
 
 export default ChecklistCard;
