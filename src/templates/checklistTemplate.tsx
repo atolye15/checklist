@@ -10,9 +10,9 @@ import Layout from '../components/Layout';
 import TagList from '../components/TagList';
 import Checklist from '../components/Checklist';
 import Button from '../components/Button';
-import ChecklistCard from '../components/ChecklistCard';
 import LinkCategory from '../components/links/LinkCategory';
 import ButtonAsAnchor from '../components/Button/ButtonAsAnchor';
+import Checklists from '../components/Checklists';
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -27,7 +27,7 @@ interface Props {
 }
 
 const ChecklistTemplate: FC<Props> = ({ data }) => {
-  const { markdownRemark } = data;
+  const { markdownRemark, relatedChecklists } = data;
 
   const frontmatter = markdownRemark?.frontmatter;
   const fields = markdownRemark?.fields;
@@ -67,61 +67,29 @@ const ChecklistTemplate: FC<Props> = ({ data }) => {
               theme="secondary"
               href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
               className="u-margin-left-small"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              atolye15.com
+              Improve this Checklist
             </ButtonAsAnchor>
           </div>
         </div>
       </div>
-      <hr className="u-margin-ends-0 u-color-primary-900" />
-      <div className="u-padding-ends-2xlarge">
-        <h2 className="u-margin-bottom-medium">Related Checklists</h2>
-        <div className="row">
-          {/* TODO: Related checklists should be requested from the server */}
-          <div className="col col--lg-6 u-margin-top-small">
-            <ChecklistCard
-              category="Front-End"
-              categorySlug="front-end"
-              todoCount={3}
-              title="Releasing a Stage Project for a Web Project"
-              description="At vero eos censes tantas res gessisse sine causa, mox videro; interea hoc epicurus in animis
-          nostris inesse notionem."
-              tags={['css', 'buttono']}
-              slug="slug"
-            />
+      {relatedChecklists.nodes.length > 0 && (
+        <>
+          <hr className="u-margin-ends-0 u-color-primary-900" />
+          <div className="u-padding-ends-2xlarge">
+            <h2 className="u-margin-bottom-medium">Related Checklists</h2>
+            <Checklists items={relatedChecklists.nodes} />
           </div>
-          <div className="col col--lg-6 u-margin-top-small">
-            <ChecklistCard
-              category="Front-End"
-              categorySlug="front-end"
-              todoCount={3}
-              title="Releasing a Stage Project for a Web Project"
-              description="At vero eos censes tantas res gessisse sine causa, mox videro; interea hoc epicurus in animis
-          nostris inesse notionem."
-              tags={['css', 'buttono']}
-              slug="slug"
-            />
-          </div>
-          <div className="col col--lg-6 u-margin-top-small">
-            <ChecklistCard
-              category="Front-End"
-              categorySlug="front-end"
-              todoCount={3}
-              title="Releasing a Stage Project for a Web Project"
-              description="At vero eos censes tantas res gessisse sine causa, mox videro; interea hoc epicurus in animis
-          nostris inesse notionem."
-              tags={['css', 'buttono']}
-              slug="slug"
-            />
-          </div>
-        </div>
-      </div>
+        </>
+      )}
     </Layout>
   );
 };
 
 export const pageQuery = graphql`
-  query ChecklistDetail($slug: String!) {
+  query ChecklistDetail($slug: String!, $categorySlug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       htmlAst
       frontmatter {
@@ -132,6 +100,16 @@ export const pageQuery = graphql`
       }
       fields {
         categorySlug
+      }
+    }
+
+    relatedChecklists: allMarkdownRemark(
+      limit: 3
+      filter: { fields: { slug: { ne: $slug }, categorySlug: { eq: $categorySlug } } }
+      sort: { fields: [frontmatter___date], order: [DESC] }
+    ) {
+      nodes {
+        ...Checklist
       }
     }
   }

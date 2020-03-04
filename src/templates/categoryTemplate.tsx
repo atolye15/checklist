@@ -13,6 +13,7 @@ import LinkLightAsAnchor from '../components/links/LinkLight/LinkLightAsAnchor';
 
 import './o-checklists-heading.scss';
 import './o-suggest-a-checklist.scss';
+import Categories from '../components/Categories/Categories';
 
 interface CategoryTemplateContext {
   category: string;
@@ -24,7 +25,7 @@ interface Props {
 }
 
 const CategoryTemplate: FC<Props> = ({ data, pageContext }) => {
-  const { checklists } = data;
+  const { checklists, categories } = data;
 
   const title = pageContext.category;
   const checklistCount = checklists.totalCount;
@@ -41,6 +42,8 @@ const CategoryTemplate: FC<Props> = ({ data, pageContext }) => {
           <LinkLightAsAnchor
             className="o-suggest-a-checklist"
             href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Suggest a Checklist{' '}
             <Icon className="o-suggest-a-checklist__icon" name="external-link" ariaHidden />
@@ -51,8 +54,12 @@ const CategoryTemplate: FC<Props> = ({ data, pageContext }) => {
         </div>
         <TagList className="u-margin-ends" tags={sortedTags.map(t => t.tag || '')} />
         <Checklists items={checklists.nodes} />
-        {/* TODO: Add other categories */}
       </div>
+      <hr className="u-margin-ends-0 u-color-primary-900" />
+      <section className="u-padding-ends-2xlarge">
+        <h2 className="u-margin-bottom">Checklist Categories</h2>
+        <Categories categories={categories} current={title} />
+      </section>
     </Layout>
   );
 };

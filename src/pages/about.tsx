@@ -1,13 +1,20 @@
 import React, { FC } from 'react';
+import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 
 import aboutImage from '../images/about.svg';
 import Blockquote from '../components/Blockquote';
-import ChecklistCard from '../components/ChecklistCard';
 import ButtonAsAnchor from '../components/Button/ButtonAsAnchor';
 
-const About: FC = () => (
+import { AboutQuery } from '../../graphql-types';
+import Checklists from '../components/Checklists';
+
+interface Props {
+  data: AboutQuery;
+}
+
+const About: FC<Props> = ({ data }) => (
   <Layout>
     <div className="row u-justify-content-center u-padding-top-xlarge u-padding-bottom-2xlarge">
       <div className="col col--lg-8">
@@ -43,7 +50,12 @@ const About: FC = () => (
           </p>
         </div>
 
-        <ButtonAsAnchor href="https://www.atolye15.com" className="u-margin-top-xlarge">
+        <ButtonAsAnchor
+          href="https://www.atolye15.com"
+          className="u-margin-top-xlarge"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           atolye15.com
         </ButtonAsAnchor>
       </div>
@@ -62,35 +74,25 @@ const About: FC = () => (
           </Blockquote>
         </div>
       </div>
-      <div className="row">
-        {/* TODO: Related checklists should be requested from the server */}
-        <div className="col col--lg-6 u-margin-top-small">
-          <ChecklistCard
-            category="Front-End"
-            categorySlug="front-end"
-            todoCount={3}
-            title="Releasing a Stage Project for a Web Project"
-            description="At vero eos censes tantas res gessisse sine causa, mox videro; interea hoc epicurus in animis
-          nostris inesse notionem."
-            tags={['css', 'buttono']}
-            slug="slug"
-          />
-        </div>
-        <div className="col col--lg-6 u-margin-top-small">
-          <ChecklistCard
-            category="Front-End"
-            categorySlug="front-end"
-            todoCount={3}
-            title="Releasing a Stage Project for a Web Project"
-            description="At vero eos censes tantas res gessisse sine causa, mox videro; interea hoc epicurus in animis
-          nostris inesse notionem."
-            tags={['css', 'buttono']}
-            slug="slug"
-          />
-        </div>
-      </div>
+      <Checklists items={data.suggestions.nodes} />
     </div>
   </Layout>
 );
+
+export const pageQuery = graphql`
+  query About {
+    suggestions: allMarkdownRemark(
+      filter: {
+        fields: {
+          slug: { in: ["suggesting-a-checklist", "suggesting-an-improvement-on-a-checklist"] }
+        }
+      }
+    ) {
+      nodes {
+        ...Checklist
+      }
+    }
+  }
+`;
 
 export default About;

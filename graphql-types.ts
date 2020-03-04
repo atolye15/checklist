@@ -2141,6 +2141,7 @@ export type SitePageContext = {
   totalPages?: Maybe<Scalars['Int']>,
   currentPage?: Maybe<Scalars['Int']>,
   slug?: Maybe<Scalars['String']>,
+  categorySlug?: Maybe<Scalars['String']>,
   tag?: Maybe<Scalars['String']>,
   category?: Maybe<Scalars['String']>,
 };
@@ -2151,6 +2152,7 @@ export type SitePageContextFilterInput = {
   totalPages?: Maybe<IntQueryOperatorInput>,
   currentPage?: Maybe<IntQueryOperatorInput>,
   slug?: Maybe<StringQueryOperatorInput>,
+  categorySlug?: Maybe<StringQueryOperatorInput>,
   tag?: Maybe<StringQueryOperatorInput>,
   category?: Maybe<StringQueryOperatorInput>,
 };
@@ -2259,6 +2261,7 @@ export type SitePageFieldsEnum =
   'context___totalPages' |
   'context___currentPage' |
   'context___slug' |
+  'context___categorySlug' |
   'context___tag' |
   'context___category' |
   'pluginCreator___id' |
@@ -2729,10 +2732,20 @@ export type TagsQueryQuery = { tags: { group: Array<(
       & { tag: MarkdownRemarkGroupConnection['fieldValue'] }
     )> } };
 
+export type NotFoundQueryVariables = {};
+
+
+export type NotFoundQuery = { suggestions: { nodes: Array<ChecklistFragment> } };
+
+export type AboutQueryVariables = {};
+
+
+export type AboutQuery = { suggestions: { nodes: Array<ChecklistFragment> } };
+
 export type CategoriesQueryVariables = {};
 
 
-export type CategoriesQuery = { categories: CategoryListFragment };
+export type CategoriesQuery = { categories: CategoryListFragment, suggestions: { nodes: Array<ChecklistFragment> } };
 
 export type CategoryDetailQueryVariables = {
   category: Scalars['String']
@@ -2748,14 +2761,15 @@ export type CategoryDetailQuery = { checklists: (
   ), categories: CategoryListFragment };
 
 export type ChecklistDetailQueryVariables = {
-  slug: Scalars['String']
+  slug: Scalars['String'],
+  categorySlug: Scalars['String']
 };
 
 
 export type ChecklistDetailQuery = { markdownRemark: Maybe<(
     Pick<MarkdownRemark, 'htmlAst'>
     & { frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'tags' | 'category' | 'description'>>, fields: Maybe<Pick<MarkdownRemarkFields, 'categorySlug'>> }
-  )> };
+  )>, relatedChecklists: { nodes: Array<ChecklistFragment> } };
 
 export type HomePageQueryQueryVariables = {
   skip: Scalars['Int'],

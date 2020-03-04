@@ -35,7 +35,12 @@ const Home: FC<Props> = ({ data, pageContext }) => {
         <div className="o-checklists-heading">
           <h2 className="u-margin-bottom-0">Checklists</h2>
 
-          <LinkLightAsAnchor className="o-suggest-a-checklist" href="./">
+          <LinkLightAsAnchor
+            className="o-suggest-a-checklist"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
+          >
             Suggest a Checklist{' '}
             <Icon className="o-suggest-a-checklist__icon" name="external-link" ariaHidden />
           </LinkLightAsAnchor>

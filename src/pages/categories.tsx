@@ -6,7 +6,7 @@ import { CategoriesQuery } from '../../graphql-types';
 import Layout from '../components/Layout';
 import Categories from '../components/Categories/Categories';
 import Blockquote from '../components/Blockquote';
-import ChecklistCard from '../components/ChecklistCard';
+import Checklists from '../components/Checklists';
 
 interface Props {
   data: CategoriesQuery;
@@ -32,33 +32,7 @@ const CategoriesPage: FC<Props> = ({ data }) => (
           </Blockquote>
         </div>
       </div>
-      <div className="row u-margin-top-medium">
-        {/* TODO: Related checklists should be requested from the server */}
-        <div className="col col--lg-6 u-margin-top-small">
-          <ChecklistCard
-            category="Front-End"
-            categorySlug="front-end"
-            todoCount={3}
-            title="Releasing a Stage Project for a Web Project"
-            description="At vero eos censes tantas res gessisse sine causa, mox videro; interea hoc epicurus in animis
-          nostris inesse notionem."
-            tags={['css', 'buttono']}
-            slug="slug"
-          />
-        </div>
-        <div className="col col--lg-6 u-margin-top-small">
-          <ChecklistCard
-            category="Front-End"
-            categorySlug="front-end"
-            todoCount={3}
-            title="Releasing a Stage Project for a Web Project"
-            description="At vero eos censes tantas res gessisse sine causa, mox videro; interea hoc epicurus in animis
-          nostris inesse notionem."
-            tags={['css', 'buttono']}
-            slug="slug"
-          />
-        </div>
-      </div>
+      <Checklists items={data.suggestions.nodes} className="u-margin-top-medium" />
     </section>
   </Layout>
 );
@@ -67,6 +41,18 @@ export const pageQuery = graphql`
   query Categories {
     categories: allMarkdownRemark(limit: 1000) {
       ...CategoryList
+    }
+
+    suggestions: allMarkdownRemark(
+      filter: {
+        fields: {
+          slug: { in: ["suggesting-a-checklist", "suggesting-an-improvement-on-a-checklist"] }
+        }
+      }
+    ) {
+      nodes {
+        ...Checklist
+      }
     }
   }
 `;

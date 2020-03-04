@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { FC } from 'react';
+import { graphql } from 'gatsby';
 
 import notFoundImage from '../images/404.svg';
 
 import Layout from '../components/Layout';
 import Blockquote from '../components/Blockquote';
-import ChecklistCard from '../components/ChecklistCard';
+import { NotFoundQuery } from '../../graphql-types';
+import Checklists from '../components/Checklists';
 
-const NotFoundPage = () => (
+interface Props {
+  data: NotFoundQuery;
+}
+
+const NotFoundPage: FC<Props> = ({ data }) => (
   <Layout>
     <div className="row u-justify-content-center u-padding-top-xlarge u-padding-bottom-2xlarge">
       <div className="col col--lg-8 u-text-align-center">
@@ -32,35 +38,21 @@ const NotFoundPage = () => (
           </Blockquote>
         </div>
       </div>
-      <div className="row">
-        {/* TODO: Related checklists should be requested from the server */}
-        <div className="col col--lg-6 u-margin-top-small">
-          <ChecklistCard
-            category="Front-End"
-            categorySlug="front-end"
-            todoCount={3}
-            title="Releasing a Stage Project for a Web Project"
-            description="At vero eos censes tantas res gessisse sine causa, mox videro; interea hoc epicurus in animis
-          nostris inesse notionem."
-            tags={['css', 'buttono']}
-            slug="slug"
-          />
-        </div>
-        <div className="col col--lg-6 u-margin-top-small">
-          <ChecklistCard
-            category="Front-End"
-            categorySlug="front-end"
-            todoCount={3}
-            title="Releasing a Stage Project for a Web Project"
-            description="At vero eos censes tantas res gessisse sine causa, mox videro; interea hoc epicurus in animis
-          nostris inesse notionem."
-            tags={['css', 'buttono']}
-            slug="slug"
-          />
-        </div>
-      </div>
+      <Checklists items={data.suggestions.nodes} />
     </div>
   </Layout>
 );
+
+export const pageQuery = graphql`
+  query NotFound {
+    suggestions: allMarkdownRemark(
+      filter: { fields: { slug: { in: ["creating-a-404-page", "creating-illustrations"] } } }
+    ) {
+      nodes {
+        ...Checklist
+      }
+    }
+  }
+`;
 
 export default NotFoundPage;
