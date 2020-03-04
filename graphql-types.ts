@@ -2732,10 +2732,20 @@ export type TagsQueryQuery = { tags: { group: Array<(
       & { tag: MarkdownRemarkGroupConnection['fieldValue'] }
     )> } };
 
+export type NotFoundQueryVariables = {};
+
+
+export type NotFoundQuery = { suggestions: { nodes: Array<ChecklistFragment> } };
+
+export type AboutQueryVariables = {};
+
+
+export type AboutQuery = { suggestions: { nodes: Array<ChecklistFragment> } };
+
 export type CategoriesQueryVariables = {};
 
 
-export type CategoriesQuery = { categories: CategoryListFragment };
+export type CategoriesQuery = { categories: CategoryListFragment, suggestions: { nodes: Array<ChecklistFragment> } };
 
 export type CategoryDetailQueryVariables = {
   category: Scalars['String']
