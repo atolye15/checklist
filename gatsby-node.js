@@ -22,6 +22,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             fields {
               slug
+              categorySlug
             }
 
             frontmatter {
@@ -76,6 +77,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: checklistTemplate,
       context: {
         slug: node.fields.slug,
+        categorySlug: node.fields.categorySlug,
       },
     });
   });
