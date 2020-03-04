@@ -4,6 +4,7 @@ import Button from '.';
 import { ButtonTheme, ButtonSize } from './Button';
 import Icon from '../Icon';
 import ButtonAsLink from './ButtonAsLink';
+import ButtonAsAnchor from './ButtonAsAnchor';
 
 interface Props {
   theme: ButtonTheme;
@@ -38,6 +39,9 @@ const ButtonDemo: SFC<Props> = ({ theme, size, children }) => (
       <ButtonAsLink theme={theme} size={size} to="./" className="u-margin-left-small">
         Link {children}
       </ButtonAsLink>
+      <ButtonAsAnchor theme={theme} size={size} href="./" className="u-margin-left-small">
+        Anchor {children}
+      </ButtonAsAnchor>
     </DemoItem>
     <DemoItem>
       <Button theme={theme} size={size} disabled>
