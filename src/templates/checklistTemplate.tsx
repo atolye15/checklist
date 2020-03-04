@@ -10,7 +10,6 @@ import Layout from '../components/Layout';
 import TagList from '../components/TagList';
 import Checklist from '../components/Checklist';
 import Button from '../components/Button';
-import LinkButton from '../components/Button/LinkButton';
 import ChecklistCard from '../components/ChecklistCard';
 import LinkCategory from '../components/links/LinkCategory';
 
@@ -63,9 +62,13 @@ const ChecklistTemplate: FC<Props> = ({ data }) => {
           <div className="u-padding-ends-xlarge">{html}</div>
           <div className="u-display-flex">
             <Button>Reset</Button>
-            <LinkButton className="u-margin-left-small" theme="secondary" to="./">
+            {/* TODO: Make custom component */}
+            <a
+              href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
+              className="c-button c-button--secondary"
+            >
               Improve This Checklist
-            </LinkButton>
+            </a>
           </div>
         </div>
       </div>
