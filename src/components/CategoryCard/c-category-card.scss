@@ -5,6 +5,8 @@
 //
 
 .c-category-card {
+  --c-card-padding-sides: #{pad(small)};
+
   $z-index-level-1: 1;
 
   min-height: px-to-rem(350px);
@@ -19,10 +21,6 @@
 
   &__checklist-count {
     color: $color-secondary;
-  }
-
-  &__description {
-    margin-top: 0;
   }
 
   &__tag {

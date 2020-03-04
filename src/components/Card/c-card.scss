@@ -9,7 +9,7 @@
   z-index: 0;
   display: flex;
   flex-direction: column;
-  padding: pad(small) pad();
+  padding: var(--c-card-padding-ends, #{pad(small)}) var(--c-card-padding-sides, #{pad()});
   border-top: px-to-rem(6px) solid;
   background-color: color-palette('primary', 700);
   border-radius: px-to-rem(4px);
