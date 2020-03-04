@@ -1,0 +1,32 @@
+@import '../../styles/abstracts/index';
+
+//
+// Category Card
+//
+
+.c-category-card {
+  $z-index-level-1: 1;
+
+  min-height: px-to-rem(350px);
+
+  //
+  // Elements
+  // -------------------------
+
+  &__title {
+    margin-bottom: gap(2xsmall);
+  }
+
+  &__checklist-count {
+    color: $color-secondary;
+  }
+
+  &__description {
+    margin-top: 0;
+  }
+
+  &__tag {
+    position: relative;
+    z-index: $z-index-level-1;
+  }
+}
