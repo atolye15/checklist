@@ -39,7 +39,8 @@ const TagTemplate: FC<Props> = ({ data, pageContext }) => {
           </LinkLightAsAnchor>
         </div>
         <div className="u-text-style-large-body">
-          There are {checklists.totalCount} of them and counting!
+          There {checklists.totalCount > 1 ? 'are' : 'is'} {checklists.totalCount} of them and
+          counting!
         </div>
         <Checklists className="u-margin-top-small" items={checklists.nodes} />
       </div>
