@@ -15,7 +15,7 @@ const NotFoundPage = () => (
         </div>
 
         <h1>Ooops...</h1>
-        <p className="u-text-style-large-body u-color">The page you are looking for is lost.</p>
+        <p className="u-text-style-large-body">The page you are looking for is lost.</p>
       </div>
     </div>
     <hr className="u-margin-ends-0 u-color-primary-900" />
