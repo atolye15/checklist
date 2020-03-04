@@ -1,14 +1,13 @@
 import React, { FC } from 'react';
 import cx from 'classnames';
-import { Link, GatsbyLinkProps } from 'gatsby';
 
 import '../c-button.scss';
 
 import { Props as ButtonProps } from '..';
 
-export type Props = ButtonProps<Omit<GatsbyLinkProps<{}>, 'ref'>>;
+export type Props = ButtonProps<JSX.IntrinsicElements['a']>;
 
-const LinkButton: FC<Props> = ({
+const ButtonAsAnchor: FC<Props> = ({
   size = 'normal',
   children,
   theme = 'primary',
@@ -16,7 +15,7 @@ const LinkButton: FC<Props> = ({
   ...rest
 }: Props) => {
   return (
-    <Link
+    <a
       className={cx(
         'c-button',
         `c-button--${theme}`,
@@ -28,8 +27,8 @@ const LinkButton: FC<Props> = ({
       {...rest}
     >
       {children}
-    </Link>
+    </a>
   );
 };
 
-export default LinkButton;
+export default ButtonAsAnchor;

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import { CategoryDetailQuery } from '../../graphql-types';
 
@@ -7,7 +7,12 @@ import Layout from '../components/Layout';
 import Checklists from '../components/Checklists';
 import TagList from '../components/TagList';
 import { getDescription } from '../utils/category';
-import Categories from '../components/Categories/Categories';
+// import Categories from '../components/Categories/Categories';
+import Icon from '../components/Icon';
+import LinkLightAsAnchor from '../components/links/LinkLight/LinkLightAsAnchor';
+
+import './o-checklists-heading.scss';
+import './o-suggest-a-checklist.scss';
 
 interface CategoryTemplateContext {
   category: string;
@@ -19,7 +24,7 @@ interface Props {
 }
 
 const CategoryTemplate: FC<Props> = ({ data, pageContext }) => {
-  const { checklists, categories } = data;
+  const { checklists } = data;
 
   const title = pageContext.category;
   const checklistCount = checklists.totalCount;
@@ -28,16 +33,26 @@ const CategoryTemplate: FC<Props> = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <h1>{title}</h1>
-      <br />
-      {checklistCount} {checklistCount === 1 ? <span>Checklist</span> : <span>Checklists</span>}{' '}
-      <br />
-      {getDescription(title)}
-      <TagList tags={sortedTags.map(t => t.tag || '')} /> <br />
-      <Link to="/">Go to home</Link>
-      <Checklists items={checklists.nodes} />
-      <hr />
-      <Categories categories={categories} current={title} />
+      <div className="u-padding-ends-xlarge">
+        <div className="o-checklists-heading">
+          <h2 className="u-margin-bottom-0">
+            {title} ({checklistCount})
+          </h2>
+          <LinkLightAsAnchor
+            className="o-suggest-a-checklist"
+            href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
+          >
+            Suggest a Checklist{' '}
+            <Icon className="o-suggest-a-checklist__icon" name="external-link" ariaHidden />
+          </LinkLightAsAnchor>
+        </div>
+        <div className="row">
+          <div className="col col--lg-6 u-text-style-large-body">{getDescription(title)}</div>
+        </div>
+        <TagList className="u-margin-ends" tags={sortedTags.map(t => t.tag || '')} />
+        <Checklists items={checklists.nodes} />
+        {/* TODO: Add other categories */}
+      </div>
     </Layout>
   );
 };

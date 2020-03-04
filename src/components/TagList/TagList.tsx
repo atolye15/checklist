@@ -27,8 +27,8 @@ const TagList: FC<Props> = ({
 }) => (
   <ul className={cx('c-tag-list', className)}>
     {tags.map(tag => (
-      <li className={cx('c-tag-list__item', itemClassName)}>
-        <Tag size={size} key={tag} theme={theme} to={`tag/${tag}`} active={tag === current}>
+      <li key={tag} className={cx('c-tag-list__item', itemClassName)}>
+        <Tag size={size} theme={theme} to={`/tag/${tag}`} active={tag === current}>
           {prefix}
           {tag}
         </Tag>

@@ -10,9 +10,9 @@ import Layout from '../components/Layout';
 import TagList from '../components/TagList';
 import Checklist from '../components/Checklist';
 import Button from '../components/Button';
-import LinkButton from '../components/Button/LinkButton';
 import ChecklistCard from '../components/ChecklistCard';
 import LinkCategory from '../components/links/LinkCategory';
+import ButtonAsAnchor from '../components/Button/ButtonAsAnchor';
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -63,9 +63,13 @@ const ChecklistTemplate: FC<Props> = ({ data }) => {
           <div className="u-padding-ends-xlarge">{html}</div>
           <div className="u-display-flex">
             <Button>Reset</Button>
-            <LinkButton className="u-margin-left-small" theme="secondary" to="./">
-              Improve This Checklist
-            </LinkButton>
+            <ButtonAsAnchor
+              theme="secondary"
+              href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
+              className="u-margin-left-small"
+            >
+              atolye15.com
+            </ButtonAsAnchor>
           </div>
         </div>
       </div>

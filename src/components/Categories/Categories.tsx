@@ -2,9 +2,9 @@ import { graphql } from 'gatsby';
 import React, { FC } from 'react';
 import slug from 'slug';
 
-import { getDescription, getMostUsedTags } from '../../utils/category';
-import CategoryCard from '../CategoryCard';
 import { CategoryListFragment } from '../../../graphql-types';
+import { getDescription, getMostUsedTags, Category } from '../../utils/category';
+import CategoryCard from '../CategoryCard';
 
 export const categoriesFragment = graphql`
   fragment CategoryList on MarkdownRemarkConnection {
@@ -39,16 +39,17 @@ const Categories: FC<Props> = ({ categories, current }) => {
     .filter(c => c.title !== current);
 
   return (
-    <div>
+    <div className="row">
       {sortedCategories.map(category => (
-        <CategoryCard
-          key={category.slug}
-          title={category.title}
-          slug={category.slug}
-          checklistCount={category.checklistCount}
-          description={category.description}
-          tags={category.tags}
-        />
+        <div className="col col--lg-3 u-display-flex u-margin-top-small" key={category.slug}>
+          <CategoryCard
+            title={category.title}
+            slug={category.slug as Category}
+            checklistCount={category.checklistCount}
+            description={category.description}
+            tags={category.tags}
+          />
+        </div>
       ))}
     </div>
   );
