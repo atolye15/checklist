@@ -8,7 +8,7 @@ import { Props as ButtonProps } from '..';
 
 export type Props = ButtonProps<Omit<GatsbyLinkProps<{}>, 'ref'>>;
 
-const LinkButton: FC<Props> = ({
+const ButtonAsLink: FC<Props> = ({
   size = 'normal',
   children,
   theme = 'primary',
@@ -32,4 +32,4 @@ const LinkButton: FC<Props> = ({
   );
 };
 
-export default LinkButton;
+export default ButtonAsLink;
