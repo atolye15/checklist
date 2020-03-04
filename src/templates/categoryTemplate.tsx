@@ -9,6 +9,10 @@ import TagList from '../components/TagList';
 import { getDescription } from '../utils/category';
 // import Categories from '../components/Categories/Categories';
 import Icon from '../components/Icon';
+import LinkLightAsAnchor from '../components/links/LinkLight/LinkLightAsAnchor';
+
+import './o-checklists-heading.scss';
+import './o-suggest-a-checklist.scss';
 
 interface CategoryTemplateContext {
   category: string;
@@ -30,17 +34,17 @@ const CategoryTemplate: FC<Props> = ({ data, pageContext }) => {
   return (
     <Layout>
       <div className="u-padding-ends-xlarge">
-        <div className="o-checklists-heading u-margin-top-0">
+        <div className="o-checklists-heading">
           <h2 className="u-margin-bottom-0">
             {title} ({checklistCount})
           </h2>
-          <a
-            className="c-link-light o-suggest-a-checklist"
+          <LinkLightAsAnchor
+            className="o-suggest-a-checklist"
             href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
           >
             Suggest a Checklist{' '}
             <Icon className="o-suggest-a-checklist__icon" name="external-link" ariaHidden />
-          </a>
+          </LinkLightAsAnchor>
         </div>
         <div className="row">
           <div className="col col--lg-6 u-text-style-large-body">{getDescription(title)}</div>

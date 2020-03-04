@@ -5,6 +5,7 @@ import Layout from '../components/Layout';
 import aboutImage from '../images/about.svg';
 import Blockquote from '../components/Blockquote';
 import ChecklistCard from '../components/ChecklistCard';
+import ButtonAsAnchor from '../components/Button/ButtonAsAnchor';
 
 const About: FC = () => (
   <Layout>
@@ -42,13 +43,9 @@ const About: FC = () => (
           </p>
         </div>
 
-        {/* TODO: Make custom component */}
-        <a
-          href="https://www.atolye15.com"
-          className="c-button c-button--primary u-margin-top-xlarge"
-        >
+        <ButtonAsAnchor href="https://www.atolye15.com" className="u-margin-top-xlarge">
           atolye15.com
-        </a>
+        </ButtonAsAnchor>
       </div>
     </div>
     <hr className="u-margin-ends-0 u-color-primary-900" />

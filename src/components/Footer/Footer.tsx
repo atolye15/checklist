@@ -6,9 +6,9 @@ import LinkSecondary from '../links/LinkSecondary';
 
 import atolye15Logo from '../../images/atolye15-logo.svg';
 
-import '../links/LinkLight/c-link-light.scss';
-import '../links/LinkSecondary/c-link-secondary.scss';
 import './c-footer.scss';
+import LinkLightAsAnchor from '../links/LinkLight/LinkLightAsAnchor';
+import LinkSecondaryAsAnchor from '../links/LinkSecondary/LinkSecondaryAsAnchor';
 
 interface Props {
   className?: string;
@@ -19,9 +19,10 @@ const Footer: FC<Props> = ({ className }) => (
     <div className="container">
       <div className="row">
         <div className="col col--sm-6 u-padding-ends">
-          <a href="https://www.atolye15.com" className="c-footer__brand-logo-link c-link-light">
+          <LinkLightAsAnchor className="c-footer__brand-logo-link" href="https://www.atolye15.com">
             <img className="c-footer__brand-logo" src={atolye15Logo} alt="Atölye15" />
-          </a>
+          </LinkLightAsAnchor>
+
           <div className="u-font-weight-500">
             Top class outsource <br />
             Design &amp; Development
@@ -40,24 +41,24 @@ const Footer: FC<Props> = ({ className }) => (
             </h6>
             <ul className="c-footer__menu">
               <li className="u-margin-top-2xsmall">
-                <a href="https://www.atolye15.com/about-us" className="c-link-secondary">
+                <LinkSecondaryAsAnchor href="https://www.atolye15.com/about-us">
                   Get to Know Us
-                </a>
+                </LinkSecondaryAsAnchor>
               </li>
               <li className="u-margin-top-2xsmall">
-                <a href="https://www.atolye15.com/events" className="c-link-secondary">
+                <LinkSecondaryAsAnchor href="https://www.atolye15.com/events">
                   Explore Our Events
-                </a>
+                </LinkSecondaryAsAnchor>
               </li>
               <li className="u-margin-top-2xsmall">
-                <a href="https://www.atolye15.com/career" className="c-link-secondary">
+                <LinkSecondaryAsAnchor href="https://www.atolye15.com/career">
                   Open Positions
-                </a>
+                </LinkSecondaryAsAnchor>
               </li>
               <li className="u-margin-top-2xsmall">
-                <a href="https://www.atolye15.com/contact" className="c-link-secondary">
+                <LinkSecondaryAsAnchor href="https://www.atolye15.com/contact">
                   Contact Us
-                </a>
+                </LinkSecondaryAsAnchor>
               </li>
             </ul>
           </nav>
@@ -72,20 +73,14 @@ const Footer: FC<Props> = ({ className }) => (
                 <LinkSecondary to="/about">About</LinkSecondary>
               </li>
               <li className="u-margin-top-2xsmall">
-                <a
-                  href="https://github.com/atolye15/checklist/blob/master/CODE_OF_CONDUCT.md"
-                  className="c-link-secondary"
-                >
+                <LinkSecondaryAsAnchor href="https://github.com/atolye15/checklist/blob/master/CODE_OF_CONDUCT.md">
                   Code of Conduct
-                </a>
+                </LinkSecondaryAsAnchor>
               </li>
               <li className="u-margin-top-2xsmall">
-                <a
-                  href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
-                  className="c-link-secondary"
-                >
+                <LinkSecondaryAsAnchor href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md">
                   Contributing
-                </a>
+                </LinkSecondaryAsAnchor>
               </li>
               <li className="u-margin-top-2xsmall">
                 <LinkSecondary to="/checklist/checklist-checklist">

@@ -12,6 +12,7 @@ import Checklist from '../components/Checklist';
 import Button from '../components/Button';
 import ChecklistCard from '../components/ChecklistCard';
 import LinkCategory from '../components/links/LinkCategory';
+import ButtonAsAnchor from '../components/Button/ButtonAsAnchor';
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -62,13 +63,13 @@ const ChecklistTemplate: FC<Props> = ({ data }) => {
           <div className="u-padding-ends-xlarge">{html}</div>
           <div className="u-display-flex">
             <Button>Reset</Button>
-            {/* TODO: Make custom component */}
-            <a
+            <ButtonAsAnchor
+              theme="secondary"
               href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
-              className="c-button c-button--secondary"
+              className="u-margin-top-xlarge"
             >
-              Improve This Checklist
-            </a>
+              atolye15.com
+            </ButtonAsAnchor>
           </div>
         </div>
       </div>
