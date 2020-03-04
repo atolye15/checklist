@@ -42,6 +42,7 @@ const About: FC = () => (
           </p>
         </div>
 
+        {/* TODO: Make custom component */}
         <a
           href="https://www.atolye15.com"
           className="c-button c-button--primary u-margin-top-xlarge"

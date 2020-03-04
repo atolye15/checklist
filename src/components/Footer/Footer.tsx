@@ -19,7 +19,7 @@ const Footer: FC<Props> = ({ className }) => (
     <div className="container">
       <div className="row">
         <div className="col col--sm-6 u-padding-ends">
-          <a href="./" className="c-footer__brand-logo-link c-link-light">
+          <a href="https://www.atolye15.com" className="c-footer__brand-logo-link c-link-light">
             <img className="c-footer__brand-logo" src={atolye15Logo} alt="Atölye15" />
           </a>
           <div className="u-font-weight-500">
@@ -72,16 +72,30 @@ const Footer: FC<Props> = ({ className }) => (
                 <LinkSecondary to="/about">About</LinkSecondary>
               </li>
               <li className="u-margin-top-2xsmall">
-                <LinkSecondary to="/code-of-conduct">Code Of Conduct</LinkSecondary>
+                <a
+                  href="https://github.com/atolye15/checklist/blob/master/CODE_OF_CONDUCT.md"
+                  className="c-link-secondary"
+                >
+                  Code of Conduct
+                </a>
               </li>
               <li className="u-margin-top-2xsmall">
-                <LinkSecondary to="/contributing">Contributing</LinkSecondary>
+                <a
+                  href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
+                  className="c-link-secondary"
+                >
+                  Contributing
+                </a>
               </li>
               <li className="u-margin-top-2xsmall">
-                <LinkSecondary to="/checklist-checklist">Checklist Checklist</LinkSecondary>
+                <LinkSecondary to="/checklist/checklist-checklist">
+                  Checklist Checklist
+                </LinkSecondary>
               </li>
               <li className="u-margin-top-2xsmall">
-                <LinkSecondary to="/improvement-checklist">Improvement Checklist</LinkSecondary>
+                <LinkSecondary to="/checklist/improvement-checklist">
+                  Improvement Checklist
+                </LinkSecondary>
               </li>
             </ul>
           </nav>
