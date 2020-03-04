@@ -27,6 +27,10 @@
   @include text-style('large-body');
 }
 
+.u-text-style-subtitle {
+  @include text-style('subtitle');
+}
+
 //
 // Utilities
 //
