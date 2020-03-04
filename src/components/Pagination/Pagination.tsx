@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import cx from 'classnames';
 
-import IconLinkButton from '../Button/IconButton/IconLinkButton';
+import IconButtonAsLink from '../Button/IconButton/IconButtonAsLink';
 
 import './c-pagination.scss';
 
@@ -14,7 +14,7 @@ interface Props {
 const Pagination: FC<Props> = ({ className, totalPages, currentPage }) => (
   <nav className={cx('c-pagination', className)} aria-label="Checklists Navigation">
     {currentPage > 1 && (
-      <IconLinkButton
+      <IconButtonAsLink
         to={currentPage === 2 ? '/' : `/checklists/${currentPage - 1}`}
         className="c-pagination__previous"
         iconName="arrow-left"
@@ -25,7 +25,7 @@ const Pagination: FC<Props> = ({ className, totalPages, currentPage }) => (
     )}
 
     {totalPages > 1 && currentPage !== totalPages && (
-      <IconLinkButton
+      <IconButtonAsLink
         to={`/checklists/${currentPage + 1}`}
         className="c-pagination__next"
         iconName="arrow-right"

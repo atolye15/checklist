@@ -9,10 +9,10 @@ interface Props extends LinkButtonProps {
   iconName: IconName;
 }
 
-const IconButton: FC<Props> = ({ className, iconName, ...rest }) => (
+const IconButtonAsLink: FC<Props> = ({ className, iconName, ...rest }) => (
   <ButtonAsLink className={cx('c-icon-button', className)} {...rest}>
     <Icon className="c-icon-button__icon" name={iconName} />
   </ButtonAsLink>
 );
 
-export default IconButton;
+export default IconButtonAsLink;
