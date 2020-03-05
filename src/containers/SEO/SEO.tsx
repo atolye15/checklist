@@ -30,11 +30,11 @@ const SEO: FC<Props> = ({ title, description, type, image }) => {
         {title && <title>{title}</title>}
         <meta name="description" content={seo.description} />
 
-        <meta name="og:image" content={seo.image} />
-        <meta name="og:site_name" content={seo.title} />
-        <meta name="og:type" content={seo.type} />
-        <meta name="og:title" content={seo.title} />
-        <meta name="og:description" content={seo.description} />
+        <meta property="og:image" content={seo.image} />
+        <meta property="og:site_name" content={seo.title} />
+        <meta property="og:type" content={seo.type} />
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:description" content={seo.description} />
 
         <meta name="twitter:image" content={seo.image} />
         <meta name="twitter:site" content="@atolye15" />
