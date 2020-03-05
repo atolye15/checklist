@@ -1,8 +1,9 @@
 import React, { FC } from 'react';
 import { graphql } from 'gatsby';
+
 import { TagDetailQuery } from '../../graphql-types';
+
 import Layout from '../components/Layout';
-import TagListContainer from '../containers/TagList';
 import Checklists from '../components/Checklists';
 import Icon from '../components/Icon';
 import LinkLightAsAnchor from '../components/links/LinkLight/LinkLightAsAnchor';
@@ -26,8 +27,6 @@ const TagTemplate: FC<Props> = ({ data, pageContext }) => {
   return (
     <Layout>
       <div className="u-padding-ends-xlarge">
-        <TagListContainer current={tag} className="u-margin-bottom-xlarge" />
-
         <div className="o-checklists-heading">
           <h2 className="u-margin-bottom-0">#{tag}</h2>
           <LinkLightAsAnchor
