@@ -15,13 +15,14 @@ const defaultDescription =
   'Checklist contains the protocols followed by Atolye15 for software development, design, project management and administrative affairs.';
 const defaultImage = ogImage;
 const defaultType = 'website';
+const siteUrl = 'https://checklist.atolye15.com';
 
 const SEO: FC<Props> = ({ title, description, type, image }) => {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     type: type || defaultType,
-    image: image || defaultImage,
+    image: `${siteUrl}/${image || defaultImage}`,
   };
 
   return (
