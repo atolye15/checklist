@@ -8587,6 +8587,20 @@ gatsby-page-utils@^0.0.39:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
+gatsby-plugin-canonical-urls@^2.1.20:
+  version "2.1.20"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-canonical-urls/-/gatsby-plugin-canonical-urls-2.1.20.tgz#6fdd0000d42aa5d8f779c6dbf9c2c25282552136"
+  integrity sha512-CRmdX9ya4bpqnR9QaqsvHm4zMQ4ssEfpMCCbv+I4DaOYj6vnGxJs1eoAsVUaKIQdttrYeDysfzeX3MuKREhGIw==
+  dependencies:
+    "@babel/runtime" "^7.7.6"
+
+gatsby-plugin-google-analytics@^2.1.36:
+  version "2.1.36"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.1.36.tgz#cbf19c45305ff50b6ab4612e7963ef9184f8b438"
+  integrity sha512-yFp75vJpTvfgqZXYlel4n7G5INykAnRFCrf/n9pn/XdnL7Vx49LzLkjwZ8SJzWIU856mAyxK1MsEJH/JXkOWAg==
+  dependencies:
+    "@babel/runtime" "^7.7.6"
+
 gatsby-plugin-graphql-codegen@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-graphql-codegen/-/gatsby-plugin-graphql-codegen-2.4.0.tgz#7e57c74e8fc3ddff3dbc69adcbe13075988ab068"
