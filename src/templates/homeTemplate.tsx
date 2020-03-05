@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { graphql } from 'gatsby';
-import Helmet from 'react-helmet';
 
 import { HomePageQueryQuery } from '../../graphql-types';
 
