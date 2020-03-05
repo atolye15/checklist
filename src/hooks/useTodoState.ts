@@ -1,16 +1,39 @@
-import { Dispatch, SetStateAction, useEffect, useState } from 'react';
+import { useContext, useLayoutEffect, useState } from 'react';
+
 import todoStore from '../store/todo';
+import activeChecklistContext from '../context/activeChecklist';
 
-const useTodoState = (key: string): [string[], Dispatch<SetStateAction<string[]>>] => {
-  const initialState = todoStore.get(key);
+const useTodoState = (): [string[], (itemId: string) => void] => {
+  const { getActiveChecklist } = useContext(activeChecklistContext);
+  const [todos, setTodos] = useState<string[]>([]);
 
-  const [todos, updateTodos] = useState<string[]>(initialState);
+  useLayoutEffect(() => {
+    const activeChecklist = getActiveChecklist();
 
-  useEffect(() => {
-    if (key) {
-      todoStore.update(key, todos);
+    if (!activeChecklist) {
+      return;
     }
-  }, [key, todos]);
+
+    const checklistTodos = todoStore.get(activeChecklist);
+    setTodos(checklistTodos);
+  }, []);
+
+  const updateTodos = (itemId: string) => {
+    const activeChecklist = getActiveChecklist();
+
+    if (!activeChecklist) {
+      return;
+    }
+
+    const checklistTodos = todoStore.get(activeChecklist);
+
+    const next = checklistTodos.includes(itemId)
+      ? checklistTodos.filter(t => t !== itemId)
+      : [...checklistTodos, itemId];
+
+    setTodos(next);
+    todoStore.update(activeChecklist, next);
+  };
 
   return [todos, updateTodos];
 };
