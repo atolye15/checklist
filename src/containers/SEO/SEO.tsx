@@ -22,7 +22,7 @@ const SEO: FC<Props> = ({ title, description, type, image }) => {
     title: title || defaultTitle,
     description: description || defaultDescription,
     type: type || defaultType,
-    image: `${siteUrl}/${image || defaultImage}`,
+    image: `${siteUrl}${image || defaultImage}`,
   };
 
   return (
