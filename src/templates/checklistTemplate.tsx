@@ -14,6 +14,7 @@ import LinkCategory from '../components/links/LinkCategory';
 import ButtonAsAnchor from '../components/Button/ButtonAsAnchor';
 import Checklists from '../components/Checklists';
 import activeChecklistContext from '../context/activeChecklist';
+import SEO from '../containers/SEO';
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -53,6 +54,7 @@ const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <SEO title={frontmatter?.title} description={frontmatter?.description} />
       <div className="row u-justify-content-center u-padding-top-xlarge u-padding-bottom-2xlarge">
         <div className="col col--lg-8">
           <LinkCategory category={fields.categorySlug} size="medium">

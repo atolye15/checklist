@@ -14,6 +14,7 @@ import LinkLightAsAnchor from '../components/links/LinkLight/LinkLightAsAnchor';
 import './o-checklists-heading.scss';
 import './o-suggest-a-checklist.scss';
 import Categories from '../components/Categories/Categories';
+import SEO from '../containers/SEO';
 
 interface CategoryTemplateContext {
   category: string;
@@ -28,12 +29,14 @@ const CategoryTemplate: FC<Props> = ({ data, pageContext }) => {
   const { checklists, categories } = data;
 
   const title = pageContext.category;
+  const description = getDescription(title);
   const checklistCount = checklists.totalCount;
 
   const sortedTags = checklists.tags.sort((t1, t2) => t2.totalCount - t1.totalCount);
 
   return (
     <Layout>
+      <SEO title={title} description={description} />
       <div className="u-padding-ends-xlarge">
         <div className="o-checklists-heading">
           <h2 className="u-margin-bottom-0">
@@ -50,7 +53,7 @@ const CategoryTemplate: FC<Props> = ({ data, pageContext }) => {
           </LinkLightAsAnchor>
         </div>
         <div className="row">
-          <div className="col col--lg-6 u-text-style-large-body">{getDescription(title)}</div>
+          <div className="col col--lg-6 u-text-style-large-body">{description}</div>
         </div>
         <TagList className="u-margin-ends" tags={sortedTags.map(t => t.tag || '')} />
         <Checklists items={checklists.nodes} />

@@ -7,6 +7,7 @@ import Layout from '../components/Layout';
 import Categories from '../components/Categories/Categories';
 import Blockquote from '../components/Blockquote';
 import Checklists from '../components/Checklists';
+import SEO from '../containers/SEO/SEO';
 
 interface Props {
   data: CategoriesQuery;
@@ -14,6 +15,10 @@ interface Props {
 
 const CategoriesPage: FC<Props> = ({ data }) => (
   <Layout>
+    <SEO
+      title="Categories"
+      description="The list of categories that main focus areas of Atolye15 are included."
+    />
     <section className="u-padding-top-xlarge u-padding-bottom-2xlarge">
       <h2>Checklist Categories</h2>
       <Categories categories={data.categories} />

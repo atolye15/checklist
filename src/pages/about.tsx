@@ -9,6 +9,7 @@ import ButtonAsAnchor from '../components/Button/ButtonAsAnchor';
 
 import { AboutQuery } from '../../graphql-types';
 import Checklists from '../components/Checklists';
+import SEO from '../containers/SEO/SEO';
 
 interface Props {
   data: AboutQuery;
@@ -16,6 +17,8 @@ interface Props {
 
 const About: FC<Props> = ({ data }) => (
   <Layout>
+    <SEO title="About" />
+
     <div className="row u-justify-content-center u-padding-top-xlarge u-padding-bottom-2xlarge">
       <div className="col col--lg-8">
         <div className="u-text-align-center u-padding-bottom-medium">

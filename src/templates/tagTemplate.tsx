@@ -10,6 +10,7 @@ import LinkLightAsAnchor from '../components/links/LinkLight/LinkLightAsAnchor';
 
 import './o-checklists-heading.scss';
 import './o-suggest-a-checklist.scss';
+import SEO from '../containers/SEO';
 
 interface TagTemplateContext {
   tag: string;
@@ -26,6 +27,7 @@ const TagTemplate: FC<Props> = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <SEO title={`#${tag}`} description={`The checklists that have been tagged under #${tag}`} />
       <div className="u-padding-ends-xlarge">
         <div className="o-checklists-heading">
           <h2 className="u-margin-bottom-0">#{tag}</h2>
