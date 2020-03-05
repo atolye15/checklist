@@ -3,6 +3,10 @@ const STORAGE_KEY = 'todos';
 type State = Record<string, string[]>;
 
 function getGlobalState(): State {
+  if (typeof window === 'undefined') {
+    return {};
+  }
+
   const storage = localStorage.getItem(STORAGE_KEY);
 
   if (storage) {
