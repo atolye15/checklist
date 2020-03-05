@@ -10,6 +10,7 @@ interface Props {
   image?: string;
 }
 
+const defaultTitle = 'Checklist';
 const defaultDescription =
   'Checklist contains the protocols followed by Atolye15 for software development, design, project management and administrative affairs.';
 const defaultImage = ogImage;
@@ -17,7 +18,7 @@ const defaultType = 'website';
 
 const SEO: FC<Props> = ({ title, description, type, image }) => {
   const seo = {
-    title,
+    title: title || defaultTitle,
     description: description || defaultDescription,
     type: type || defaultType,
     image: image || defaultImage,
@@ -26,7 +27,7 @@ const SEO: FC<Props> = ({ title, description, type, image }) => {
   return (
     <>
       <Helmet>
-        {seo.title && <title>{seo.title}</title>}
+        {title && <title>{title}</title>}
         <meta name="description" content={seo.description} />
 
         <meta name="og:image" content={seo.image} />
