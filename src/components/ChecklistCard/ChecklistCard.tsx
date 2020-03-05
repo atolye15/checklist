@@ -41,7 +41,7 @@ const ChecklistCard: FC<Props> = ({
 
         {todoCount && (
           <span className="c-checklist-card__todo-count">
-            {todoCount} To-Do{`${todoCount > 0 ? "'s" : ''}`}
+            {todoCount} To-Do{`${todoCount > 1 ? "'s" : ''}`}
           </span>
         )}
       </div>

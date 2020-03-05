@@ -7,6 +7,7 @@ import Layout from '../components/Layout';
 import Blockquote from '../components/Blockquote';
 import { NotFoundQuery } from '../../graphql-types';
 import Checklists from '../components/Checklists';
+import SEO from '../containers/SEO';
 
 interface Props {
   data: NotFoundQuery;
@@ -14,6 +15,7 @@ interface Props {
 
 const NotFoundPage: FC<Props> = ({ data }) => (
   <Layout>
+    <SEO title="Ooops..." />
     <div className="row u-justify-content-center u-padding-top-xlarge u-padding-bottom-2xlarge">
       <div className="col col--lg-8 u-text-align-center">
         <div className="u-padding-bottom-medium">
