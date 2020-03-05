@@ -30,8 +30,12 @@ export const checklistDetailFragment = graphql`
 const Checklists: FC<Props> = ({ className, items }) => (
   <div className={cx('row', className)}>
     {items.map(checklist => (
-      <div className="col col--lg-6 u-margin-top-small" key={checklist.fields?.slug || ''}>
+      <div
+        className="col col--lg-6 u-margin-top-small u-display-flex"
+        key={checklist.fields?.slug || ''}
+      >
         <ChecklistCard
+          className="u-flex-basis-100%"
           category={checklist.frontmatter?.category || ''}
           description={checklist.frontmatter?.description || ''}
           slug={checklist.fields?.slug || ''}

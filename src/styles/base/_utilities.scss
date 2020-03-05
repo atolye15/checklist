@@ -130,6 +130,12 @@ $g-utilities: (
     property: flex-shrink,
     values: 0,
   ),
+  'flex-basis': (
+    property: flex-basis,
+    values: (
+      '100' + quote(\%): 100%,
+    ),
+  ),
   'flex-direction': (
     property: flex-direction,
     values: row row-reverse column column-reverse,
