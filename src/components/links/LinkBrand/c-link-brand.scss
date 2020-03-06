@@ -5,7 +5,7 @@
 //
 
 .c-link-brand {
-  color: color-palette('primary', 50);
+  color: $g-text-color;
 
   &:hover,
   &.is-active {
