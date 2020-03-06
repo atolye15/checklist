@@ -1,10 +1,15 @@
 import React, { FC } from 'react';
+import cx from 'classnames';
 import HeaderNavbar from './HeaderNavbar';
 
 import './c-header.scss';
 
-const Header: FC = () => (
-  <header className="c-header">
+interface Props {
+  className?: string;
+}
+
+const Header: FC<Props> = ({ className }) => (
+  <header className={cx('c-header', className)}>
     <div className="container">
       <HeaderNavbar />
     </div>

@@ -5,8 +5,12 @@ import Helmet from 'react-helmet';
 import Header from '../Header';
 import Footer from '../Footer';
 
-import '../../styles/main.scss';
 import SEO from '../../containers/SEO/SEO';
+
+import '../../styles/main.scss';
+import './o-main.scss';
+import './o-header.scss';
+import './o-footer.scss';
 
 interface Props {
   children: ReactNode;
@@ -21,9 +25,9 @@ const Layout: FC<Props> = ({ children, mainClassName }) => (
       bodyAttributes={{ class: 'o-root' }}
     />
     <SEO />
-    <Header />
-    <main className={cx('container', mainClassName)}>{children}</main>
-    <Footer />
+    <Header className="o-header" />
+    <main className={cx('o-main', mainClassName)}>{children}</main>
+    <Footer className="o-footer" />
   </>
 );
 
