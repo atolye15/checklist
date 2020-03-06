@@ -29,29 +29,27 @@ const Home: FC<Props> = ({ data, pageContext }) => {
   const { checklists } = data;
 
   return (
-    <Layout>
-      <div className="o-page-container">
-        <TagListContainer limit={36} />
+    <Layout mainClassName="o-page-container">
+      <TagListContainer limit={36} />
 
-        <div className="o-checklists-heading">
-          <h2 className="u-margin-bottom-0">Checklists</h2>
+      <div className="o-checklists-heading">
+        <h2 className="u-margin-bottom-0">Checklists</h2>
 
-          <LinkLightAsAnchor
-            className="o-suggest-a-checklist"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
-          >
-            Suggest a Checklist{' '}
-            <Icon className="o-suggest-a-checklist__icon" name="external-link" ariaHidden />
-          </LinkLightAsAnchor>
-        </div>
-        <div className="u-text-style-large-body">
-          There are {checklists.totalCount} of them and counting!
-        </div>
-        <Checklists className="u-margin-top-small" items={checklists.nodes} />
-        <Pagination totalPages={pageContext.totalPages} currentPage={pageContext.currentPage} />
+        <LinkLightAsAnchor
+          className="o-suggest-a-checklist"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
+        >
+          Suggest a Checklist{' '}
+          <Icon className="o-suggest-a-checklist__icon" name="external-link" ariaHidden />
+        </LinkLightAsAnchor>
       </div>
+      <div className="u-text-style-large-body">
+        There are {checklists.totalCount} of them and counting!
+      </div>
+      <Checklists className="u-margin-top-small" items={checklists.nodes} />
+      <Pagination totalPages={pageContext.totalPages} currentPage={pageContext.currentPage} />
     </Layout>
   );
 };
