@@ -5,7 +5,7 @@
 //
 
 .c-unstyled-button {
-  padding: var(--c-unstyled-button-padding-ends, 0) var(--c-unstyled-button-padding-ends, 0);
+  padding: var(--c-unstyled-button-padding-ends, 0) var(--c-unstyled-button-padding-sides, 0);
   border: 0;
   background-color: transparent;
   cursor: pointer;
