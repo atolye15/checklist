@@ -1,0 +1,43 @@
+@import '../../styles/abstracts/index';
+
+//
+// Category Tag Link
+//
+
+.c-tag {
+  display: inline-flex;
+  background-color: var(--c-tag-background-color);
+  border-radius: px-to-rem(2px);
+  color: color-palette('primary', 50);
+  font-weight: 600;
+  transition: background-color $g-transition-duration;
+
+  &:hover,
+  &.is-active {
+    background-color: var(--c-tag-background-color-hover);
+    color: color-palette('primary', 50);
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: px-to-rem(2px) dotted color-palette('primary', 50);
+    outline-offset: px-to-rem(2px);
+  }
+
+  &--size-small {
+    @include text-style('tiny');
+    padding: px-to-rem(4px) pad(2xsmall);
+  }
+
+  &--size-normal {
+    @include text-style('small');
+    padding: pad(2xsmall);
+  }
+
+  @each $name, $colors in $g-theme-colors {
+    &--theme-#{$name} {
+      --c-tag-background-color: #{theme-color($name)};
+      --c-tag-background-color-hover: #{theme-color($name, 'hover')};
+    }
+  }
+}

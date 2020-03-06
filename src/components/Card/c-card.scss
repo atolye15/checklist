@@ -1,0 +1,45 @@
+@import '../../styles/abstracts/index';
+
+//
+// Card
+//
+
+.c-card {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  padding: var(--c-card-padding-ends, #{pad(small)}) var(--c-card-padding-sides, #{pad()});
+  border-top: px-to-rem(6px) solid;
+  background-color: color-palette('primary', 700);
+  border-radius: px-to-rem(4px);
+  transition: background-color $g-transition-duration;
+
+  &:hover {
+    background-color: color-palette('primary', 600);
+  }
+
+  &__title-link {
+    &::before {
+      position: absolute;
+      z-index: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      content: '';
+    }
+  }
+
+  &__footer {
+    padding-top: pad(2xsmall);
+    margin-top: auto;
+  }
+
+  @each $name, $colors in $g-theme-colors {
+    &--theme-#{$name} {
+      border-top-color: theme-color($name);
+    }
+  }
+}

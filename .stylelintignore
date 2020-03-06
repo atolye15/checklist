@@ -1,0 +1,4 @@
+src/scss/libs/
+src/**/*.stories.tsx
+src/**/*.test.tsx
+

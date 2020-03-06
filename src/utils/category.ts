@@ -1,27 +1,54 @@
 import { MarkdownRemarkFrontmatter, Maybe } from '../../graphql-types';
+import { Theme } from './theme';
+
+export type Category =
+  | 'front-end'
+  | 'back-end'
+  | 'devops'
+  | 'design'
+  | 'project-management'
+  | 'human-resources'
+  | 'marketing'
+  | 'general'
+  | 'default';
+
+export const categoryTheme: { [key in Category]: Theme } = {
+  default: 'default',
+  'front-end': 'dodger-blue',
+  'back-end': 'electric-violet',
+  devops: 'fuzzy-wuzzy-brown',
+  design: 'rose',
+  'project-management': 'clementine',
+  'human-resources': 'purple-heart',
+  marketing: 'gossamer',
+  general: 'blue',
+};
 
 export const getDescription = (title: string): string => {
   switch (title) {
     case 'Design':
-      return 'These checklists ensure that we have standardized both visual design and User Experience design principals.';
+      return 'These checklists ensure that we have standardized both visual design and user experience design principles.';
 
     case 'Front-End':
-      return 'Checklists that are mainly used by our Front-End developers.';
+      return 'We keep it simple and smart, and these are our checklists mainly used by our front-end developers.';
 
     case 'Back-End':
-      return 'They do the hard work so our products stay steady. Server related, data driven, API based checklists.';
+      return 'Server related, data-driven and API based checklists that help making our products of hard work stay steady.';
+
+    case 'DevOps':
+      return 'We love to automate things and have also checklists for that.';
 
     case 'Project Management':
-      return 'They manage the product team, they play a role as bridge between the designers and developers to well, everyone!';
+      return 'They manage the team and act as a bridge between designers, developers and frankly, everyone, with the additional help of these checklists.';
 
     case 'Human Resources':
-      return 'Ut placet, inquam tum dicere exorsus est et fortibus viris.';
+      return 'Cabin crew, slides armed and cross check! Here are the checklists to make sure everyone in the crew is happy.';
 
     case 'Marketing':
-      return 'Marketing checklists that we follow!';
+      return 'Our marketing checklist is to help supporting our good work by its communication, and has everything marketing team uses for our marketing efforts.';
 
     case 'General':
-      return 'General checklists that we follow within the Atölye15. Could be anything!';
+      return 'For all else, we have our general checklists that involves everything we follow up with here at Atölye15.';
 
     default:
       return 'A checklist category!';

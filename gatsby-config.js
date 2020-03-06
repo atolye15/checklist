@@ -7,12 +7,25 @@ const queries = require('./src/utils/algolia');
 
 module.exports = {
   siteMetadata: {
-    title: 'Atölye15 Checklist',
-    description: 'The protocols that have been used by Atölye15 for years.',
+    title: 'Checklist',
+    description: "The protocols we follow for the things we can't automate yet.",
     author: '@atolye15',
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-39803605-26',
+      },
+    },
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://checklist.atolye15.com`,
+        stripQueryString: true,
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -25,13 +38,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Atölye15 Checklist',
+        name: 'Checklist',
         short_name: 'Checklist',
         start_url: '/',
-        background_color: '#181C27',
-        theme_color: '#181C27',
+        background_color: '#101013',
+        theme_color: '#ff0c6f',
         display: 'minimal-ui',
-        icon: 'src/images/icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/icon.png',
       },
     },
 
@@ -41,7 +54,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'checklists',
-        path: `${__dirname}/src/checklists`,
+        path: `${__dirname}/checklists`,
       },
     },
 

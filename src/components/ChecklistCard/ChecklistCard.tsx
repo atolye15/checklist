@@ -1,37 +1,67 @@
 import React, { FC } from 'react';
-import { Link } from 'gatsby';
+import cx from 'classnames';
 
+import { Category, categoryTheme } from '../../utils/category';
 import TagList from '../TagList';
+import LinkCategory from '../links/LinkCategory';
+import Card, { CardHeader, CardTitle, CardFooter } from '../Card';
 
-interface Props {
+import './c-checklist-card.scss';
+
+type Props = {
+  className?: string;
   category: string;
+  categorySlug?: Category;
   todoCount: number;
   title: string;
   slug: string;
   description: string;
   tags: string[];
-  categorySlug: string;
-}
+};
 
 const ChecklistCard: FC<Props> = ({
+  className,
   category,
+  categorySlug = 'default',
   todoCount,
   title,
-  slug,
   description,
+  slug,
   tags,
-  categorySlug,
 }) => (
-  <div>
-    <Link to={`/category/${categorySlug}`}>{category}</Link>
-    <br />
-    {todoCount} {todoCount === 1 ? <span>To-do</span> : <span>To-do&apos;s</span>}
-    <br />
-    <Link to={`/checklist/${slug}`}>{title}</Link>
-    <br />
-    {description}
-    <TagList tags={tags} />
-  </div>
+  <Card
+    className={cx('c-checklist-card', className)}
+    theme={categoryTheme[categorySlug] || 'default'}
+  >
+    <CardHeader>
+      <div className="c-checklist-card__details">
+        <LinkCategory className="c-checklist-card__category" category={categorySlug}>
+          {category}
+        </LinkCategory>
+
+        {todoCount && (
+          <span className="c-checklist-card__todo-count">
+            {todoCount} To-Do{`${todoCount > 1 ? "'s" : ''}`}
+          </span>
+        )}
+      </div>
+
+      <CardTitle className="c-checklist-card__title" to={`/checklist/${slug}`}>
+        {title}
+      </CardTitle>
+    </CardHeader>
+
+    <p className="c-checklist-card__description">{description}</p>
+
+    <CardFooter>
+      <TagList
+        tags={tags}
+        theme={categoryTheme[categorySlug]}
+        size="small"
+        itemClassName="c-checklist-card__tag"
+      />
+    </CardFooter>
+  </Card>
 );
 
 export default ChecklistCard;

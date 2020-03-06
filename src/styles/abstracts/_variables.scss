@@ -6,13 +6,13 @@
 // Transition
 // -------------------------
 
-$g-transition-duration: 0.4s !default;
+$g-transition-duration: 0.25s !default;
 
 //
 // Links
 // -------------------------
 
-$g-link-transition: null !default;
+$g-link-transition: color 0.25s !default;
 $g-link-hover-decoration: underline !default;
 
 //
@@ -32,27 +32,22 @@ $g-line-height-base: 1.5 !default;
 $g-text-styles: (
   'hero': (
     font-size: px-to-rem(64px),
-    font-weight: 700,
     line-height: 72/64,
   ),
   'large-title': (
     font-size: px-to-rem(48px),
-    font-weight: 700,
     line-height: 64/48,
   ),
   'title': (
     font-size: px-to-rem(32px),
-    font-weight: 700,
     line-height: 48/32,
   ),
   'small-title': (
     font-size: px-to-rem(24px),
-    font-weight: 700,
     line-height: 32/24,
   ),
   'subtitle': (
     font-size: px-to-rem(20px),
-    font-weight: 700,
     line-height: 28/20,
   ),
   'large-body': (
@@ -73,9 +68,9 @@ $g-text-styles: (
   ),
 );
 
-$g-headings-font-family: inherit !default;
+$g-headings-font-family: null !default;
 $g-headings-margin-bottom: 1rem !default;
-$g-headings-font-weight: null !default;
+$g-headings-font-weight: 700 !default;
 $g-headings-line-height: null !default;
 
 $g-text-style-h1: 'large-title' !default;

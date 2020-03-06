@@ -1,5 +1,7 @@
-import React, { FC, ReactNode, useState } from 'react';
-import cx from 'classnames';
+import React, { FC, ReactNode } from 'react';
+
+import CheckListItem from '../Checklist/ChecklistItem/ChecklistItem';
+import useTodoState from '../../hooks/useTodoState';
 
 interface Props {
   className: string;
@@ -7,33 +9,27 @@ interface Props {
 }
 
 /* eslint-disable react/jsx-props-no-spreading */
-const ListItem: FC<Props> = ({ className, children, ...rest }) => {
-  const [isChecked, updateIsChecked] = useState(false);
-
-  const updateCheckStatus = () => {
-    updateIsChecked(!isChecked);
-  };
+const ListItem: FC<Props> = ({ className, children }) => {
+  const [todos, updateTodos] = useTodoState();
 
   if (className === 'task-list-item' && Array.isArray(children)) {
-    const [, title, , description] = children;
+    const [, title, , ...description] = children;
+    const itemId = title as string;
 
     return (
-      <li className={cx(className, { 'is-checked': isChecked })} {...rest}>
-        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-        <label>
-          <input type="checkbox" checked={isChecked} onChange={updateCheckStatus} />
-          <h3>{title}</h3>
-          {description && <p>{description}</p>}
-        </label>
-      </li>
+      <CheckListItem
+        id={itemId}
+        title={title}
+        checked={todos.includes(itemId)}
+        description={description}
+        onClick={() => {
+          updateTodos(itemId);
+        }}
+      />
     );
   }
 
-  return (
-    <li className={className} {...rest}>
-      {children}
-    </li>
-  );
+  return <li className={className}>{children}</li>;
 };
 /* eslint-enable react/jsx-props-no-spreading */
 

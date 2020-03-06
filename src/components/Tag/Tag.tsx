@@ -1,14 +1,37 @@
 import React, { FC } from 'react';
-import { Link } from 'gatsby';
+import cx from 'classnames';
+import { Link, GatsbyLinkProps } from 'gatsby';
 
-interface Props {
-  tag: string;
-  selected: boolean;
-}
+import { Theme } from '../../utils/theme';
+import './c-tag.scss';
 
-const Tag: FC<Props> = ({ tag, selected }) => (
-  <Link to={`/tag/${tag}`}>
-    {tag} {selected && <span>[x]</span>}
+export type TagSize = 'normal' | 'small';
+
+type Props = Omit<GatsbyLinkProps<{}>, 'ref'> & {
+  theme?: Theme;
+  size?: TagSize;
+  active?: boolean;
+};
+
+const Tag: FC<Props> = ({
+  className,
+  children,
+  theme = 'default',
+  size = 'normal',
+  active,
+  ...rest
+}) => (
+  <Link
+    className={cx(
+      'c-tag',
+      `c-tag--theme-${theme}`,
+      `c-tag--size-${size}`,
+      { 'is-active': active },
+      className,
+    )}
+    {...rest}
+  >
+    {children}
   </Link>
 );
 

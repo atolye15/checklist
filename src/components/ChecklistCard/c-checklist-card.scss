@@ -1,0 +1,44 @@
+@import '../../styles/abstracts/index';
+
+//
+// Checklist Card
+//
+
+.c-checklist-card {
+  $z-index-level-1: 1;
+  min-height: px-to-rem(270px);
+
+  //
+  // Elements
+  // -------------------------
+
+  &__details {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: gap();
+    color: $g-text-muted-color;
+  }
+
+  &__category {
+    position: relative;
+    z-index: $z-index-level-1;
+  }
+
+  &__todo-count {
+    @include text-style('small');
+  }
+
+  &__title {
+    margin-bottom: gap(xsmall);
+  }
+
+  &__description {
+    margin-top: 0;
+  }
+
+  &__tag {
+    position: relative;
+    z-index: $z-index-level-1;
+  }
+}

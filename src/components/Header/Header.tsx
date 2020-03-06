@@ -1,5 +1,18 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
+import HeaderNavbar from './HeaderNavbar';
 
-const Header: FC = () => <h1>Header</h1>;
+import './c-header.scss';
+
+interface Props {
+  search: ReactNode;
+}
+
+const Header: FC<Props> = ({ search }) => (
+  <header className="c-header">
+    <div className="container">
+      <HeaderNavbar search={search} />
+    </div>
+  </header>
+);
 
 export default Header;

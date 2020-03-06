@@ -22,6 +22,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             fields {
               slug
+              categorySlug
             }
 
             frontmatter {
@@ -76,6 +77,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: checklistTemplate,
       context: {
         slug: node.fields.slug,
+        categorySlug: node.fields.categorySlug,
       },
     });
   });
@@ -113,7 +115,9 @@ exports.onCreateNode = ({ actions, getNodes }) => {
     .filter(n => n.internal.type === 'MarkdownRemark')
     .forEach(node => {
       const { title, category } = node.frontmatter;
-      const todoCount = (node.rawMarkdownBody || '').match(/- \[ ] (.*)/g).length;
+
+      const check = (node.rawMarkdownBody || '').match(/- \[ ] (.*)/g);
+      const todoCount = Array.isArray(check) ? check.length : 0;
 
       createNodeField({
         node,

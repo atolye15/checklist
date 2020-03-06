@@ -1,0 +1,29 @@
+@import '../../../styles/abstracts/index';
+
+//
+// Header Navbar
+//
+
+.c-header-navbar {
+  display: grid;
+  height: px-to-rem(128px);
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  column-gap: $grid-gutter-width;
+
+  &__logo-area {
+    display: flex;
+    grid-column: 1/3;
+  }
+
+  &__search {
+    grid-column: 4/9;
+  }
+
+  &__menu {
+    @include list-unstyled($margin-bottom: 0, $margin-top: 0);
+    display: flex;
+    grid-column: 9/-1;
+    margin-left: auto;
+  }
+}

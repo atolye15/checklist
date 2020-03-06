@@ -12,6 +12,8 @@ query {
 
         fields {
           slug
+          categorySlug
+          todoCount
         }
 
         excerpt(pruneLength: 5000)
@@ -33,7 +35,7 @@ const queries = [
   {
     query,
     transformer: ({ data }) => flatten(data.allMarkdownRemark.edges),
-    indexName: `checklists`,
+    indexName: process.env.GATSBY_ALGOLIA_INDEX,
     settings,
   },
 ];

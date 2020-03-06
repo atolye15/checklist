@@ -1,0 +1,35 @@
+@import '../../styles/abstracts/index';
+
+//
+// Pagination
+//
+
+.c-pagination {
+  $translate-value: px-to-rem(8px);
+  display: flex;
+  justify-content: space-between;
+  padding-top: pad();
+  padding-bottom: pad();
+
+  //
+  // Elements
+  // -------------------------
+
+  &__next {
+    margin-left: auto;
+
+    &:hover {
+      --c-icon-button-icon-transform: translate3d(#{$translate-value}, 0, 0);
+    }
+  }
+
+  &__previous {
+    &:hover {
+      --c-icon-button-icon-transform: translate3d(#{-$translate-value}, 0, 0);
+    }
+  }
+
+  //
+  // Modifiers
+  // -------------------------
+}

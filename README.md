@@ -1,92 +1,58 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<h1>
-  Atölye15 Checklist
-</h1>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/1801024/75039893-a9f8c000-54ca-11ea-9544-7f566efac108.png">
+</p>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+# Checklist
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+![License](https://img.shields.io/github/license/atolye15/checklist) ![Build status](https://img.shields.io/circleci/build/github/atolye15/checklist?token=f24c01bd62842ac4e36b333b195fbe18f98459cd) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md)
 
-## 🚀 Quick start
+We love to automate anything if it can be automated. For the things we can’t automate (yet) we have a protocol. These protocols standardise our workflow so that everyone in Atolye15 can work on a standard. Checklist is a project that helps us follow these protocols online.
 
-1.  **Create a Gatsby site.**
+## Motivation
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+We have been designing, developing & managing projects that vary in size for over 10 years now. Working on a different scale projects brought us some priceless experiences that led us to a greater success on the following projects. We updated our workflow, the way we work, even the hours we work. We try to adapt to the ongoing growth on technology and we are always on track with keeping our protocols updated.
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+This was an internal tool that we still use on every department but we’ve decided to share this with the community so that we can help each other out, please feel free to suggest a checklist or an improvement on a checklist. We will consider every suggestion and implement the ones that we think fits our needs and the way we work.
 
-1.  **Start developing.**
+## Contributing
 
-    Navigate into your new site’s directory and start it up.
+If you would like to contribute to this project, please refer to [CONTRIBUTING.md](https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md) guide.
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+## Development
 
-1.  **Open the source code and start editing!**
+You need to run the command below for the development server.
 
-    Your site is now running at `http://localhost:8000`!
+```bash
+cd checklist
+gatsby develop
+```
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+Now the project is running on https://localhost:8000 with live-reload server.
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.tsx`. Save your changes and the browser will update in real time!
+Here is the some useful commands;
 
-## 🧐 What's inside?
+#### `yarn lint` 
+It lints TypeScript, runs ESLint and Stylelint.
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+#### `yarn format`  
+It runs Prettier.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
+#### `yarn test`
+It runs tests.
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
+#### `yarn storybook`
+It runs [Storybook](https://storybook.js.org/)
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
+You need to follow these steps to open a new pull request;
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
+- [ ] Make your changes
+- [ ] Run `yarn lint`
+- [ ] Run `yarn format`
+- [ ] Run `yarn test`
+- [ ] Commit your changes
+- [ ] Publish your branch
+- [ ] Open a PR 🎉
 
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
+## License
 
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+This project has [MIT License](https://github.com/atolye15/checklist/blob/master/LICENSE).
