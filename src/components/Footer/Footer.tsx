@@ -112,12 +112,12 @@ const Footer: FC<Props> = ({ className }) => (
                 </LinkSecondaryAsAnchor>
               </li>
               <li className="u-margin-top-2xsmall">
-                <LinkSecondary to="/checklist/suggesting-a-checklist">
+                <LinkSecondary to="/checklist/checklist-checklist">
                   Checklist Checklist
                 </LinkSecondary>
               </li>
               <li className="u-margin-top-2xsmall">
-                <LinkSecondary to="/checklist/suggesting-an-improvement-on-a-checklist">
+                <LinkSecondary to="/checklist/improvement-checklist">
                   Improvement Checklist
                 </LinkSecondary>
               </li>
