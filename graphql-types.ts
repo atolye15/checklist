@@ -1840,8 +1840,6 @@ export type QueryAllSitePageArgs = {
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>,
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
-  port?: Maybe<IntQueryOperatorInput>,
-  host?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
   pathPrefix?: Maybe<StringQueryOperatorInput>,
   id?: Maybe<StringQueryOperatorInput>,
@@ -1953,8 +1951,6 @@ export type QueryAllSitePluginArgs = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars['Date']>,
   siteMetadata?: Maybe<SiteSiteMetadata>,
-  port?: Maybe<Scalars['Int']>,
-  host?: Maybe<Scalars['String']>,
   polyfill?: Maybe<Scalars['Boolean']>,
   pathPrefix?: Maybe<Scalars['String']>,
   id: Scalars['ID'],
@@ -2157,8 +2153,6 @@ export type SiteFieldsEnum =
   'siteMetadata___title' |
   'siteMetadata___description' |
   'siteMetadata___author' |
-  'port' |
-  'host' |
   'polyfill' |
   'pathPrefix' |
   'id' |
@@ -2251,8 +2245,6 @@ export type SiteFieldsEnum =
 export type SiteFilterInput = {
   buildTime?: Maybe<DateQueryOperatorInput>,
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>,
-  port?: Maybe<IntQueryOperatorInput>,
-  host?: Maybe<StringQueryOperatorInput>,
   polyfill?: Maybe<BooleanQueryOperatorInput>,
   pathPrefix?: Maybe<StringQueryOperatorInput>,
   id?: Maybe<StringQueryOperatorInput>,
@@ -2495,13 +2487,13 @@ export type SitePageFieldsEnum =
   'pluginCreator___pluginOptions___theme_color' |
   'pluginCreator___pluginOptions___display' |
   'pluginCreator___pluginOptions___icon' |
-  'pluginCreator___pluginOptions___pathCheck' |
   'pluginCreator___pluginOptions___appId' |
   'pluginCreator___pluginOptions___apiKey' |
   'pluginCreator___pluginOptions___queries' |
   'pluginCreator___pluginOptions___queries___query' |
   'pluginCreator___pluginOptions___queries___indexName' |
   'pluginCreator___pluginOptions___chunkSize' |
+  'pluginCreator___pluginOptions___pathCheck' |
   'pluginCreator___nodeAPIs' |
   'pluginCreator___browserAPIs' |
   'pluginCreator___ssrAPIs' |
@@ -2706,7 +2698,6 @@ export type SitePluginFieldsEnum =
   'pluginOptions___theme_color' |
   'pluginOptions___display' |
   'pluginOptions___icon' |
-  'pluginOptions___pathCheck' |
   'pluginOptions___appId' |
   'pluginOptions___apiKey' |
   'pluginOptions___queries' |
@@ -2714,6 +2705,7 @@ export type SitePluginFieldsEnum =
   'pluginOptions___queries___indexName' |
   'pluginOptions___queries___settings___attributesToSnippet' |
   'pluginOptions___chunkSize' |
+  'pluginOptions___pathCheck' |
   'nodeAPIs' |
   'browserAPIs' |
   'ssrAPIs' |
@@ -2841,11 +2833,11 @@ export type SitePluginPluginOptions = {
   theme_color?: Maybe<Scalars['String']>,
   display?: Maybe<Scalars['String']>,
   icon?: Maybe<Scalars['String']>,
-  pathCheck?: Maybe<Scalars['Boolean']>,
   appId?: Maybe<Scalars['String']>,
   apiKey?: Maybe<Scalars['String']>,
   queries?: Maybe<Array<Maybe<SitePluginPluginOptionsQueries>>>,
   chunkSize?: Maybe<Scalars['Int']>,
+  pathCheck?: Maybe<Scalars['Boolean']>,
 };
 
 export type SitePluginPluginOptionsFilterInput = {
@@ -2861,11 +2853,11 @@ export type SitePluginPluginOptionsFilterInput = {
   theme_color?: Maybe<StringQueryOperatorInput>,
   display?: Maybe<StringQueryOperatorInput>,
   icon?: Maybe<StringQueryOperatorInput>,
-  pathCheck?: Maybe<BooleanQueryOperatorInput>,
   appId?: Maybe<StringQueryOperatorInput>,
   apiKey?: Maybe<StringQueryOperatorInput>,
   queries?: Maybe<SitePluginPluginOptionsQueriesFilterListInput>,
   chunkSize?: Maybe<IntQueryOperatorInput>,
+  pathCheck?: Maybe<BooleanQueryOperatorInput>,
 };
 
 export type SitePluginPluginOptionsPlugins = {

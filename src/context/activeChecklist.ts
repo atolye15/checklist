@@ -1,13 +1,13 @@
 import { createContext } from 'react';
 
 export interface ActiveChecklistContext {
-  getActiveChecklist: () => string | undefined;
+  activeChecklist: string;
   setActiveChecklist: (active: string) => void;
 }
 
 /* eslint-disable @typescript-eslint/no-empty-function */
 export const activeChecklistDefault = {
-  getActiveChecklist: () => undefined,
+  activeChecklist: '',
   setActiveChecklist: () => {},
 };
 /* eslint-enable @typescript-eslint/no-empty-function */

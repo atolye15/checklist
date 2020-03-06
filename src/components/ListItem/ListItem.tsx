@@ -1,7 +1,7 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC, ReactNode, useContext } from 'react';
 
 import CheckListItem from '../Checklist/ChecklistItem/ChecklistItem';
-import useTodoState from '../../hooks/useTodoState';
+import todosContext from '../../context/todos';
 
 interface Props {
   className: string;
@@ -10,7 +10,12 @@ interface Props {
 
 /* eslint-disable react/jsx-props-no-spreading */
 const ListItem: FC<Props> = ({ className, children }) => {
-  const [todos, updateTodos] = useTodoState();
+  const { todos, setTodos } = useContext(todosContext);
+
+  const handleTodosUpdate = (itemId: string) => () => {
+    const next = todos.includes(itemId) ? todos.filter(t => t !== itemId) : [...todos, itemId];
+    setTodos(next);
+  };
 
   if (className === 'task-list-item' && Array.isArray(children)) {
     const [, title, , ...description] = children;
@@ -22,9 +27,7 @@ const ListItem: FC<Props> = ({ className, children }) => {
         title={title}
         checked={todos.includes(itemId)}
         description={description}
-        onClick={() => {
-          updateTodos(itemId);
-        }}
+        onClick={handleTodosUpdate(itemId)}
       />
     );
   }
