@@ -73,7 +73,7 @@ module.exports = {
       options: {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        queries,
+        queries: process.env.ALGOLIA_SKIP_INDEX === 'false' ? queries : [],
         chunkSize: 10000,
       },
     },
