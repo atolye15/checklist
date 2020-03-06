@@ -5,8 +5,10 @@ import Helmet from 'react-helmet';
 import Header from '../Header';
 import Footer from '../Footer';
 
-import '../../styles/main.scss';
 import SEO from '../../containers/SEO/SEO';
+
+import '../../styles/main.scss';
+import './o-root.scss';
 
 interface Props {
   children: ReactNode;
