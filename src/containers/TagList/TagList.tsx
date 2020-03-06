@@ -1,9 +1,12 @@
 import React, { FC } from 'react';
+import cx from 'classnames';
 import { graphql, useStaticQuery } from 'gatsby';
 
 import { TagsQueryQuery } from '../../../graphql-types';
 
 import TagList from '../../components/TagList';
+
+import './o-page-taglist.scss';
 
 interface Props {
   className?: string;
@@ -29,7 +32,7 @@ const TagListContainer: FC<Props> = ({ current, className, limit }) => {
     <TagList
       tags={sortedTags.map(t => t.tag || '').slice(0, limit)}
       current={current}
-      className={className}
+      className={cx('o-page-taglist', className)}
     />
   );
 };

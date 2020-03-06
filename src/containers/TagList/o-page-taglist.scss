@@ -1,0 +1,22 @@
+@import '../../styles/abstracts/index';
+
+//
+// Page Taglist
+//
+
+.o-page-taglist {
+  @include media-breakpoint-up(lg) {
+    margin-bottom: gap(xlarge);
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-bottom: gap();
+  }
+
+  @include media-breakpoint-down(sm) {
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+}

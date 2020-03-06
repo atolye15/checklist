@@ -31,7 +31,7 @@ const Checklists: FC<Props> = ({ className, items }) => (
   <div className={cx('row', className)}>
     {items.map(checklist => (
       <div
-        className="col col--lg-6 u-margin-top-small u-display-flex"
+        className="col col--md-6 u-margin-top-small u-display-flex"
         key={checklist.fields?.slug || ''}
       >
         <ChecklistCard

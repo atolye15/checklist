@@ -127,12 +127,24 @@ h6,
 
 h1,
 .h1 {
-  @include text-style($g-text-style-h1);
+  @include media-breakpoint-up(md) {
+    @include text-style($g-text-style-h1);
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include text-style($g-text-style-h1-sm);
+  }
 }
 
 h2,
 .h2 {
-  @include text-style($g-text-style-h2);
+  @include media-breakpoint-up(md) {
+    @include text-style($g-text-style-h2);
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include text-style($g-text-style-h2-sm);
+  }
 }
 
 h3,

@@ -13,6 +13,7 @@ import LinkLightAsAnchor from '../components/links/LinkLight/LinkLightAsAnchor';
 
 import './o-checklists-heading.scss';
 import './o-suggest-a-checklist.scss';
+import './o-page-container.scss';
 
 interface HomePageContext {
   totalPages: number;
@@ -29,8 +30,8 @@ const Home: FC<Props> = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <div className="u-padding-ends-xlarge">
-        <TagListContainer className="u-margin-bottom-xlarge" limit={36} />
+      <div className="o-page-container">
+        <TagListContainer limit={36} />
 
         <div className="o-checklists-heading">
           <h2 className="u-margin-bottom-0">Checklists</h2>
