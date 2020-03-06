@@ -1,10 +1,10 @@
 @import '../styles/abstracts/index';
 
 //
-// Related Checklists
+// Suggested Checklists
 //
 
-.o-related-checklists {
+.o-suggested-checklists {
   @include media-breakpoint-up(xl) {
     padding-top: pad(2xlarge);
     padding-bottom: pad(2xlarge);

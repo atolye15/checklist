@@ -10,7 +10,7 @@ import Checklists from '../components/Checklists';
 import SEO from '../containers/SEO';
 
 import './o-not-found-section.scss';
-import './o-related-checklists.scss';
+import './o-suggested-checklists.scss';
 
 interface Props {
   data: NotFoundQuery;
@@ -30,7 +30,7 @@ const NotFoundPage: FC<Props> = ({ data }) => (
       </div>
     </div>
     <hr className="u-margin-ends-0 u-color-primary-900" />
-    <section className="o-related-checklists">
+    <section className="o-suggested-checklists">
       <h2 className="u-margin-bottom">Have you seen these checklists?</h2>
       <div className="row">
         <div className="col col--md-9 col--lg-6">

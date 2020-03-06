@@ -12,7 +12,7 @@ import Checklists from '../components/Checklists';
 import SEO from '../containers/SEO/SEO';
 
 import './o-about-section.scss';
-import './o-related-checklists.scss';
+import './o-suggested-checklists.scss';
 
 interface Props {
   data: AboutQuery;
@@ -64,7 +64,7 @@ const About: FC<Props> = ({ data }) => (
       </section>
     </div>
     <hr className="u-margin-ends-0 u-color-primary-900" />
-    <section className="o-related-checklists">
+    <section className="o-suggested-checklists">
       <h2 className="u-margin-bottom">Check out these checklists before you go!</h2>
       <div className="row">
         <div className="col col--md-9 col--lg-6">
