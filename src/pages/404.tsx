@@ -9,6 +9,9 @@ import { NotFoundQuery } from '../../graphql-types';
 import Checklists from '../components/Checklists';
 import SEO from '../containers/SEO';
 
+import './o-not-found-section.scss';
+import './o-related-checklists.scss';
+
 interface Props {
   data: NotFoundQuery;
 }
@@ -16,10 +19,10 @@ interface Props {
 const NotFoundPage: FC<Props> = ({ data }) => (
   <Layout>
     <SEO title="Ooops..." />
-    <div className="row u-justify-content-center u-padding-top-xlarge u-padding-bottom-2xlarge">
-      <div className="col col--lg-8 u-text-align-center">
-        <div className="u-padding-bottom-medium">
-          <img src={notFoundImage} alt="Content not found" width="712" height="519" />
+    <div className="row o-not-found-section">
+      <div className="col col--md-10 col--lg-8 u-text-align-center">
+        <div className="u-padding-bottom-large">
+          <img className="u-img-fluid" src={notFoundImage} alt="Content not found" width="712" />
         </div>
 
         <h1>Ooops...</h1>
@@ -27,10 +30,10 @@ const NotFoundPage: FC<Props> = ({ data }) => (
       </div>
     </div>
     <hr className="u-margin-ends-0 u-color-primary-900" />
-    <div className="u-padding-ends-2xlarge">
-      <h2 className="u-margin-bottom-medium">Do you like what you see?</h2>
-      <div className="row u-padding-bottom-large">
-        <div className="col col--lg-6">
+    <section className="o-related-checklists">
+      <h2 className="u-margin-bottom">Have you seen these checklists?</h2>
+      <div className="row">
+        <div className="col col--md-9 col--lg-6">
           <Blockquote>
             We have a checklist for both creating an illustration and for 404 pages. You should go
             ahead and check ‘em out!{' '}
@@ -40,8 +43,8 @@ const NotFoundPage: FC<Props> = ({ data }) => (
           </Blockquote>
         </div>
       </div>
-      <Checklists items={data.suggestions.nodes} />
-    </div>
+      <Checklists items={data.suggestions.nodes} className="u-margin-top-medium" />
+    </section>
   </Layout>
 );
 
