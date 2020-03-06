@@ -1,0 +1,17 @@
+@import '../styles/abstracts/index';
+
+//
+// Related Checklists
+//
+
+.o-related-checklists {
+  @include media-breakpoint-up(xl) {
+    padding-top: pad(2xlarge);
+    padding-bottom: pad(2xlarge);
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-top: pad(xlarge);
+    padding-bottom: pad(xlarge);
+  }
+}
