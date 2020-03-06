@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useContext, useMemo } from 'react';
 import { graphql } from 'gatsby';
 import RehypeReact from 'rehype-react';
 
@@ -13,6 +13,8 @@ import Button from '../components/Button';
 import LinkCategory from '../components/links/LinkCategory';
 import ButtonAsAnchor from '../components/Button/ButtonAsAnchor';
 import Checklists from '../components/Checklists';
+import activeChecklistContext from '../context/activeChecklist';
+import SEO from '../containers/SEO';
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -24,10 +26,18 @@ const renderAst = new RehypeReact({
 
 interface Props {
   data: ChecklistDetailQuery;
+  pageContext: { slug: string };
 }
 
-const ChecklistTemplate: FC<Props> = ({ data }) => {
+const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
+  const { setActiveChecklist } = useContext(activeChecklistContext);
   const { markdownRemark, relatedChecklists } = data;
+
+  useMemo(() => {
+    if (pageContext.slug) {
+      setActiveChecklist(pageContext.slug);
+    }
+  }, [pageContext.slug, setActiveChecklist]);
 
   const frontmatter = markdownRemark?.frontmatter;
   const fields = markdownRemark?.fields;
@@ -44,6 +54,7 @@ const ChecklistTemplate: FC<Props> = ({ data }) => {
 
   return (
     <Layout>
+      <SEO title={frontmatter?.title} description={frontmatter?.description} />
       <div className="row u-justify-content-center u-padding-top-xlarge u-padding-bottom-2xlarge">
         <div className="col col--lg-8">
           <LinkCategory category={fields.categorySlug} size="medium">

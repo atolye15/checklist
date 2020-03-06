@@ -1,41 +1,35 @@
-import React, { FC, ReactNode, useState } from 'react';
+import React, { FC, ReactNode } from 'react';
+
 import CheckListItem from '../Checklist/ChecklistItem/ChecklistItem';
+import useTodoState from '../../hooks/useTodoState';
 
 interface Props {
   className: string;
-  key: string;
   children: ReactNode;
 }
 
 /* eslint-disable react/jsx-props-no-spreading */
-const ListItem: FC<Props> = ({ className, children, key }) => {
-  const [isChecked, updateIsChecked] = useState(false);
-
-  const updateCheckStatus = () => {
-    updateIsChecked(!isChecked);
-  };
+const ListItem: FC<Props> = ({ className, children }) => {
+  const [todos, updateTodos] = useTodoState();
 
   if (className === 'task-list-item' && Array.isArray(children)) {
     const [, title, , ...description] = children;
+    const itemId = title as string;
 
     return (
       <CheckListItem
-        id={`todo-${key}`}
+        id={itemId}
         title={title}
-        checked={isChecked}
+        checked={todos.includes(itemId)}
         description={description}
         onClick={() => {
-          updateCheckStatus();
+          updateTodos(itemId);
         }}
       />
     );
   }
 
-  return (
-    <li className={className} key={key}>
-      {children}
-    </li>
-  );
+  return <li className={className}>{children}</li>;
 };
 /* eslint-enable react/jsx-props-no-spreading */
 
