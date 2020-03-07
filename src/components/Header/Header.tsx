@@ -1,12 +1,16 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import HeaderNavbar from './HeaderNavbar';
 
 import './c-header.scss';
 
-const Header: FC = () => (
+interface Props {
+  search: ReactNode;
+}
+
+const Header: FC<Props> = ({ search }) => (
   <header className="c-header">
     <div className="container">
-      <HeaderNavbar />
+      <HeaderNavbar search={search} />
     </div>
   </header>
 );

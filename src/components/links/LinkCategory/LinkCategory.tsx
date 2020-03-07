@@ -7,7 +7,7 @@ import LinkSecondary from '../LinkSecondary';
 interface Props {
   className?: string;
   category: string;
-  size?: 'normal' | 'medium';
+  size?: 'normal' | 'medium' | 'small';
 }
 
 const LinkCategory: FC<Props> = ({ className, category, size = 'normal', children }) => (

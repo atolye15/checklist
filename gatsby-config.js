@@ -1,4 +1,9 @@
-/* eslint-disable @typescript-eslint/camelcase */
+/* eslint-disable @typescript-eslint/camelcase, @typescript-eslint/no-var-requires */
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+const queries = require('./src/utils/algolia');
 
 module.exports = {
   siteMetadata: {
@@ -62,7 +67,17 @@ module.exports = {
 
     'gatsby-plugin-graphql-codegen',
     'gatsby-plugin-sass',
+
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        queries: process.env.ALGOLIA_SKIP_INDEX === 'false' ? queries : [],
+        chunkSize: 10000,
+      },
+    },
   ],
 };
 
-/* eslint-enable @typescript-eslint/camelcase */
+/* eslint-enable @typescript-eslint/camelcase, @typescript-eslint/no-var-requires */

@@ -1,4 +1,4 @@
-import React, { FC, useContext, useMemo } from 'react';
+import React, { FC, useContext, useLayoutEffect } from 'react';
 import { graphql } from 'gatsby';
 import RehypeReact from 'rehype-react';
 
@@ -15,6 +15,8 @@ import ButtonAsAnchor from '../components/Button/ButtonAsAnchor';
 import Checklists from '../components/Checklists';
 import activeChecklistContext from '../context/activeChecklist';
 import SEO from '../containers/SEO';
+import todosContext from '../context/todos';
+import todoStore from '../store/todo';
 
 const renderAst = new RehypeReact({
   createElement: React.createElement,
@@ -30,14 +32,23 @@ interface Props {
 }
 
 const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
-  const { setActiveChecklist } = useContext(activeChecklistContext);
+  const { activeChecklist, setActiveChecklist } = useContext(activeChecklistContext);
+  const { setTodos } = useContext(todosContext);
   const { markdownRemark, relatedChecklists } = data;
+  const { slug } = pageContext;
 
-  useMemo(() => {
-    if (pageContext.slug) {
-      setActiveChecklist(pageContext.slug);
+  useLayoutEffect(() => {
+    if (slug) {
+      setActiveChecklist(slug);
     }
-  }, [pageContext.slug, setActiveChecklist]);
+  }, [slug]);
+
+  useLayoutEffect(() => {
+    if (activeChecklist) {
+      const todos = todoStore.get(activeChecklist);
+      setTodos(todos);
+    }
+  }, [activeChecklist]);
 
   const frontmatter = markdownRemark?.frontmatter;
   const fields = markdownRemark?.fields;
@@ -51,6 +62,11 @@ const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
   }
 
   const html = renderAst(markdownRemark?.htmlAst);
+
+  const handleReset = () => {
+    setTodos([]);
+    window.scrollTo(0, 0);
+  };
 
   return (
     <Layout>
@@ -73,7 +89,7 @@ const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
 
           <div className="u-padding-ends-xlarge">{html}</div>
           <div className="u-display-flex">
-            <Button>Reset</Button>
+            <Button onClick={handleReset}>Reset</Button>
             <ButtonAsAnchor
               theme="secondary"
               href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"

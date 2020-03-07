@@ -85,11 +85,7 @@ const About: FC<Props> = ({ data }) => (
 export const pageQuery = graphql`
   query About {
     suggestions: allMarkdownRemark(
-      filter: {
-        fields: {
-          slug: { in: ["suggesting-a-checklist", "suggesting-an-improvement-on-a-checklist"] }
-        }
-      }
+      filter: { fields: { slug: { in: ["checklist-checklist", "improvement-checklist"] } } }
     ) {
       nodes {
         ...Checklist
