@@ -41,7 +41,10 @@ const Categories: FC<Props> = ({ categories, current }) => {
   return (
     <div className="row">
       {sortedCategories.map(category => (
-        <div className="col col--lg-3 u-display-flex u-margin-top-small" key={category.slug}>
+        <div
+          className="col col--md-4 col--lg-3 u-display-flex u-margin-top-small"
+          key={category.slug}
+        >
           <CategoryCard
             title={category.title}
             slug={category.slug as Category}

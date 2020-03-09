@@ -7,14 +7,16 @@ import Layout from '../components/Layout';
 import Checklists from '../components/Checklists';
 import TagList from '../components/TagList';
 import { getDescription } from '../utils/category';
-// import Categories from '../components/Categories/Categories';
 import Icon from '../components/Icon';
 import LinkLightAsAnchor from '../components/links/LinkLight/LinkLightAsAnchor';
+import Categories from '../components/Categories/Categories';
+import SEO from '../containers/SEO';
 
 import './o-checklists-heading.scss';
 import './o-suggest-a-checklist.scss';
-import Categories from '../components/Categories/Categories';
-import SEO from '../containers/SEO';
+import './o-category-detail-section.scss';
+import '../containers/TagList/o-page-taglist.scss';
+import './o-checklist-categories-section.scss';
 
 interface CategoryTemplateContext {
   category: string;
@@ -37,7 +39,7 @@ const CategoryTemplate: FC<Props> = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title={title} description={description} />
-      <div className="u-padding-ends-xlarge">
+      <div className="o-category-detail-section">
         <div className="o-checklists-heading">
           <h2 className="u-margin-bottom-0">
             {title} ({checklistCount})
@@ -52,15 +54,18 @@ const CategoryTemplate: FC<Props> = ({ data, pageContext }) => {
             <Icon className="o-suggest-a-checklist__icon" name="external-link" ariaHidden />
           </LinkLightAsAnchor>
         </div>
-        <div className="row">
-          <div className="col col--lg-6 u-text-style-large-body">{description}</div>
+        <div className="row u-margin-top-xsmall">
+          <div className="col col--md-6 col--xl-5 u-text-style-large-body">{description}</div>
         </div>
-        <TagList className="u-margin-ends" tags={sortedTags.map(t => t.tag || '')} />
+        <TagList
+          className="o-page-taglist u-margin-top u-margin-bottom-medium@md-up u-margin-bottom@sm-down"
+          tags={sortedTags.map(t => t.tag || '')}
+        />
         <Checklists items={checklists.nodes} />
       </div>
       <hr className="u-margin-ends-0 u-color-primary-900" />
-      <section className="u-padding-ends-2xlarge">
-        <h2 className="u-margin-bottom">Checklist Categories</h2>
+      <section className="o-checklist-categories-section">
+        <h2 className="u-margin-bottom-medium">Checklist Categories</h2>
         <Categories categories={categories} current={title} />
       </section>
     </Layout>

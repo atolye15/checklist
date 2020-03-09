@@ -28,7 +28,7 @@ const TagTemplate: FC<Props> = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title={`#${tag}`} description={`The checklists that have been tagged under #${tag}`} />
-      <div className="u-padding-ends-xlarge">
+      <div className="u-padding-ends-xlarge@md-up u-padding-large@sm-down">
         <div className="o-checklists-heading">
           <h2 className="u-margin-bottom-0">#{tag}</h2>
           <LinkLightAsAnchor
@@ -39,7 +39,7 @@ const TagTemplate: FC<Props> = ({ data, pageContext }) => {
             <Icon className="o-suggest-a-checklist__icon" name="external-link" ariaHidden />
           </LinkLightAsAnchor>
         </div>
-        <div className="u-text-style-large-body">
+        <div className="u-text-style-large-body u-margin-top-xsmall">
           There {checklists.totalCount > 1 ? 'are' : 'is'} {checklists.totalCount} of them and
           counting!
         </div>

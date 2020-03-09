@@ -74,7 +74,9 @@ $g-headings-font-weight: 700 !default;
 $g-headings-line-height: null !default;
 
 $g-text-style-h1: 'large-title' !default;
+$g-text-style-h1-sm: 'title' !default;
 $g-text-style-h2: 'title' !default;
+$g-text-style-h2-sm: 'small-title' !default;
 $g-text-style-h3: 'small-title' !default;
 $g-text-style-h4: 'large-body' !default;
 $g-text-style-h5: 'body' !default;
@@ -211,3 +213,5 @@ $grid-gutter-width: px-to-rem(16px) !default;
 //
 //  Global `z-index` values should be defined below
 // -------------------------
+
+$g-z-index-header-menu: 2;

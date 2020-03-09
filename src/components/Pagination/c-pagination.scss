@@ -6,17 +6,32 @@
 
 .c-pagination {
   $translate-value: px-to-rem(8px);
-  display: flex;
-  justify-content: space-between;
+  $button-size: var(--c-pagination-button-size, #{px-to-rem(72)});
+
+  display: grid;
+  grid-template-columns:
+    $button-size
+    var(--c-pagination-gap, 1fr)
+    $button-size;
   padding-top: pad();
   padding-bottom: pad();
+
+  @include media-breakpoint-between(sm, lg) {
+    // stylelint-disable-next-line meowtec/no-px
+    --c-pagination-button-size: #{px-to-rem(160px)};
+  }
+
+  @include media-breakpoint-down(xs) {
+    --c-pagination-button-size: 1fr;
+    --c-pagination-gap: #{gap(small)};
+  }
 
   //
   // Elements
   // -------------------------
 
   &__next {
-    margin-left: auto;
+    grid-column: 3/4;
 
     &:hover {
       --c-icon-button-icon-transform: translate3d(#{$translate-value}, 0, 0);
@@ -24,6 +39,8 @@
   }
 
   &__previous {
+    grid-column: 1/2;
+
     &:hover {
       --c-icon-button-icon-transform: translate3d(#{-$translate-value}, 0, 0);
     }

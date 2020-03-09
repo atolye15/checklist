@@ -7,6 +7,10 @@
 .o-suggest-a-checklist {
   @include text-style('large-body');
 
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
   //
   // Elements
   // -------------------------
