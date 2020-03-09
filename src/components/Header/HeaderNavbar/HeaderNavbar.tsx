@@ -1,9 +1,8 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, ReactNode } from 'react';
 
 import cx from 'classnames';
 
 import Logo from '../../Logo';
-import SearchBar from '../../SearchBar/SeachBar';
 import HeaderNavbarMenu from './HeaderNavbarMenu';
 import LinkLight from '../../links/LinkLight';
 import LinkLightAsButton from '../../links/LinkLight/LinkLightAsButton/LinkLightAsButton';
@@ -13,9 +12,10 @@ import './c-header-navbar.scss';
 
 interface Props {
   className?: string;
+  search: ReactNode;
 }
 
-const HeaderNavbar: FC<Props> = ({ className }) => {
+const HeaderNavbar: FC<Props> = ({ className, search }) => {
   const [menuActive, setMenuActive] = useState(false);
 
   if (typeof document !== 'undefined') {
@@ -29,7 +29,7 @@ const HeaderNavbar: FC<Props> = ({ className }) => {
           <Logo />
         </LinkLight>
       </div>
-      <SearchBar id="main-search" className="c-header-navbar__search" />
+      {search}
       <HeaderNavbarMenu className={cx('c-header-navbar__menu', { 'is-active': menuActive })} />
       <LinkLightAsButton
         className="c-header-navbar__menu-action"

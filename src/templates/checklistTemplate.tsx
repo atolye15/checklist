@@ -1,4 +1,4 @@
-import React, { FC, useContext, useMemo } from 'react';
+import React, { FC, useContext, useLayoutEffect } from 'react';
 import { graphql } from 'gatsby';
 import RehypeReact from 'rehype-react';
 
@@ -15,6 +15,8 @@ import ButtonAsAnchor from '../components/Button/ButtonAsAnchor';
 import Checklists from '../components/Checklists';
 import activeChecklistContext from '../context/activeChecklist';
 import SEO from '../containers/SEO';
+import todosContext from '../context/todos';
+import todoStore from '../store/todo';
 
 import './o-checklist-detail-section.scss';
 import './o-related-checklists-section.scss';
@@ -33,14 +35,23 @@ interface Props {
 }
 
 const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
-  const { setActiveChecklist } = useContext(activeChecklistContext);
+  const { activeChecklist, setActiveChecklist } = useContext(activeChecklistContext);
+  const { setTodos } = useContext(todosContext);
   const { markdownRemark, relatedChecklists } = data;
+  const { slug } = pageContext;
 
-  useMemo(() => {
-    if (pageContext.slug) {
-      setActiveChecklist(pageContext.slug);
+  useLayoutEffect(() => {
+    if (slug) {
+      setActiveChecklist(slug);
     }
-  }, [pageContext.slug, setActiveChecklist]);
+  }, [slug]);
+
+  useLayoutEffect(() => {
+    if (activeChecklist) {
+      const todos = todoStore.get(activeChecklist);
+      setTodos(todos);
+    }
+  }, [activeChecklist]);
 
   const frontmatter = markdownRemark?.frontmatter;
   const fields = markdownRemark?.fields;
@@ -54,6 +65,11 @@ const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
   }
 
   const html = renderAst(markdownRemark?.htmlAst);
+
+  const handleReset = () => {
+    setTodos([]);
+    window.scrollTo(0, 0);
+  };
 
   return (
     <Layout>
@@ -77,7 +93,9 @@ const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
           <div className="u-padding-ends-xlarge@xl-up u-padding-ends-large@lg-down">{html}</div>
           <div className="row">
             <div className="col u-width-auto@md-up">
-              <Button className="u-width-100%@sm-down">Reset</Button>
+              <Button className="u-width-100%@sm-down" onClick={handleReset}>
+                Reset
+              </Button>
             </div>
             <div className="col u-width-auto@md-up u-margin-top-small@sm-down">
               <ButtonAsAnchor

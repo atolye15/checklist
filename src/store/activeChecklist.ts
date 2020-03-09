@@ -1,11 +1,11 @@
 const STORAGE_KEY = 'activeChecklist';
 
-function get(): string | null {
+function get(): string {
   if (typeof window === 'undefined') {
-    return null;
+    return '';
   }
 
-  return localStorage.getItem(STORAGE_KEY);
+  return localStorage.getItem(STORAGE_KEY) || '';
 }
 
 function update(value: string) {
