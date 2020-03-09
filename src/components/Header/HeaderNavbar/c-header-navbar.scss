@@ -78,19 +78,19 @@
 
     @include media-breakpoint-down(xs) {
       --c-header-navbar-menu-display: none;
-    }
 
-    &.is-active {
-      --c-header-navbar-menu-display: unset;
+      &.is-active {
+        --c-header-navbar-menu-display: unset;
 
-      position: fixed;
-      z-index: $g-z-index-header-menu;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      padding-right: pad(small);
-      padding-left: pad(small);
+        position: fixed;
+        z-index: $g-z-index-header-menu;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding-right: pad(small);
+        padding-left: pad(small);
+      }
     }
   }
 
