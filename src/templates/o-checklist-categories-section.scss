@@ -1,0 +1,24 @@
+@import '../styles/abstracts/index';
+
+//
+// Checklist Categories Section
+//
+
+.o-checklist-categories-section {
+  @include media-breakpoint-up(xl) {
+    padding-top: pad(2xlarge);
+    padding-bottom: pad(2xlarge);
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    padding-top: pad(xlarge);
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-bottom: pad(xlarge);
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-top: pad(large);
+  }
+}

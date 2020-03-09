@@ -31,7 +31,10 @@ const Home: FC<Props> = ({ data, pageContext }) => {
   return (
     <Layout>
       <div className="o-page-container">
-        <TagListContainer limit={36} />
+        <TagListContainer
+          className="u-margin-bottom-xlarge@lg-up u-margin-bottom@md-down"
+          limit={36}
+        />
 
         <div className="o-checklists-heading">
           <h2 className="u-margin-bottom-0">Checklists</h2>
@@ -46,7 +49,7 @@ const Home: FC<Props> = ({ data, pageContext }) => {
             <Icon className="o-suggest-a-checklist__icon" name="external-link" ariaHidden />
           </LinkLightAsAnchor>
         </div>
-        <div className="u-text-style-large-body">
+        <div className="u-text-style-large-body u-margin-top-xsmall">
           There are {checklists.totalCount} of them and counting!
         </div>
         <Checklists className="u-margin-top-small" items={checklists.nodes} />

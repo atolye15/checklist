@@ -16,6 +16,9 @@ import Checklists from '../components/Checklists';
 import activeChecklistContext from '../context/activeChecklist';
 import SEO from '../containers/SEO';
 
+import './o-checklist-detail-section.scss';
+import './o-related-checklists-section.scss';
+
 const renderAst = new RehypeReact({
   createElement: React.createElement,
   components: {
@@ -55,7 +58,7 @@ const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title={frontmatter?.title} description={frontmatter?.description} />
-      <div className="row u-justify-content-center u-padding-top-xlarge u-padding-bottom-2xlarge">
+      <div className="row o-checklist-detail-section">
         <div className="col col--lg-8">
           <LinkCategory category={fields.categorySlug} size="medium">
             {frontmatter.category}
@@ -71,25 +74,29 @@ const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
             {frontmatter.description}
           </p>
 
-          <div className="u-padding-ends-xlarge">{html}</div>
-          <div className="u-display-flex">
-            <Button>Reset</Button>
-            <ButtonAsAnchor
-              theme="secondary"
-              href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
-              className="u-margin-left-small"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Improve this Checklist
-            </ButtonAsAnchor>
+          <div className="u-padding-ends-xlarge@xl-up u-padding-ends-large@lg-down">{html}</div>
+          <div className="row">
+            <div className="col u-width-auto@md-up">
+              <Button className="u-width-100%@sm-down">Reset</Button>
+            </div>
+            <div className="col u-width-auto@md-up u-margin-top-small@sm-down">
+              <ButtonAsAnchor
+                theme="secondary"
+                href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="u-width-100%@sm-down"
+              >
+                Improve this Checklist
+              </ButtonAsAnchor>
+            </div>
           </div>
         </div>
       </div>
       {relatedChecklists.nodes.length > 0 && (
         <>
           <hr className="u-margin-ends-0 u-color-primary-900" />
-          <div className="u-padding-ends-2xlarge">
+          <div className="o-related-checklists-section">
             <h2 className="u-margin-bottom-medium">Related Checklists</h2>
             <Checklists items={relatedChecklists.nodes} />
           </div>
