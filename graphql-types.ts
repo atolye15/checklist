@@ -2495,8 +2495,6 @@ export type SitePageFieldsEnum =
   'pluginCreator___pluginOptions___theme_color' |
   'pluginCreator___pluginOptions___display' |
   'pluginCreator___pluginOptions___icon' |
-  'pluginCreator___pluginOptions___appId' |
-  'pluginCreator___pluginOptions___apiKey' |
   'pluginCreator___pluginOptions___chunkSize' |
   'pluginCreator___pluginOptions___pathCheck' |
   'pluginCreator___nodeAPIs' |
@@ -2703,8 +2701,6 @@ export type SitePluginFieldsEnum =
   'pluginOptions___theme_color' |
   'pluginOptions___display' |
   'pluginOptions___icon' |
-  'pluginOptions___appId' |
-  'pluginOptions___apiKey' |
   'pluginOptions___chunkSize' |
   'pluginOptions___pathCheck' |
   'nodeAPIs' |
@@ -2834,8 +2830,6 @@ export type SitePluginPluginOptions = {
   theme_color?: Maybe<Scalars['String']>,
   display?: Maybe<Scalars['String']>,
   icon?: Maybe<Scalars['String']>,
-  appId?: Maybe<Scalars['String']>,
-  apiKey?: Maybe<Scalars['String']>,
   chunkSize?: Maybe<Scalars['Int']>,
   pathCheck?: Maybe<Scalars['Boolean']>,
 };
@@ -2853,8 +2847,6 @@ export type SitePluginPluginOptionsFilterInput = {
   theme_color?: Maybe<StringQueryOperatorInput>,
   display?: Maybe<StringQueryOperatorInput>,
   icon?: Maybe<StringQueryOperatorInput>,
-  appId?: Maybe<StringQueryOperatorInput>,
-  apiKey?: Maybe<StringQueryOperatorInput>,
   chunkSize?: Maybe<IntQueryOperatorInput>,
   pathCheck?: Maybe<BooleanQueryOperatorInput>,
 };
