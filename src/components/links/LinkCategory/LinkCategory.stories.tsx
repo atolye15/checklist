@@ -9,5 +9,9 @@ export default {
   decorators: [Wrapper],
 };
 
-export const defaultView = () => <LinkCategory category="font-end" />;
-export const medium = () => <LinkCategory category="font-end" size="medium" />;
+export const defaultView = () => <LinkCategory category="font-end">Front-end</LinkCategory>;
+export const medium = () => (
+  <LinkCategory category="font-end" size="medium">
+    Front-end
+  </LinkCategory>
+);
