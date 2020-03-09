@@ -28,7 +28,7 @@ const TagTemplate: FC<Props> = ({ data, pageContext }) => {
   return (
     <Layout>
       <SEO title={`#${tag}`} description={`The checklists that have been tagged under #${tag}`} />
-      <div className="u-padding-ends-xlarge@md-up u-padding-large@sm-down">
+      <div className="u-padding-ends-xlarge@md-up u-padding-ends-large@sm-down">
         <div className="o-checklists-heading">
           <h2 className="u-margin-bottom-0">#{tag}</h2>
           <LinkLightAsAnchor
