@@ -15,7 +15,7 @@ You should continue with selecting "Classic Project".
 - [ ] Give a familiar name to your project  
 Name should be familiar to everyone in the Atolye15. Convince the team to use the same wording in any case afterwards.
 
-- [ ] Provide a easy-to-say key and well-sound for the project  
+- [ ] Provide a easy-to-say and well-sound key for the project  
 Key must be maximum of 5 characters long. Key and name must be corresponded. Mostly, Atolye15 will finds a key for the project naturally even before you create the project, so you can use it.
 
 - [ ] Select Scrum template  
