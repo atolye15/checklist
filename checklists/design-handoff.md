@@ -21,5 +21,5 @@ Style guide is one of the main things that keeps the UI consistent. You need to 
 - [ ] Mark exportables ready  
 We need to mark our image assets (icons, logos, images) exportables so that developers can download them within the Abstract.
 
-- [ ] Create a collection on Abstract  
+- [ ] Create a collection on Abstract  
 We use collections feature of Abstract. Every project needs to have a style guide collection along with the collections of every features. 
