@@ -2,7 +2,7 @@
 title: Setting up Meta Tags
 category: Front-End
 date: "2020-03-10"
-tags: ['meta', 'open-graph', 'twitter', 'hand-off']
+tags: ['meta', 'open-graph', 'twitter', 'handoff']
 description: The meta tags need to be defined on all projects.
 ---
 
