@@ -1,7 +1,7 @@
 ---
 title: Arrange an Internal Meetup
 category: General
-date: "2020-02-14"
+date: "2020-03-11"
 tags: ['meetup']
 description: Steps before arranging an internal meetup
 ---
