@@ -18,6 +18,8 @@ og:title, og:description, og:image, og:site_name, og:type, og:url must be provid
 - [ ] Make sure all relevant Twitter tags have been provided  
 twitter:title, twitter:description, twitter:image, twitter:card, twitter:site must be provided.  
 
+- [ ] Make sure og and twitter image sizes are correct.
+
 - [ ] Canonical url must be included in all pages.
 
 - [ ] (Optional) Add structured data  
