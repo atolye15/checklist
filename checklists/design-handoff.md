@@ -2,7 +2,7 @@
 title: Design Handoff
 category: Design
 date: "2020-03-09"
-tags: ['abstract', 'exportables', 'tools', 'style-guide', 'consistency']
+tags: ['abstract', 'exportables', 'tools', 'style-guide', 'consistency', 'handoff']
 description: A good handoff makes development process smoother. Well, at least for the beginning... This checklist makes sure that we don't miss anything on the handoff.
 ---
 
