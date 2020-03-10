@@ -47,7 +47,7 @@ As with anything else we have some rules for creating a tag;
 
 ```md
 ---
-title: Bug reporting
+title: Bug Reporting
 category: Project Management
 date: "2020-02-14"
 tags: [‘jira’, ‘bug’, ‘issue’]
