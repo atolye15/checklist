@@ -21,5 +21,5 @@ twitter:title, twitter:description, twitter:image, twitter:card, twitter:site mu
 - [ ] Canonical url must be included in all pages.
 
 - [ ] (Optional) Add structured data  
-If applicable add structured data to your page. Detailed information can be found on [https://schema.org/](https://schema.org/)
+If applicable, add structured data to your page. Detailed information can be found on [https://schema.org/](https://schema.org/)
 
