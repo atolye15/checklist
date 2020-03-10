@@ -2,7 +2,7 @@
 title: Creating Classic Project on Jira
 category: Project Management
 date: "2020-03-10"
-tags: [‘jira’]
+tags: ['jira']
 description: Here you can find how we create a classic scrum project on Jira.
 ---
 
