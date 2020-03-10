@@ -10,6 +10,7 @@ module.exports = {
     title: 'Checklist',
     description: "The protocols we follow for the things we can't automate yet.",
     author: '@atolye15',
+    siteUrl: 'https://checklist.atolye15.com',
   },
   plugins: [
     {
@@ -77,6 +78,8 @@ module.exports = {
         chunkSize: 10000,
       },
     },
+
+    'gatsby-plugin-sitemap',
   ],
 };
 
