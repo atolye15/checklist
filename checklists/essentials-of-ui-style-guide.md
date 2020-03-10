@@ -2,8 +2,8 @@
 title: Essentials of UI Style Guide
 category: Design
 date: "2020-03-10"
-tags: ['components', 'style-guide', 'buttons', 'colors', 'icons', 'typography', 'font']
-description: After wireframing there comes UI design and every UI needs a style guide. Essential checklist for Essentials of UI Style Guide. 
+tags: ['components', 'style-guide', 'buttons', 'colors', 'icons', 'typography']
+description: After wireframing there comes the UI design and every UI needs a style guide. Essential checklist for Essentials of UI Style Guide, be sure to have these on your style guide!
 ---
 
 - [ ] Color Palette  
