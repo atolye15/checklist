@@ -9,14 +9,14 @@ description: Here you can find how we create a classic scrum project on Jira.
 - [ ] Check your role on Jira  
 You must be a Jira admin in order to open a classic project. Otherwise, you can choose to continue with Next-Gen Project.
 
-- [ ] Navigate to the "Projects" page and click "Create Project" button   
+- [ ] Navigate to the "Projects" page and click on the "Create Project" button   
 You should continue with selecting "Classic Project".
 
 - [ ] Give a familiar name to your project  
 Name should be familiar to everyone in the Atolye15. Convince the team to use the same wording in any case afterwards.
 
 - [ ] Provide a easy-to-say key and well-sound for the project  
-Key must be maximum 5 characters long. Key and name must be corresponded. Mostly, Atolye15 will found a key for the project naturally even before you create the project, you can use it.
+Key must be maximum of 5 characters long. Key and name must be corresponded. Mostly, Atolye15 will finds a key for the project naturally even before you create the project, so you can use it.
 
 - [ ] Select Scrum template  
 
@@ -25,7 +25,7 @@ Key must be maximum 5 characters long. Key and name must be corresponded. Mostly
 - [ ] Provide project avatar and URL     
 Avatar size must be 400x400. You can get help from a designer.
 
-- [ ] Check the project lead. It should be the project manager of the project  
+- [ ] Check the project lead, it should be the project manager of the project  
 
 - [ ] Navigate to the Project Settings / Summary    
 
