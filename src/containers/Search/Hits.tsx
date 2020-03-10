@@ -3,7 +3,13 @@ import { navigate } from 'gatsby';
 import { connectHits } from 'react-instantsearch-dom';
 import { HitsProvided } from 'react-instantsearch-core';
 
-import Hit, { ChecklistHit } from './Hit';
+import './c-search.scss';
+import SearchCard, { Props as SearchCardProps } from '../../components/SearchCard';
+
+interface ChecklistHit extends SearchCardProps {
+  excerpt: string;
+  objectID: string;
+}
 
 interface Props {
   onClick: () => void;
@@ -27,7 +33,17 @@ const Hits: FC<Props & HitsProvided<ChecklistHit>> = ({ hits, onClick }) => {
   return (
     <div className="c-search__hits">
       {hits.map(hit => (
-        <Hit key={hit.objectID} hit={hit} onClick={onClick} />
+        <SearchCard
+          key={hit.objectID}
+          category={hit.category}
+          categorySlug={hit.categorySlug}
+          todoCount={hit.todoCount}
+          title={hit.title}
+          description={hit.description}
+          tags={hit.tags}
+          slug={hit.slug}
+          onClick={onClick}
+        />
       ))}
     </div>
   );

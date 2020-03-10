@@ -8,7 +8,7 @@
   @include text-style('subtitle');
   justify-content: center;
 
-  @include media-breakpoint-up(lx) {
+  @include media-breakpoint-up(xl) {
     padding-top: pad(2xlarge);
     padding-bottom: pad(2xlarge);
   }
