@@ -85,7 +85,6 @@ There are two ways for you to contribute.
 - [ ] Checklist title should be in the title case format.
 - [ ] Preview the content with **Preview** button. 
 - [ ] Give a meaningful name to your branch
-- [ ] Click on "Create a new branch for this commit and start a pull request"
 - [ ] Start a new PR 
 
 That's it! Hope to see your contribution 👊
