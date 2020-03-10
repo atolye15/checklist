@@ -31,7 +31,7 @@ Here is the full list of pre-defined category list. It is not allowed to use any
 | Project Management | They manage the team and act as a bridge between designers, developers and frankly, everyone, with the additional help of these checklists.         |
 | Human Resources    | Cabin crew, slides armed and cross check! Here are the checklists to make sure everyone in the crew is happy.                                       |
 | Marketing          | Our marketing checklist is to help supporting our good work by its communication, and has everything marketing team uses for our marketing efforts. |
-| General            | For all else, we have our general checklists that involves everything we follow up with here at Atölye15.                                           |
+| General            | There are some checklists which are hard to categorize. Let’s just call them generals.                                          |
 
 We also have some tag using rules;
 
