@@ -48,7 +48,7 @@ export const getDescription = (title: string): string => {
       return 'Our marketing checklist is to help supporting our good work by its communication, and has everything marketing team uses for our marketing efforts.';
 
     case 'General':
-      return 'For all else, we have our general checklists that involves everything we follow up with here at Atölye15.';
+      return 'There are some checklists which are hard to categorize. Let’s just call them generals.';
 
     default:
       return 'A checklist category!';
