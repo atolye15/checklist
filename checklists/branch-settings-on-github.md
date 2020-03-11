@@ -6,13 +6,13 @@ tags: ['github', 'branch', 'kickoff']
 description: Branch settings you should make when you create a new repository on GitHub
 ---
 
-- [ ] Enable require pull request reviews before merging
+- [ ] Enable "Require pull request reviews before merging"
 
 - [ ] Set required reviews at least to one
 
-- [ ] Enable dismiss stale pull request approvals when new commits are pushed
+- [ ] Enable "Dismiss stale pull request approvals when new commits are pushed"
 
-- [ ] Enable require status checks to pass before merging
+- [ ] Enable "Require status checks to pass before merging"
 
 - [ ] Mark CirleCI related checks on the list  
 It is not allowed to merge any code without successfully passing the CircleCI tests.
@@ -25,4 +25,4 @@ No one can bypass this rules 🤝
 
 - [ ] Apply these rules to master and develop branches
 
-- [ ] Check automatically delete head branches on repository options
+- [ ] Check "Automatically delete head branches" on repository options
