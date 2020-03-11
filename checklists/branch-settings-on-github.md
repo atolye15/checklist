@@ -17,6 +17,9 @@ description: Branch settings you should make when you create a new repository on
 - [ ] Mark CirleCI related checks on the list  
 It is not allowed the merge any code without passing CircleCI tests
 
+- [ ] Mark Codecov related checks on the list
+If the project use Codecov, then enable its checks too
+
 - [ ] Enable include administrators  
 No one can bypass this rules 🤝
 
