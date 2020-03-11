@@ -8,6 +8,7 @@
   @include make-grid-container($gutter: px-to-rem(32px));
   @include make-grid-container-max-widths();
 
+  width: 100%;
   animation-duration: 0.6s;
   animation-name: slideIn;
   animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
