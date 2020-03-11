@@ -12,7 +12,7 @@ interface Props {
 
 const Header: FC<Props> = ({ className, search }) => (
   <header className={cx('c-header', className)}>
-    <div className="container">
+    <div className="container-layout">
       <HeaderNavbar search={search} />
     </div>
   </header>
