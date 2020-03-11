@@ -16,12 +16,12 @@ Check environment values in the `.env` file to prevent a leak of any sensitive i
 Once again, make sure the `Makefile` is running correctly for all the environments defined for the project
 
 - [ ] Open a merge pull request to the environment's base branch  
-After the done Jira issue(s), open a merge pull request from issue(s) related branch to the environment's base branch
+After the AC on Jira completed, open a merge pull request from issue(s) related branch to the environment's base branch
 
 - [ ] Define environment values on server  
 If any newly defined environment values exist in `.env` file, make sure they are defined in the `.env.local` with correct values on the target server
 
 - [ ] Merge approved pull request  
-Then wait for the deployment tool to be done while you enjoy a sip of your ☕️
+Then wait for the deployment tool while you enjoy a sip of your ☕️
 
 - [ ] Visit the application to make sure it is deployed successfully
