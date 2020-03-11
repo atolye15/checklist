@@ -13,11 +13,11 @@ Carefully test all the wordings and emojis.
 Take care of the modals and try to test each screen. 
 
 - [ ] Check the notification while app is on background  
-Notification wording might be changed while app is on background. Check the wording if it is same with related Jira issue or not.
+Notification wording might change while the app is running on background. Check the wording whether it's the same as related Jira issue or not.
 
-- [ ] Check the notification is still coming while app is closed  
+- [ ] Check to see if the user still gets the expected notification even when the app is closed  
 
-- [ ] Do all test on both IOS and Android devices 
+- [ ] Apply the tests on both iOS and Android devices  
 
 - [ ] Try to test all different notifications
 
