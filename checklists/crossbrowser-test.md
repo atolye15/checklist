@@ -3,7 +3,7 @@ title: Crossbrowser Test
 category: Project Management
 date: "2020-03-11"
 tags: ['test', 'responsive']
-description: Complete the crossbrowser test to check your project according to the different type of devices and browsers.
+description: Complete the crossbrowser test to check your project works correctly in different types of devices and browsers.
 ---
 
 - [ ] Test the project via different browsers on desktop  
