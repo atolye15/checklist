@@ -29,7 +29,7 @@ gatsby develop
 
 Now the project is running on https://localhost:8000 with live-reload server.
 
-Here is the some useful commands;
+Here are the some useful commands;
 
 #### `yarn lint` 
 It lints TypeScript, runs ESLint and Stylelint.
