@@ -15,7 +15,7 @@ So that you can start to check the responsiveness of the website. We should also
 - [ ] Test the project via different browsers on iOS device  
 Especially check the project works correctly on Safari, and other browsers.  
 
-- [ ] Test the project via different browsers on Android  
-We do crossbrowser test on Android mobile device via different browsers such as Chrome, Firefox.  
+- [ ] Test the project with different browsers on Android  
+We do the cross-browser tests on Android mobile devices via different browsers such as Chrome, Firefox.  
 
 - [ ] Test the project in different browser on Tablet such as Safari, Chrome  
