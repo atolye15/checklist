@@ -18,5 +18,4 @@ Especially check the project works correctly on Safari, and other browsers.
 - [ ] Test the project via different browsers on Android  
 We do crossbrowser test on Android mobile device via different browsers such as Chrome, Firefox.  
 
-- [ ] Test the project via different browser on Tablet  
-We do crossbrowser test on Tablet device via different browsers such as Safari, Chrome, Firefox.
+- [ ] Test the project in different browser on Tablet such as Safari, Chrome  
