@@ -2,7 +2,7 @@
 title: Posting on Social Media
 category: Marketing
 date: "2020-02-24"
-tags: ['instagram', 'facebook', 'twitter', 'linkedin']
+tags: ['socialmedia']
 description: The guideline we follow when we post on our social media accounts. This checklist is important to understand our culture and our posting tips and tricks.
 ---
 
