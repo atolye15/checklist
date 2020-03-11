@@ -20,7 +20,7 @@ You should share necessary email address and password with the client.
 
 - [ ] Generate Google Analytics and Google Tag Manager code and forward it to the developer  
 
-- [ ] Check the meta information is available for all pages  
+- [ ] Check the meta information is available on all pages  
 
 - [ ] Check the favicon
 
@@ -42,5 +42,4 @@ You can check it by putting /robots.txt at the end of the domain url.
 - [ ] Check HTML<lang>  
 
 - [ ] Check the project has a valid SSL  
-
 
