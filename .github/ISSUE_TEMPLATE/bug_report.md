@@ -3,7 +3,7 @@
 Please answer the following questions for yourself before submitting an issue.
 
 - [ ] My ad-block or script blocker is disabled (if you have any).
-- [ ] My browser is IE or EDGE.
+- [ ] My browser is not IE
 - [ ] I checked that there are no browser extensions that may affect the issue on my browser.
 - [ ] This is not a duplicated issue, i checked current issues before creating this issue.
 
