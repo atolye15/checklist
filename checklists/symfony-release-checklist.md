@@ -2,7 +2,7 @@
 title: Symfony Release Checklist
 category: Back-End
 date: '2020-03-11'
-tags: ['symfony', 'release']
+tags: ['php', 'symfony', 'release']
 description: The list of the To-do's we have complete right before the deploy our application to stage or live 🚀
 ---
 
