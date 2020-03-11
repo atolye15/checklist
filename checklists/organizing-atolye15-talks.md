@@ -5,10 +5,10 @@ date: "2020-03-03"
 tags: ['meetup', 'kommunity', 'talks', 'conference', 'team']
 description: The action plan we need to take when organizing in-house meetups.  
 ---
-- [ ] Research about current trend topics initially.  
+- [ ] Define current trend topics initially.  
 Research and find trending topics on web development and design, agile development and lifestyle concepts that may be applicable to our niche audience.
 
-- [ ]  Get together with the team to plan who'll be willing to host the next meetup.    
+- [ ]  Get together with the team to plan who'll be hosting the next meetup.    
 The meetup line-up consists of guest speakers and our team members so first we should talk on who wants to host a meetup about subjects we are experts on; UI/UX design, web and mobile development, and project management. Compile a list of speakers and create a calendar for upcoming meetups.
 
 - [ ]  Get in touch with the guest speaker if there is one and make necessary arrangements.  
