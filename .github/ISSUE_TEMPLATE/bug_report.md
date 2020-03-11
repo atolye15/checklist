@@ -1,6 +1,6 @@
 # Prerequisites
 
-Please answer the following questions for yourself before submitting an issue.
+Please make sure you've checked the following to-do's.
 
 - [ ] My ad-block or script blocker is disabled (if you have any).
 - [ ] My browser is IE or EDGE.
