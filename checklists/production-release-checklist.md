@@ -7,7 +7,7 @@ description: Welcome on board! Follow the checklist for the last controls before
 ---
 
 - [ ] Prepare 301 redirection list  
-We usually do it on website which is already exist.  
+We usually apply this to-do to the existing websites  
 
 - [ ] Setup a ping tool  
 We use UptimeRobot as a ping tool.  
@@ -42,7 +42,6 @@ You can check it by putting /robots.txt at the end of the domain url.
 - [ ] Check HTML<lang>  
 
 - [ ] Check the project has a valid SSL  
-
 
 
 
