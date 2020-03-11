@@ -2,7 +2,7 @@
 title: Testing Mobile Update
 category: Project Management
 date: "2020-03-11"
-tags: ['test', 'mobileapp']
+tags: ['test', 'mobile', 'testflight', 'production']
 description: Before releasing mobile application, you should test it in different cases. Here are the methods of it!
 ---
 
@@ -22,4 +22,3 @@ So that you can be sure that everything works on older version of the app correc
 - [ ] Download the new version of the application from stores
 
 - [ ] Apply all the tests on production environment
-
