@@ -17,7 +17,7 @@ description: These are the rules you need to follow when you generate any kind o
 - [ ] Do not use same password on somewhere else
 
 - [ ] Use a generator  
-You can use https://passwordsgenerator.net with default settings to apply this checklist
+You can use [Password Generator](https://passwordsgenerator.net) with default settings to apply this checklist
 
 - [ ] Enable 2FA on the platform that you use this password
 If the platform supports two-factor authentication then you should enable it
