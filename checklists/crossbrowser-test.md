@@ -12,7 +12,7 @@ We do cross-browser test on desktop with different browsers such as Safari, Chro
 - [ ] Test the project in bigger screen size    
 So that you can start to check the responsiveness of the website. We should also control the design of the project in different screen sizes.
 
-- [ ] Test the project via different browsers on iOS device  
+- [ ] Test the project with different browsers on iOS device  
 Especially check the project works correctly on Safari, and other browsers.  
 
 - [ ] Test the project with different browsers on Android  
