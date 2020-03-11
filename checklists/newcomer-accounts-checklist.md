@@ -9,7 +9,7 @@ description: The accounts and invitations we need to provide for the newcomers.
 - [ ] Create mail account  
 
 - [ ] Invite to Slack  
-You need to invite the newcomer also to related channels. #kitchen and #market is mandatory 👊
+You need to invite the newcomer also to related channels. #kitchen and #market are mandatory 👊
 
 - [ ] Invite to Jira  
 Don't forget to add relevant role to newcomer
