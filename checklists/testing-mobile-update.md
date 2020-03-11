@@ -9,7 +9,7 @@ description: Before releasing mobile application, you should test it in differen
 - [ ] Test the application on stage environment  
 We do our tests by using TestFlight on iOS and relevant APK on Android. Download the stage application and start testing now! 
 
-- [ ] Test all the issues that are on Jira for current sprint  
+- [ ] Test all the issues that are on Jira for the ongoing sprint  
 
 - [ ] Test the application in general  
 In some cases other parts of the apllication might have broken, even anything developed in that parts.
