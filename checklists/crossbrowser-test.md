@@ -6,7 +6,7 @@ tags: ['test', 'responsive']
 description: Complete the cross-browser test to check if your project works correctly in different types of devices and browsers.
 ---
 
-- [ ] Test the project via different browsers on desktop  
+- [ ] Test the project with different browsers on desktop  
 We do crossbrowser test on desktop side via different browsers such as Safari, Chrome, Firefox.  
 
 - [ ] Test the project in bigger screen size    
