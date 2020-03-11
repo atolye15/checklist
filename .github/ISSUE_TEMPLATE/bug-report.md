@@ -9,16 +9,16 @@ assignees: alpcanaydin, ecempehlivan
 
 # Prerequisites
 
-Please answer the following questions for yourself before submitting an issue.
+Please make sure you've checked the following to-do's.
 
 - [ ] My ad-block or script blocker is disabled
 - [ ] My browser is not IE
 - [ ] There are no browser extensions that may affect the issue on the browser
-- [ ] This is not a duplicated issue, I checked the current issues before creating this issue.
+- [ ] This is not a duplicated issue, I checked the current issues before creating this issue
 
 # Current Behavior
 
-What is the current behavior?
+Explain the current behavior.
 
 # Expected Behavior
 
