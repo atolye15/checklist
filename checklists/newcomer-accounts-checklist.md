@@ -20,4 +20,4 @@ Don’t forget to add them to the relevant teams. Our project managers are alrea
 - [ ] Invite to Abstract
 
 - [ ] Share awesome-atolye15 repo with the newcomer  
-We have lots of tutorial accounts in this repo. Our colleague's open source projects are also listed here.
+We have lots of tutorial accounts in this repo. Our colleagues' open source projects are also listed here.
