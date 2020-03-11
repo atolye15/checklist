@@ -20,3 +20,5 @@ Notification wording might be changed while app is on background. Check the word
 - [ ] Do all test on both IOS and Android devices 
 
 - [ ] Try to test all different notifications
+
+- [ ] Test if deep linking works correctly
