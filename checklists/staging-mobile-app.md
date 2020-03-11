@@ -6,7 +6,8 @@ tags: ['mobile', 'react-native']
 description: Follow these steps during staging a mobile application 
 ---
 
-- [ ] Create a new branch, ideally named "testflight"  
+- [ ] Create a new branch  
+Ideally named "testflight"  
 
 - [ ] Update version and build number  
 Some projects may have been configured to do this task using Fastlane. Run desired fastlane job/-s or do it manually if necessary.
@@ -23,4 +24,3 @@ Built APK file for Android can be found inside projects android folder `app/buil
 - [ ] Load built apk file into Android test devices  
 
 - [ ] Don't forget to merge your branch to develop  
-
