@@ -20,6 +20,6 @@ It is not allowed the merge any code without passing CircleCI tests
 - [ ] Enable include administrators  
 No one can bypass this rules 🤝
 
-- [ ] Apply these rules master and develop branches
+- [ ] Apply these rules to master and develop branches
 
 - [ ] Check automatically delete head branches on repository options
