@@ -14,7 +14,9 @@
 
   &:focus {
     outline: none;
+  }
 
+  &[data-focus-visible-added] {
     > .c-checklist-item__checkbox {
       outline: px-to-rem(2px) dotted;
       outline-offset: px-to-rem(2px);

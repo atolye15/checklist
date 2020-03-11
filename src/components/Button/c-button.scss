@@ -18,6 +18,8 @@
   $buttono-transition-duration: $g-transition-duration;
   $buttono-color: color-palette('primary', 50);
   $buttono-color-alt: color-palette('primary', 800);
+  $buttono-outline-offset-focus: px-to-rem(2px);
+  $buttono-outline-color-focus: color-palette('primary', 50);
 
   @include buttono-block($display: inline-flex);
 
@@ -25,6 +27,10 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
+
+  &:focus:not([data-focus-visible-added]) {
+    outline: none;
+  }
 
   //
   // Elements

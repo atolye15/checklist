@@ -1,6 +1,7 @@
 import React, { FC, ReactNode } from 'react';
 import cx from 'classnames';
 import Helmet from 'react-helmet';
+import 'focus-visible';
 
 import Header from '../Header';
 import Footer from '../Footer';
