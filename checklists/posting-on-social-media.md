@@ -18,5 +18,5 @@ The language we prefer to use on Atolye15 accounts are very friendly and warm. T
 - [ ]  Provide location  
 We use our location tag in all our content related to our office.
 
-- [ ]  Keep constant track of feedback: comments, likes and direct messages.  
+- [ ]  Keep constant track of feedback: comments, likes and direct messages  
 Answer direct messages, and reply back to comments on the regular.
