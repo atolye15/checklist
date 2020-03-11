@@ -13,7 +13,7 @@ We usually apply this to-do to the existing websites
 We use UptimeRobot as a ping tool.  
 
 - [ ] Generate sitemap.xml  
-You can do it over Google WMT or you can get help from backend developer.  
+You can generate it on Google WMT or you can get help from a back-end developer.  
 
 - [ ] Provide the necessary infos to the client  
 You should share necessary email address and password with the client.  
@@ -42,6 +42,5 @@ You can check it by putting /robots.txt at the end of the domain url.
 - [ ] Check HTML<lang>  
 
 - [ ] Check the project has a valid SSL  
-
 
 
