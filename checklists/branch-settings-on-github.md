@@ -15,10 +15,10 @@ description: Branch settings you should make when you create a new repository on
 - [ ] Enable require status checks to pass before merging
 
 - [ ] Mark CirleCI related checks on the list  
-It is not allowed the merge any code without passing CircleCI tests
+It is not allowed to merge any code without successfully passing the CircleCI tests.
 
 - [ ] Mark Codecov related checks on the list
-If the project use Codecov, then enable its checks too
+If the project uses Codecov, then enable it's checks too
 
 - [ ] Enable include administrators  
 No one can bypass this rules 🤝
