@@ -31,7 +31,7 @@ Here is the full list of pre-defined category list. It is not allowed to use any
 | Project Management | They manage the team and act as a bridge between designers, developers and frankly, everyone, with the additional help of these checklists.         |
 | Human Resources    | Cabin crew, slides armed and cross check! Here are the checklists to make sure everyone in the crew is happy.                                       |
 | Marketing          | Our marketing checklist is to help supporting our good work by its communication, and has everything marketing team uses for our marketing efforts. |
-| General            | For all else, we have our general checklists that involves everything we follow up with here at Atölye15.                                           |
+| General            | There are some checklists which are hard to categorize. Let’s just call them generals.                                          |
 
 We also have some tag using rules;
 
@@ -47,10 +47,10 @@ As with anything else we have some rules for creating a tag;
 
 ```md
 ---
-title: Bug reporting
+title: Bug Reporting
 category: Project Management
 date: "2020-02-14"
-tags: [‘jira’, ‘bug’, ‘issue’]
+tags: ['jira', 'bug', 'issue']
 description: The protocol we follow when we report a bug. This checklist is vital for assignee to understand the problem and reproduce it.
 ---
 
@@ -85,7 +85,6 @@ There are two ways for you to contribute.
 - [ ] Checklist title should be in the title case format.
 - [ ] Preview the content with **Preview** button. 
 - [ ] Give a meaningful name to your branch
-- [ ] Click on "Create a new branch for this commit and start a pull request"
 - [ ] Start a new PR 
 
 That's it! Hope to see your contribution 👊

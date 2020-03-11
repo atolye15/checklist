@@ -23,15 +23,13 @@ newPRWelcomeComment: |
 
 firstPRMergeComment: >
   Hi 👋
-
   It's me again, the humble servant of Atolye15 🤖
 
   I have good news for you. Your PR has been merged 🥳
 
   Here is what will follow next;
-
-  - [ ] Build Gatsby on Netlify.
-  - [ ] Publish artifacts to Netlify CDN.
+  - [ ] Build Gatsby on Netlify. 
+  - [ ] Publish artifacts to Netlify CDN. 
   - [ ] Go live! 🎉
 
   Now you're the part of Atolye15 Checklist community.
