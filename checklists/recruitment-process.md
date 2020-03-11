@@ -9,7 +9,7 @@ description: Follow the steps to find the right candidate. It helps to understan
 - [ ] Determine the correct job position  
 Define the targeted position based on the ongoing projects and growth of the team.
 
-- [ ] Search a candidate pool and create job posting  
+- [ ] Build a candidate pool and create job posting  
 Create a candidate pool by using dedicated tools and platform like Linkedin. Create the most suitable job post in order to reach to best match.
 
 - [ ] Make a phone call with potential candidate(s)  
