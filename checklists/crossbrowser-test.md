@@ -9,8 +9,8 @@ description: Complete the crossbrowser test to check your project works correctl
 - [ ] Test the project via different browsers on desktop  
 We do crossbrowser test on desktop side via different browsers such as Safari, Chrome, Firefox.  
 
-- [ ] Test the project via a bigger screen monitor  
-We control the design of project is suitable for many measure or not.  
+- [ ] Test the project in bigger screen size    
+So that you can start to check the responsiveness of the website. We should also control the design of the project in different screen sizes.
 
 - [ ] Test the project via different browsers on IOS  
 We do crossbrowser test on IOS mobile device via different browsers such as Safari, Chrome, Firefox.  
