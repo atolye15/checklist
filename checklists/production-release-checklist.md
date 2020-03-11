@@ -39,6 +39,6 @@ Mobile and desktop analysis results must be minimum of 90 grade.
 - [ ] Check the Robots.txt file  
 You can check it by putting /robots.txt at the end of the domain url.  
 
-- [ ] Check HTML<lang>  
+- [ ] Check HTML tag lang attribute
 
 - [ ] Check the project has a valid SSL  
