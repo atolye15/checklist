@@ -16,7 +16,7 @@ interface Props {
 
 const Footer: FC<Props> = ({ className }) => (
   <footer className={cx('c-footer', className)}>
-    <div className="container">
+    <div className="container-layout">
       <div className="row">
         <div className="col col--sm-6 u-padding-ends">
           <LinkLightAsAnchor

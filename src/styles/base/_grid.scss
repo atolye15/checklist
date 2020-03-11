@@ -8,6 +8,11 @@
   @include make-grid-container-max-widths();
 }
 
+.container-layout {
+  @include make-grid-container($gutter: px-to-rem(32px));
+  @include make-grid-container-max-widths();
+}
+
 .container-fluid {
   @include make-grid-container();
 }
