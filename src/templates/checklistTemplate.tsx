@@ -23,7 +23,7 @@ import './o-related-checklists-section.scss';
 
 const ChecklistLink: FC<JSX.IntrinsicElements['a']> = ({ children, ...otherProps }) => (
   // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
-  <a onClick={e => e.stopPropagation()} target="_blank" rel="noopener noreferrer" {...otherProps}>
+  <a onClick={e => e.stopPropagation()} target="_blank" rel="ugc nofollow noopener" {...otherProps}>
     {children}
   </a>
 );
