@@ -33,6 +33,10 @@
     &:focus {
       border-bottom-color: color-palette('primary', 500);
 
+      &:not([data-focus-visible-added]) {
+        outline: none;
+      }
+
       + .c-search-bar__icon {
         color: $g-text-color-light;
       }

@@ -19,7 +19,11 @@
     text-decoration: none;
   }
 
-  &:focus {
+  &:focus:not([data-focus-visible-added]) {
+    outline: none;
+  }
+
+  &[data-focus-visible-added] {
     outline: px-to-rem(2px) dotted color-palette('primary', 50);
     outline-offset: px-to-rem(2px);
   }
