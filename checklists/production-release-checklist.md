@@ -28,7 +28,7 @@ You should share necessary email address and password with the client.
 We are checking Safari, Chrome, Firefox on different devices.  
 
 - [ ] Check Google Speed Insights  
-Mobile and desktop analysis results must be minimum 90.  
+Mobile and desktop analysis results must be minimum of 90 grade.  
 
 - [ ] Check all the static assets are compressed   
 
@@ -42,4 +42,3 @@ You can check it by putting /robots.txt at the end of the domain url.
 - [ ] Check HTML<lang>  
 
 - [ ] Check the project has a valid SSL  
-
