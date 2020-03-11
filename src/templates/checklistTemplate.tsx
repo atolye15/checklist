@@ -21,11 +21,19 @@ import todoStore from '../store/todo';
 import './o-checklist-detail-section.scss';
 import './o-related-checklists-section.scss';
 
+const ChecklistLink: FC<JSX.IntrinsicElements['a']> = ({ children, ...otherProps }) => (
+  // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
+  <a onClick={e => e.stopPropagation()} target="_blank" rel="noopener noreferrer" {...otherProps}>
+    {children}
+  </a>
+);
+
 const renderAst = new RehypeReact({
   createElement: React.createElement,
   components: {
     ul: Checklist,
     li: ListItem,
+    a: ChecklistLink,
   },
 }).Compiler;
 
