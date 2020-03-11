@@ -4,7 +4,7 @@ Please answer the following questions for yourself before submitting an issue.
 
 - [ ] My ad-block or script blocker is disabled
 - [ ] My browser is not IE
-- [ ] I checked that there are no browser extensions that may affect the issue on my browser.
+- [ ] There are no browser extensions that may affect the issue on the browser
 - [ ] This is not a duplicated issue, I checked the current issues before creating this issue.
 
 # Expected Behavior
