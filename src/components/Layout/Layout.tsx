@@ -10,6 +10,7 @@ import Search from '../../containers/Search';
 
 import '../../styles/main.scss';
 
+import './o-root.scss';
 import './o-main.scss';
 import './o-header.scss';
 import './o-footer.scss';

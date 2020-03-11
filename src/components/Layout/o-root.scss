@@ -1,0 +1,15 @@
+@import '../../styles/abstracts/index';
+
+//
+// root
+//
+
+.o-root {
+  // Because we couldn't add class to gatsby wrapper, we have to add min-height as follows
+  // stylelint-disable-next-line selector-max-id, selector-max-specificity
+  > #___gatsby > #gatsby-focus-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+}
