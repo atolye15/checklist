@@ -13,7 +13,7 @@ You should always keep the current design style of the project, but in some case
 We gather together all the inspiration, usually on a sketch file, and discuss the style with the design team.
 
 - [ ] Draft illustrations  
-After deciding on to the design style with the team. We create drafts of the illustrations, usually on the paper but sometimes we use iPads too.
+After deciding on to the design style with the team, we create drafts of the illustrations, usually on the paper but sometimes we use iPads too.
 
 - [ ] Get feedback  
 It is always a good idea to take the drafts to non-design persons and gather their feedbacks.
