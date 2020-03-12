@@ -696,6 +696,7 @@ export type FileFieldsEnum =
   'childMarkdownRemark___excerpt' |
   'childMarkdownRemark___rawMarkdownBody' |
   'childMarkdownRemark___fileAbsolutePath' |
+  'childMarkdownRemark___fields___filePath' |
   'childMarkdownRemark___fields___slug' |
   'childMarkdownRemark___fields___todoCount' |
   'childMarkdownRemark___fields___categorySlug' |
@@ -1452,6 +1453,7 @@ export type MarkdownRemarkEdge = {
 };
 
 export type MarkdownRemarkFields = {
+  filePath?: Maybe<Scalars['String']>,
   slug?: Maybe<Scalars['String']>,
   todoCount?: Maybe<Scalars['Int']>,
   categorySlug?: Maybe<Scalars['String']>,
@@ -1467,6 +1469,7 @@ export type MarkdownRemarkFieldsEnum =
   'excerpt' |
   'rawMarkdownBody' |
   'fileAbsolutePath' |
+  'fields___filePath' |
   'fields___slug' |
   'fields___todoCount' |
   'fields___categorySlug' |
@@ -1568,6 +1571,7 @@ export type MarkdownRemarkFieldsEnum =
   'internal___type';
 
 export type MarkdownRemarkFieldsFilterInput = {
+  filePath?: Maybe<StringQueryOperatorInput>,
   slug?: Maybe<StringQueryOperatorInput>,
   todoCount?: Maybe<IntQueryOperatorInput>,
   categorySlug?: Maybe<StringQueryOperatorInput>,
@@ -2968,7 +2972,7 @@ export type ChecklistDetailQueryVariables = {
 
 export type ChecklistDetailQuery = { markdownRemark: Maybe<(
     Pick<MarkdownRemark, 'htmlAst'>
-    & { frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'tags' | 'category' | 'description'>>, fields: Maybe<Pick<MarkdownRemarkFields, 'categorySlug'>> }
+    & { frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'tags' | 'category' | 'description'>>, fields: Maybe<Pick<MarkdownRemarkFields, 'categorySlug' | 'filePath'>> }
   )>, relatedChecklists: { nodes: Array<ChecklistFragment> } };
 
 export type HomePageQueryQueryVariables = {

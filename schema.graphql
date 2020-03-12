@@ -476,6 +476,7 @@ type MarkdownRemarkEdge {
 
 type MarkdownRemarkFields {
   categorySlug: String
+  filePath: String
   slug: String
   todoCount: Int
 }
@@ -527,6 +528,7 @@ type Query {
   allImageSharp(filter: ImageSharpFilterInput, limit: Int, skip: Int, sort: ImageSharpSortInput): ImageSharpConnection!
   allMarkdownRemark(filter: MarkdownRemarkFilterInput, limit: Int, skip: Int, sort: MarkdownRemarkSortInput): MarkdownRemarkConnection!
   allSite(filter: SiteFilterInput, limit: Int, skip: Int, sort: SiteSortInput): SiteConnection!
+  allSiteBuildMetadata(filter: SiteBuildMetadataFilterInput, limit: Int, skip: Int, sort: SiteBuildMetadataSortInput): SiteBuildMetadataConnection!
   allSitePage(filter: SitePageFilterInput, limit: Int, skip: Int, sort: SitePageSortInput): SitePageConnection!
   allSitePlugin(filter: SitePluginFilterInput, limit: Int, skip: Int, sort: SitePluginSortInput): SitePluginConnection!
   directory(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): Directory
@@ -534,6 +536,7 @@ type Query {
   imageSharp(children: NodeFilterListInput, fixed: ImageSharpFixedFilterInput, fluid: ImageSharpFluidFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, original: ImageSharpOriginalFilterInput, parent: NodeFilterInput, resize: ImageSharpResizeFilterInput, resolutions: ImageSharpResolutionsFilterInput, sizes: ImageSharpSizesFilterInput): ImageSharp
   markdownRemark(children: NodeFilterListInput, excerpt: StringQueryOperatorInput, excerptAst: JSONQueryOperatorInput, fields: MarkdownRemarkFieldsFilterInput, fileAbsolutePath: StringQueryOperatorInput, frontmatter: MarkdownRemarkFrontmatterFilterInput, headings: MarkdownHeadingFilterListInput, html: StringQueryOperatorInput, htmlAst: JSONQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, rawMarkdownBody: StringQueryOperatorInput, tableOfContents: StringQueryOperatorInput, timeToRead: IntQueryOperatorInput, wordCount: MarkdownWordCountFilterInput): MarkdownRemark
   site(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, host: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, port: IntQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput): Site
+  siteBuildMetadata(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput): SiteBuildMetadata
   sitePage(children: NodeFilterListInput, component: StringQueryOperatorInput, componentChunkName: StringQueryOperatorInput, componentPath: StringQueryOperatorInput, context: SitePageContextFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, internalComponentName: StringQueryOperatorInput, isCreatedByStatefulCreatePages: BooleanQueryOperatorInput, matchPath: StringQueryOperatorInput, parent: NodeFilterInput, path: StringQueryOperatorInput, pluginCreator: SitePluginFilterInput, pluginCreatorId: StringQueryOperatorInput): SitePage
   sitePlugin(browserAPIs: StringQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, name: StringQueryOperatorInput, nodeAPIs: StringQueryOperatorInput, packageJson: SitePluginPackageJsonFilterInput, parent: NodeFilterInput, pluginFilepath: StringQueryOperatorInput, pluginOptions: SitePluginPluginOptionsFilterInput, resolve: StringQueryOperatorInput, ssrAPIs: StringQueryOperatorInput, version: StringQueryOperatorInput): SitePlugin
 }
@@ -558,6 +561,47 @@ type Site implements Node {
   polyfill: Boolean
   port: Int
   siteMetadata: SiteSiteMetadata
+}
+
+type SiteBuildMetadata implements Node {
+  buildTime(
+    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    difference: String,
+    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    formatString: String,
+    #Returns a string generated with Moment.js' `fromNow` function
+    fromNow: Boolean,
+    #Configures the locale Moment.js will use to format the date.
+    locale: String
+  ): Date
+  children: [Node!]!
+  id: ID!
+  internal: Internal!
+  parent: Node
+}
+
+type SiteBuildMetadataConnection {
+  distinct(field: SiteBuildMetadataFieldsEnum!): [String!]!
+  edges: [SiteBuildMetadataEdge!]!
+  group(field: SiteBuildMetadataFieldsEnum!, limit: Int, skip: Int): [SiteBuildMetadataGroupConnection!]!
+  nodes: [SiteBuildMetadata!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}
+
+type SiteBuildMetadataEdge {
+  next: SiteBuildMetadata
+  node: SiteBuildMetadata!
+  previous: SiteBuildMetadata
+}
+
+type SiteBuildMetadataGroupConnection {
+  edges: [SiteBuildMetadataEdge!]!
+  field: String!
+  fieldValue: String
+  nodes: [SiteBuildMetadata!]!
+  pageInfo: PageInfo!
+  totalCount: Int!
 }
 
 type SiteConnection {
@@ -612,6 +656,7 @@ type SitePageConnection {
 
 type SitePageContext {
   category: String
+  categorySlug: String
   currentPage: Int
   limit: Int
   skip: Int
@@ -704,7 +749,10 @@ type SitePluginPackageJsonPeerDependencies {
 }
 
 type SitePluginPluginOptions {
+  apiKey: String
+  appId: String
   background_color: String
+  chunkSize: Int
   display: String
   icon: String
   name: String
@@ -712,8 +760,11 @@ type SitePluginPluginOptions {
   pathCheck: Boolean
   plugins: [SitePluginPluginOptionsPlugins]
   short_name: String
+  siteUrl: String
   start_url: String
+  stripQueryString: Boolean
   theme_color: String
+  trackingId: String
 }
 
 type SitePluginPluginOptionsPlugins {
@@ -727,6 +778,7 @@ type SitePluginPluginOptionsPlugins {
 type SiteSiteMetadata {
   author: String
   description: String
+  siteUrl: String
   title: String
 }
 
@@ -973,6 +1025,7 @@ enum FileFieldsEnum {
   childMarkdownRemark___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMarkdownRemark___excerptAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMarkdownRemark___fields___categorySlug @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  childMarkdownRemark___fields___filePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMarkdownRemark___fields___slug @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMarkdownRemark___fields___todoCount @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   childMarkdownRemark___fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1353,6 +1406,7 @@ enum MarkdownRemarkFieldsEnum {
   excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   excerptAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   fields___categorySlug @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+  fields___filePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   fields___slug @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   fields___todoCount @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
   fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1428,6 +1482,96 @@ enum PotraceTurnPolicy {
   TURNPOLICY_MINORITY
   TURNPOLICY_RIGHT
   TURNPOLICY_WHITE
+}
+
+enum SiteBuildMetadataFieldsEnum {
+  buildTime
+  children
+  children___children
+  children___children___children
+  children___children___children___children
+  children___children___children___id
+  children___children___id
+  children___children___internal___content
+  children___children___internal___contentDigest
+  children___children___internal___description
+  children___children___internal___fieldOwners
+  children___children___internal___ignoreType
+  children___children___internal___mediaType
+  children___children___internal___owner
+  children___children___internal___type
+  children___children___parent___children
+  children___children___parent___id
+  children___id
+  children___internal___content
+  children___internal___contentDigest
+  children___internal___description
+  children___internal___fieldOwners
+  children___internal___ignoreType
+  children___internal___mediaType
+  children___internal___owner
+  children___internal___type
+  children___parent___children
+  children___parent___children___children
+  children___parent___children___id
+  children___parent___id
+  children___parent___internal___content
+  children___parent___internal___contentDigest
+  children___parent___internal___description
+  children___parent___internal___fieldOwners
+  children___parent___internal___ignoreType
+  children___parent___internal___mediaType
+  children___parent___internal___owner
+  children___parent___internal___type
+  children___parent___parent___children
+  children___parent___parent___id
+  id
+  internal___content
+  internal___contentDigest
+  internal___description
+  internal___fieldOwners
+  internal___ignoreType
+  internal___mediaType
+  internal___owner
+  internal___type
+  parent___children
+  parent___children___children
+  parent___children___children___children
+  parent___children___children___id
+  parent___children___id
+  parent___children___internal___content
+  parent___children___internal___contentDigest
+  parent___children___internal___description
+  parent___children___internal___fieldOwners
+  parent___children___internal___ignoreType
+  parent___children___internal___mediaType
+  parent___children___internal___owner
+  parent___children___internal___type
+  parent___children___parent___children
+  parent___children___parent___id
+  parent___id
+  parent___internal___content
+  parent___internal___contentDigest
+  parent___internal___description
+  parent___internal___fieldOwners
+  parent___internal___ignoreType
+  parent___internal___mediaType
+  parent___internal___owner
+  parent___internal___type
+  parent___parent___children
+  parent___parent___children___children
+  parent___parent___children___id
+  parent___parent___id
+  parent___parent___internal___content
+  parent___parent___internal___contentDigest
+  parent___parent___internal___description
+  parent___parent___internal___fieldOwners
+  parent___parent___internal___ignoreType
+  parent___parent___internal___mediaType
+  parent___parent___internal___owner
+  parent___parent___internal___type
+  parent___parent___parent___children
+  parent___parent___parent___id
 }
 
 enum SiteFieldsEnum {
@@ -1524,6 +1668,7 @@ enum SiteFieldsEnum {
   port
   siteMetadata___author
   siteMetadata___description
+  siteMetadata___siteUrl
   siteMetadata___title
 }
 
@@ -1571,6 +1716,7 @@ enum SitePageFieldsEnum {
   componentChunkName
   componentPath
   context___category
+  context___categorySlug
   context___currentPage
   context___limit
   context___skip
@@ -1687,7 +1833,10 @@ enum SitePageFieldsEnum {
   pluginCreator___parent___parent___children
   pluginCreator___parent___parent___id
   pluginCreator___pluginFilepath
+  pluginCreator___pluginOptions___apiKey
+  pluginCreator___pluginOptions___appId
   pluginCreator___pluginOptions___background_color
+  pluginCreator___pluginOptions___chunkSize
   pluginCreator___pluginOptions___display
   pluginCreator___pluginOptions___icon
   pluginCreator___pluginOptions___name
@@ -1700,8 +1849,11 @@ enum SitePageFieldsEnum {
   pluginCreator___pluginOptions___plugins___resolve
   pluginCreator___pluginOptions___plugins___version
   pluginCreator___pluginOptions___short_name
+  pluginCreator___pluginOptions___siteUrl
   pluginCreator___pluginOptions___start_url
+  pluginCreator___pluginOptions___stripQueryString
   pluginCreator___pluginOptions___theme_color
+  pluginCreator___pluginOptions___trackingId
   pluginCreator___resolve
   pluginCreator___ssrAPIs
   pluginCreator___version
@@ -1814,7 +1966,10 @@ enum SitePluginFieldsEnum {
   parent___parent___parent___children
   parent___parent___parent___id
   pluginFilepath
+  pluginOptions___apiKey
+  pluginOptions___appId
   pluginOptions___background_color
+  pluginOptions___chunkSize
   pluginOptions___display
   pluginOptions___icon
   pluginOptions___name
@@ -1827,8 +1982,11 @@ enum SitePluginFieldsEnum {
   pluginOptions___plugins___resolve
   pluginOptions___plugins___version
   pluginOptions___short_name
+  pluginOptions___siteUrl
   pluginOptions___start_url
+  pluginOptions___stripQueryString
   pluginOptions___theme_color
+  pluginOptions___trackingId
   resolve
   ssrAPIs
   version
@@ -2098,6 +2256,7 @@ input MarkdownHeadingFilterListInput {
 
 input MarkdownRemarkFieldsFilterInput {
   categorySlug: StringQueryOperatorInput
+  filePath: StringQueryOperatorInput
   slug: StringQueryOperatorInput
   todoCount: IntQueryOperatorInput
 }
@@ -2163,6 +2322,19 @@ input Potrace {
   turnPolicy: PotraceTurnPolicy
 }
 
+input SiteBuildMetadataFilterInput {
+  buildTime: DateQueryOperatorInput
+  children: NodeFilterListInput
+  id: StringQueryOperatorInput
+  internal: InternalFilterInput
+  parent: NodeFilterInput
+}
+
+input SiteBuildMetadataSortInput {
+  fields: [SiteBuildMetadataFieldsEnum]
+  order: [SortOrderEnum] = [ASC]
+}
+
 input SiteFilterInput {
   buildTime: DateQueryOperatorInput
   children: NodeFilterListInput
@@ -2178,6 +2350,7 @@ input SiteFilterInput {
 
 input SitePageContextFilterInput {
   category: StringQueryOperatorInput
+  categorySlug: StringQueryOperatorInput
   currentPage: IntQueryOperatorInput
   limit: IntQueryOperatorInput
   skip: IntQueryOperatorInput
@@ -2265,7 +2438,10 @@ input SitePluginPackageJsonPeerDependenciesFilterListInput {
 }
 
 input SitePluginPluginOptionsFilterInput {
+  apiKey: StringQueryOperatorInput
+  appId: StringQueryOperatorInput
   background_color: StringQueryOperatorInput
+  chunkSize: IntQueryOperatorInput
   display: StringQueryOperatorInput
   icon: StringQueryOperatorInput
   name: StringQueryOperatorInput
@@ -2273,8 +2449,11 @@ input SitePluginPluginOptionsFilterInput {
   pathCheck: BooleanQueryOperatorInput
   plugins: SitePluginPluginOptionsPluginsFilterListInput
   short_name: StringQueryOperatorInput
+  siteUrl: StringQueryOperatorInput
   start_url: StringQueryOperatorInput
+  stripQueryString: BooleanQueryOperatorInput
   theme_color: StringQueryOperatorInput
+  trackingId: StringQueryOperatorInput
 }
 
 input SitePluginPluginOptionsPluginsFilterInput {
@@ -2297,6 +2476,7 @@ input SitePluginSortInput {
 input SiteSiteMetadataFilterInput {
   author: StringQueryOperatorInput
   description: StringQueryOperatorInput
+  siteUrl: StringQueryOperatorInput
   title: StringQueryOperatorInput
 }
 

@@ -1,8 +1,5 @@
 version: 2.1
 
-orbs:
-  jira: circleci/jira@1.0.5
-
 jobs:
   build_dependencies:
     docker:
@@ -54,7 +51,3 @@ workflows:
       - test_app:
           requires:
             - build_dependencies
-          post-steps:
-            - jira/notify:
-              job_type: build
-              environment_type: development
