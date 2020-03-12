@@ -1,5 +1,5 @@
 ---
-title: Writing a Case Study
+title: Preparation of a Case Study
 category: Marketing
 date: "2020-03-11"
 tags: ['case-study']
