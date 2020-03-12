@@ -3,7 +3,7 @@ title: Coding Life-Cycle of a Jira issue
 category: General
 date: "2020-03-12"
 tags: ['jira', 'issue', 'development', 'workflow']
-description: Atolye15 has some protocols to follow before starting to coding, in progress and afterwards
+description: Atolye15 has some protocols to follow prior to coding, in progress and afterwards of coding as well.
 ---
 
 - [ ] Read the acceptance criteria carefully  
