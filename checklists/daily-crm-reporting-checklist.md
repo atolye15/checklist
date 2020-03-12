@@ -12,7 +12,7 @@ If you worked in multiple projects, we expect you to report them separately.
 - [ ] Specify your worklog for each project  
 You should specify it in 15 minutes slots. 
 
-- [ ] Specify what did you do in the project  
+- [ ] Specify the tasks/issues you have worked  
 You should specify it with key-id and title that are taken from Jira. So that everyone in the Atolye15 might have an idea about what you're doing.
 
 - [ ] Write down the status of your issues like "Done", "In Progress"
