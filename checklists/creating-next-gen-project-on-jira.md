@@ -31,7 +31,7 @@ If you had a specific category in work space, you can choose one of them.
 Avatar size must be 400x400. You can get help from a designer.
 
 - [ ] Add team members to the project  
-Navigate to the Project Settings/ Access and add team members. 
+Navigate to the Project Settings/ Access and add relative team members. 
 
 - [ ] Determine issue types for project  
 You can quickly update or change the fields and types your team uses to describe each type of work.
