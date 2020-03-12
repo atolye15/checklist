@@ -7,7 +7,7 @@ description: The steps that should be followed by the designer for creating an i
 ---
 
 - [ ] Define the design style   
-You should always keep the current design style of the project, but in some cases there might be no design style ready or you could be starting to a new project. In those cases the first thing you should do is the defining the design style by researching illustration design inspirations for the given project. 
+You should always follow the current design style of the project, but in some cases, there might be no design style ready or you might be starting to a new project. In those cases the first thing you should do is the defining the design style by researching illustration design inspirations for the given project. 
 
 - [ ] Create a moodboard  
 We gather together all the inspiration, usually on a sketch file, and discuss the style with the design team.
