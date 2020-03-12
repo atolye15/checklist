@@ -19,5 +19,5 @@ You should specify it with key-id and title that are taken from Jira. So that ev
 
 - [ ] It would be better to include Turkish characters while writing CRM  
 
-- [ ] Check that the total time is equal to 7.30 hours.
+- [ ] Check that the total time is equal to 7.30 hours  
 We are counting the time over 7.30 hours.
