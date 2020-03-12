@@ -5,6 +5,7 @@ date: "2020-03-12"
 tags: ['case-study']
 description: The checklist we abide by when we write a case study about a new project.
 ---
+
 -  [ ] Explain the project  
 Create a summary of the project to provide its reader with necessary general information.
 
