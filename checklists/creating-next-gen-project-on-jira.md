@@ -19,7 +19,7 @@ Key must be maximum of 5 characters long. Key and name must be corresponded. Mos
 You can customize the project view by choosing one of the “private, limited, open” options.
 
 - [ ] Choose a next-gen template  
-Kanban or Scrum? You can choose a better framework for your project.
+We usually work with the Scrum framework.
 
 - [ ] Navigate to the Project Settings  
 You can customize the project's issues, permissions and appearance via this menu.
