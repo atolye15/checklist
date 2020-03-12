@@ -319,7 +319,7 @@ const NotFoundPage: FC<Props> = ({ data }) => (
 export const pageQuery = graphql`
   query NotFound {
     suggestions: allMarkdownRemark(
-      filter: { fields: { slug: { in: ["creating-a-404-page", "creating-illustrations"] } } }
+      filter: { fields: { slug: { in: ["creating-a-404-page", "creating-ui-illustrations"] } } }
     ) {
       nodes {
         ...Checklist

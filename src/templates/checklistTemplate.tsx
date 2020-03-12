@@ -68,7 +68,7 @@ const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
     return null;
   }
 
-  if (!fields || !fields.categorySlug) {
+  if (!fields || !fields.categorySlug || !fields.filePath) {
     return null;
   }
 
@@ -108,7 +108,7 @@ const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
             <div className="col u-width-auto@md-up u-margin-top-small@sm-down">
               <ButtonAsAnchor
                 theme="secondary"
-                href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
+                href={`https://github.com/atolye15/checklist/edit/master/${fields.filePath}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="u-width-100%@sm-down"
@@ -144,6 +144,7 @@ export const pageQuery = graphql`
       }
       fields {
         categorySlug
+        filePath
       }
     }
 

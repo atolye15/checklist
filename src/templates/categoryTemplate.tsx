@@ -46,7 +46,7 @@ const CategoryTemplate: FC<Props> = ({ data, pageContext }) => {
           </h2>
           <LinkLightAsAnchor
             className="o-suggest-a-checklist"
-            href="https://github.com/atolye15/checklist/blob/master/CONTRIBUTING.md"
+            href="https://git.io/Jv6Wv"
             target="_blank"
             rel="noopener noreferrer"
           >

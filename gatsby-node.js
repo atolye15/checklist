@@ -119,6 +119,15 @@ exports.onCreateNode = ({ actions, getNodes }) => {
       const check = (node.rawMarkdownBody || '').match(/- \[ ] (.*)/g);
       const todoCount = Array.isArray(check) ? check.length : 0;
 
+      const filenameParts = (node.fileAbsolutePath || '').split('/');
+      const filePath = filenameParts[filenameParts.length - 1];
+
+      createNodeField({
+        node,
+        name: 'filePath',
+        value: `checklists/${filePath}`,
+      });
+
       createNodeField({
         node,
         name: 'slug',

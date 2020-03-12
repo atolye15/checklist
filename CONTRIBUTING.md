@@ -65,6 +65,8 @@ You need to provide expected behaviour when you follow the steps to reproduce.
 
 ```
 
+You can use the template via this [link](https://git.io/Jv6Wv)
+
 ## Contribution Channels
 
 There are two ways for you to contribute.
