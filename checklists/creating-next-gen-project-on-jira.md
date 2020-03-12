@@ -3,7 +3,7 @@ title: Creating Next-Gen project on Jira
 category: Project Management
 date: "2020-03-12"
 tags: ['jira']
-description: Here you can find how we create a next-gen project on Jira. Good news! All users can create a next-gen project, even non-admins.
+description: Here you can find how we create a next-gen project on Jira. Good news! All users can create a next-gen project, even non-admins. 🤓
 ---
 
 - [ ] Navigate to the "Projects" page and click on the "Create Project" button  
