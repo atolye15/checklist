@@ -9,7 +9,7 @@ description: We request the worklog from the team at the end of every day. So th
 - [ ] Write the project's name that you're working on as title  
 If you worked in multiple projects, we expect you to report them separately.
 
-- [ ] Specify your work log for each project  
+- [ ] Specify your worklog for each project  
 You should specify it in 15 minutes slots. 
 
 - [ ] Specify what did you do in the project  
