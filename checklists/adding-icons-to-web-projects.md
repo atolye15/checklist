@@ -2,7 +2,7 @@
 title: Adding Vector Icons to Web Projects
 category: Front-End
 date: '2020-03-14'
-tags: ['front-end', 'web', 'svg', 'icon', 'icomoon']
+tags: ['front-end', 'web', 'svg', 'icon', 'icoMoon']
 description: These are the steps of how to add vector icons correctly to a web project assumed that the project is utilizing SVG sprite.
 ---
 
