@@ -21,7 +21,7 @@ It is always a good idea to take the drafts to non-design persons and gather the
 - [ ] Decide upon the one to go with  
 
 - [ ] Create high-fidelity illustration  
-After agreed upon the design style with the team. It is now time to create high-fidelity illustrations.
+After agreed upon the design style with the team it is now time to create high-fidelity illustrations.
 
 - [ ] Get feedback, again  
 Even if you have agreed upon the design style of the illustrations, the high-fidelity illustrations might need feedbacks again. 
