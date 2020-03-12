@@ -24,7 +24,7 @@ You should share necessary email address and password with the client.
 
 - [ ] Check the favicon
 
-- [ ] Do crossbrowser test  
+- [ ] Do cross-browser test  
 We are checking Safari, Chrome, Firefox on different devices. Please refer to [Cross-Browser Test Checklist](https://checklist.atolye15.com/checklist/cross-browser-test).  
 
 - [ ] Check Google Speed Insights  
