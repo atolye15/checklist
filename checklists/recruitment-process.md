@@ -17,3 +17,15 @@ Contact the potential candidate in order to get to know them better & provide th
 
 - [ ] Send an "Introduction Mail" about the interviewed position to the candidate  
 Inform the candidate about related position's needs and learn more about their past experiences.
+
+- [ ] Forward test case to the candidate  
+Evaluate to candidates who respond to the introduction mail. Ask to complete a small test run in order to observe candidates technical competence. 
+
+- [ ] Share project case work        
+Ask for more extensive project from the candidate who completes test process successfully. Get the information about the level of expertise.
+
+- [ ] Organize a job interview with the candidate   
+Organize face-to-face interview with Hiring Managers in order share more detailed information about the candidate.
+
+- [ ] Final interview    
+As the last step of the recruitment process, the final interview is held with the participation of the related managers. Make an offer to the suitable candidate.
