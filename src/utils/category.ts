@@ -4,6 +4,7 @@ import { Theme } from './theme';
 export type Category =
   | 'front-end'
   | 'back-end'
+  | 'mobile'
   | 'devops'
   | 'design'
   | 'project-management'
@@ -16,6 +17,7 @@ export const categoryTheme: { [key in Category]: Theme } = {
   default: 'default',
   'front-end': 'dodger-blue',
   'back-end': 'electric-violet',
+  mobile: 'purple-heart',
   devops: 'fuzzy-wuzzy-brown',
   design: 'rose',
   'project-management': 'clementine',
@@ -34,6 +36,9 @@ export const getDescription = (title: string): string => {
 
     case 'Back-End':
       return 'Server related, data-driven and API based checklists that help making our products of hard work stay steady.';
+
+    case 'Mobile':
+      return 'Connecting people by covering all the processes from mobile development to roll-out the application.';
 
     case 'DevOps':
       return 'We love to automate things and have also checklists for that.';
