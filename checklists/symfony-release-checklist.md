@@ -9,7 +9,7 @@ description: The list of the To-do's we have complete right before the deploy ou
 - [ ] Check dependencies in the composer.json file  
 Make sure the development and production dependencies are correctly defined and production release does not include development packages
 
-- [ ] Check the environment values  
+- [ ] Check the environment variables  
 Check environment values in the `.env` file to prevent a leak of any sensitive information make sure there are no real data defined
 
 - [ ] Test the Makefile is running as it should for all environment definitions  
