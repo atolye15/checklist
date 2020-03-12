@@ -10,7 +10,7 @@ description: We request the worklog from the team at the end of every day. So th
 If you worked in multiple projects, we expect you to report them separately.
 
 - [ ] Specify your worklog for each project  
-You should specify it in 15 minutes slots. 
+Use marks of 15 minutes.
 
 - [ ] Specify the tasks/issues you have worked  
 You should specify it with key-id and title that are taken from Jira. So that everyone in the Atolye15 might have an idea about what you're doing.
