@@ -24,4 +24,4 @@ If any newly defined environment values exist in `.env` file, make sure they are
 - [ ] Merge approved pull request  
 Then wait for the deployment tool while you enjoy a sip of your ☕️
 
-- [ ] Visit the application to make sure it is deployed successfully
+- [ ] Test the application to make sure it is deployed successfully
