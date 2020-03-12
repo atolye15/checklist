@@ -2,7 +2,7 @@
 title: Orientation Programme
 category: Human Resources
 date: "2020-03-12"
-tags: ['orientation', 'mentor', 'welcomekit']
+tags: ['orientation', 'mentor', 'welcome-kit']
 description: Follow the programme to quickly adapt the employee to the Atolye15 culture and own position.
 
 ---
