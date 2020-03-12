@@ -22,7 +22,7 @@ You can customize the project view by choosing one of the “private, limited, o
 We usually work with the Scrum framework.
 
 - [ ] Navigate to the Project Settings  
-You can customize the project's issues, permissions and appearance via this menu.
+You can customize the project's issues, permissions and appearance in this menu.
 
 - [ ] Select a category   
 If you had a specific category in work space, you can choose one of them. 
