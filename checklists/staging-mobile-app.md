@@ -19,7 +19,7 @@ You'll need a keystore file for android and authorized certificate/-s for iOS. W
 API endpoints or environment variables may differ.
 
 - [ ] Build a staging application  
-Built APK file for Android can be found inside projects android folder `app/build/output/apk/release/`, iOS application will be sent to TestFlight. 
+Built APK file for Android can be found inside project's Android folder `app/build/output/apk/release/`, iOS application will be sent to TestFlight. 
 
 - [ ] Load built apk file into Android test devices  
 
