@@ -6,7 +6,7 @@ tags: ['hiring', 'agreement', 'documentation']
 description: Make sure that the documents of the employee who will start work are complete and ensure that they are protected
 ---
 
-- [ ] Request of Employment Documents  
+- [ ] Request employment documents  
 The list of requested documents are sent to the candidate after job offer has been accepted. The submission of necessary documents are required within the settled timeframe.  
 
 - [ ] Finalize agreements and contracts  
