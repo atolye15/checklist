@@ -1,6 +1,6 @@
 ---
 title: Daily CRM Reporting Checklist
-category: Project Management
+category: General
 date: "2020-03-12"
 tags: ['worklog', 'time-management']
 description: We request the worklog from the team at the end of every day. So that, we can follow our performance (man/day) in each project and we call it "CRM". Follow the steps for the perfect CRM sharing! 
