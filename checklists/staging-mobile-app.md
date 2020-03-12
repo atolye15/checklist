@@ -3,7 +3,7 @@ title: Stage A Mobile App
 category: Mobile
 date: "2020-03-11"
 tags: ['mobile', 'react-native']
-description: Follow these steps during staging a mobile application 
+description: Follow these steps while staging a mobile application.
 ---
 
 - [ ] Create a new branch  
