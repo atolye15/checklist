@@ -2,8 +2,8 @@
 title: Daily CRM Reporting Checklist
 category: Project Management
 date: "2020-03-12"
-tags: ['crm', 'time-management']
-description: Follow the steps for the perfect CRM sharing! We request CRM from the team at the end of the everyday. Therefore, we can follow our performance (man/day) in each project.
+tags: ['worklog', 'time-management']
+description: We request the worklog from the team at the end of every day so that, we can follow our performance (man/day) in each project, and we call it "CRM". Follow the steps for the perfect CRM sharing! 
 ---
 
 - [ ] Write the project name as title that you're working on  
