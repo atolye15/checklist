@@ -62,6 +62,8 @@ $color-gossamer: #079668;
 $color-salem: #09714f;
 $color-fuzzy-wuzzy-brown: #c54d52;
 $color-medium-carmine: #b73a3f;
+$color-purple: #820189;
+$color-scarlet-gum: #631567;
 
 $color-brand: #fe2d5b;
 $color-brand-dark-1: #e6004d;
@@ -119,6 +121,10 @@ $g-theme-colors: (
   'purple-heart': (
     idle: $color-purple-heart,
     hover: $color-blue-gem,
+  ),
+  'purple': (
+    idle: $color-purple,
+    hover: $color-scarlet-gum,
   ),
   'clementine': (
     idle: $color-clementine,

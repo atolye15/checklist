@@ -5,6 +5,7 @@ export type Theme =
   | 'electric-violet'
   | 'fuzzy-wuzzy-brown'
   | 'rose'
+  | 'purple'
   | 'purple-heart'
   | 'clementine'
   | 'gossamer';

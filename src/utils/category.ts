@@ -19,7 +19,7 @@ export const categoryTheme: { [key in Category]: Theme } = {
   devops: 'fuzzy-wuzzy-brown',
   design: 'rose',
   'project-management': 'clementine',
-  'human-resources': 'purple-heart',
+  'human-resources': 'purple',
   marketing: 'gossamer',
   general: 'blue',
 };
