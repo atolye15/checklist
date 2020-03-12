@@ -36,5 +36,5 @@ Navigate to the Project Settings/ Access and add relative team members.
 - [ ] Determine issue types for project  
 You can quickly update or change the fields and types your team uses to describe each type of work.
 
-- [ ] Don’t forget to set a features  
+- [ ] Don’t forget to set features  
 Generally we use Roadmap, Backlog, Estimation features in Atolye15’s projects. 
