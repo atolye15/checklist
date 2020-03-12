@@ -32,7 +32,7 @@ You always commit changes with a meaningful scope. Commits should contain just o
 - [ ] Push your changes
 
 - [ ] Create a new PR
-You may mention the issue name on PR title.
+You may mention the issue name on PR title
 
 - [ ] Assign relevant people to PR
 
