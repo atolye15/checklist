@@ -10,7 +10,7 @@ description: The list of the To-do's we have complete right before the deploy ou
 Make sure the development and production dependencies are correctly defined and production release does not include development packages
 
 - [ ] Check the environment variables  
-Check environment values in the `.env` file to prevent a leak of any sensitive information make sure there are no real data defined
+Check the environment variables defined in `.env` file to prevent a leak of any sensitive information and make sure this file only includes example values
 
 - [ ] Test the Makefile is running as it should for all environment definitions  
 Once again, make sure the `Makefile` is running correctly for all the environments defined for the project
