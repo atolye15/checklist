@@ -21,7 +21,7 @@ Inform the candidate about related position's needs and learn more about their p
 - [ ] Forward test case to the candidate  
 Evaluate to candidates who respond to the introduction mail. Ask to complete a small test run in order to observe candidates technical competence. 
 
-- [ ] Share project case work        
+- [ ] Share project case work with candidate         
 Ask for more extensive project from the candidate who completes test process successfully. Get the information about the level of expertise.
 
 - [ ] Organize a job interview with the candidate   
