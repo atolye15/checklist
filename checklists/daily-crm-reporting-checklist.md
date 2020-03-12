@@ -6,11 +6,18 @@ tags: ['crm', 'time-management']
 description: Follow the steps for the perfect CRM sharing! We request CRM from the team at the end of the everyday. Therefore, we can follow our performance (man/day) in each project.
 ---
 
-- [ ] Write your project name which is time spent  
-- [ ] Specify your time spent for each project  
-You should specify it in 25 percent time frame. For example, you spent 45 minutes for your project. You should specify it as 0.75.  
-- [ ] Specify what did you do in project  
-You should specify your jira key ıd, title and status of task details.  
-- [ ] Prefer Turkish characters while writing CRM  
-- [ ] Check overall worktime of day  
-You should check overall worktime of day, it might be 7 hour and 30 minutes.
+- [ ] Write the project name as title that you're working on  
+If you worked in multiple projects, we expect you to report them separately.
+
+- [ ] Specify your work log for each project  
+You should specify it in 15 minutes slots. 
+
+- [ ] Specify what did you do in the project  
+You should specify it with key-id and title that are taken from Jira. So that everyone in the Atolye15 might have an idea about what you're doing.
+
+- [ ] Write down the status of your issues like "Done", "In Progress"
+
+- [ ] It would be better to include Turkish characters while writing CRM  
+
+- [ ] Check that the total time is equal to 7.30 hours.
+We are counting the time over 7.30 hours.
