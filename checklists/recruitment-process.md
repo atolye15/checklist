@@ -3,7 +3,7 @@ title: Recruitment Process
 category: Human Resources
 date: "2020-03-11"
 tags: ['recruitment',  'job-posting', 'interview', 'offer']
-description: Follow the steps to find the right candidate. It helps us understand the candidate's technical capabilities and profile features  
+description: Follow these steps to find the right candidate. It helps to understand the candidate's technical capabilities and their profile  
 ---
 
 - [ ] Determine the required job position  
