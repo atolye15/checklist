@@ -16,7 +16,7 @@ Check the environment variables defined in `.env` file to prevent a leak of any 
 Once again, make sure the `Makefile` is running correctly for all the environments defined for the project
 
 - [ ] Open a pull request to the environment's base branch  
-After the AC on Jira completed, open a merge pull request from issue(s) related branch to the environment's base branch
+After the AC on Jira completed, open a  pull request from issue(s) related branch to the environment's base branch
 
 - [ ] Define environment values on server  
 If any newly defined environment values exist in `.env` file, make sure they are defined in the `.env.local` with correct values on the target server
