@@ -2,7 +2,7 @@
 title: Coding Life-Cycle of a Jira issue
 category: General
 date: "2020-03-12"
-tags: ['jira', 'issue', 'development', 'workflow' ]
+tags: ['jira', 'issue', 'development', 'workflow']
 description: Atolye15 has some protocols to follow before starting to coding, in progress and afterwards
 ---
 
@@ -10,7 +10,7 @@ description: Atolye15 has some protocols to follow before starting to coding, in
 Be sure all cases are covered. Even you already discussed the issue with the team, some new cases may come up to your mind. Don't hesitate to discuss AC one more time with the team!
 
 - [ ] Create a branch for the issue  
-You should create a branch with a name like `feature/ABC-123_brief-description`. For bugs change `feature` with `bug` keyword.
+You should create a branch with a name like `feature/ABC-123_brief-description`. For bugs change `feature` with `bug` keyword
 
 - [ ] Push your branch to remote immediately. 
 Since we have Jira-GitHub integration, you have to push the branch to remote in order to trigger "In Progress" transition on Jira
