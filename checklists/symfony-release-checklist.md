@@ -15,7 +15,7 @@ Check the environment variables defined in `.env` file to prevent a leak of any 
 - [ ] Test the Makefile is running as it should for all environment definitions  
 Once again, make sure the `Makefile` is running correctly for all the environments defined for the project
 
-- [ ] Open a merge pull request to the environment's base branch  
+- [ ] Open a pull request to the environment's base branch  
 After the AC on Jira completed, open a merge pull request from issue(s) related branch to the environment's base branch
 
 - [ ] Define environment values on server  
