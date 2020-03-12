@@ -5,6 +5,7 @@ date: "2020-03-12"
 tags: ['illustrations', 'mood-boarding', 'sketch']
 description: The steps that should be followed by the designer for creating illustration designs to the design projects.
 ---
+
 - [ ] Define the design style   
 You should always keep the current design style of the project, but in some cases there might be no design style ready or you could be starting to a new project. In those cases the first thing you should do is the defining the design style by researching illustration design inspirations for the given project. 
 
