@@ -12,7 +12,7 @@ Be sure all cases are covered. Even you already discussed the issue with the tea
 - [ ] Create a branch for the issue  
 You should create a branch with a name like `feature/ABC-123_brief-description`. For bugs change `feature` with `bug` keyword
 
-- [ ] Push your branch to remote immediately. 
+- [ ] Push your branch to remote immediately   
 Since we have Jira-GitHub integration, you have to push the branch to remote in order to trigger "In Progress" transition on Jira
 
 - [ ] Start time tracker  
@@ -25,13 +25,13 @@ You always commit changes with a meaningful scope. Commits should contain just o
 
 - [ ] Check that everything is working as mentioned on acceptance criteria via E2E or manually  
 
-- [ ] Make sure that there is no, any linting or formatting error
+- [ ] Make sure that there is no linting or formatting error
 
 - [ ] Make sure you aren't below the coverage threshold
 
 - [ ] Push your changes
 
-- [ ] Create a new PR
+- [ ] Create a new PR  
 You may mention the issue name on PR title
 
 - [ ] Assign relevant people to PR
