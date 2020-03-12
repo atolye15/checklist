@@ -3,7 +3,7 @@ title: Creating Interactive Prototypes
 category: Design
 date: "2020-03-11"
 tags: ['tools', 'prototyping', 'design-process']
-description: Creating interactive prototypes is an important step on the design process. Use this checklist to make sure you cover the basics of creating them!
+description: Creating interactive prototypes is an important step in the product design process. Use this checklist to make sure you cover the basics of creating them!
 ---
 
 - [ ] Create the screens  
