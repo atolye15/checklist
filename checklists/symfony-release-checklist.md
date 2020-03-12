@@ -18,7 +18,7 @@ Once again, make sure the `Makefile` is running correctly for all the environmen
 - [ ] Open a pull request to the environment's base branch  
 Open a pull request from the development branch which contains all the branches that have been completed their [coding life-cycle](/checklist/coding-life-cycle-of-a-jira-issue) to the environment's base branch
 
-- [ ] Define environment values on server  
+- [ ] Define environment variables on the server  
 If any newly defined environment values exist in `.env` file, make sure they are defined in the `.env.local` with correct values on the target server or continuous deployment tool.
 
 - [ ] Merge approved pull request  
