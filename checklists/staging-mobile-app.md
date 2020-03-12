@@ -13,7 +13,7 @@ Ideally named "testflight"
 Some projects may have been configured to do this task using Fastlane. Run desired fastlane job/-s or do it manually if necessary.
 
 - [ ] Make sure you have set up your authorization correctly  
-You'll need a keystore file for android and authorized certificate/-s for iOS. While uploading to AppStore you might also need to enter a SMS verification code.
+You'll need a keystore file for Android and authorized certificate/-s for iOS. While uploading to AppStore you might also need to enter a SMS verification code.
 
 - [ ] Make sure staging application has the correct configuration  
 API endpoints or environment variables may differ.
