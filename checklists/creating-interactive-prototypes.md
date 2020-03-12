@@ -12,6 +12,9 @@ These screens don't have to be high-fidelity designs.
 - [ ] Wire them up  
 Make sure you have linked every screen to each other so that ther are no gaps in interactions.
 
+- [ ] Pay attention to component behaviours  
+For better prototyping you should pay extra attention to component states and their behaviours. E.g. sticky components, hover and active effects, micro-interactions...
+
 - [ ] Test the usability of the product  
 E.g. Make sure the buttons are easily noticable and clickable. Texts are easy to read, etc.
 
