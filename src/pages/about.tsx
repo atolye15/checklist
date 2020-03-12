@@ -277,7 +277,7 @@ const About: FC<Props> = ({ data }) => (
         </div>
 
         <h1 className="h2 u-margin-bottom">
-          What is <br /> Atolye15 Checklist
+          <div className="u-color-secondary">What is</div> Atolye15 Checklist
         </h1>
 
         <p>
