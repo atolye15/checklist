@@ -24,6 +24,9 @@ const DemoItem = ({ size }: { size?: any }) => (
     <Tag to="./" theme="rose" size={size} className="u-margin-2xsmall">
       #rose
     </Tag>
+    <Tag to="./" theme="purple" size={size} className="u-margin-2xsmall">
+      #purple
+    </Tag>
     <Tag to="./" theme="purple-heart" size={size} className="u-margin-2xsmall">
       #purple-heart
     </Tag>
