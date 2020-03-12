@@ -2,7 +2,7 @@
 title: Recruitment Process
 category: Human Resources
 date: "2020-03-11"
-tags: ['recruitment', 'search', 'job-posting', 'interview', 'offer']
+tags: ['recruitment',  'job-posting', 'interview', 'offer']
 description: Follow the steps to find the right candidate. It helps us understand the candidate's technical capabilities and profile features  
 ---
 
@@ -25,7 +25,7 @@ Evaluate to candidates who respond to the introduction mail. Ask to complete a s
 Ask for more extensive project from the candidate who completes test process successfully. Get the information about the level of expertise.
 
 - [ ] Organize a job interview with the candidate   
-Organize face-to-face interview with Hiring Managers in order share more detailed information about the candidate.
+Organize a face-to-face interview with Hiring Managers in order to get more detailed information about the candidate.
 
 - [ ] Final interview    
-As the last step of the recruitment process, we set the the final interview with the participation managers and make an offer to the suitable candidate.
+As the last step of the recruitment process, have a final interview with the candidate and the participation related managers. Make a job offer if the candidate has been found suitable.
