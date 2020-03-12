@@ -3,7 +3,7 @@ title: Creating UI Illustrations
 category: Design
 date: "2020-03-12"
 tags: ['illustrations', 'mood-boarding', 'sketch']
-description: The steps that should be followed by the designer for creating illustration designs to the design projects.
+description: The steps that should be followed by the designer for creating an illustration to a project.
 ---
 
 - [ ] Define the design style   
