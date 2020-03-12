@@ -46,6 +46,7 @@ const Categories: FC<Props> = ({ categories, current }) => {
           key={category.slug}
         >
           <CategoryCard
+            className="u-flex-basis-100%"
             title={category.title}
             slug={category.slug as Category}
             checklistCount={category.checklistCount}
