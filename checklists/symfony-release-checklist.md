@@ -12,6 +12,9 @@ Make sure the development and production dependencies are correctly defined and 
 - [ ] Check the environment variables  
 Check the environment variables defined in `.env` file to prevent a leak of any sensitive information and make sure this file only includes example values
 
+- [ ] Check the logger configuration for the environment
+Set the correct logging level for the environment and add email notifier for critical logs
+
 - [ ] Test the Makefile is running as it should for all environment definitions  
 Once again, make sure the `Makefile` is running correctly for all the environments defined for the project
 
