@@ -25,7 +25,7 @@ It is always a good idea to brainstorm with the other designers on the team.
 - [ ] Commit early and often  
 
 - [ ] Keep the design consistent and accessible  
-You should follow the [UI Style Guide](https://checklist.atolye15.com/checklist/essentials-of-ui-style-guide) of the project and make sure the new contributions are compatible with the rest of the design.
+You should follow the [UI Style Guide](/checklist/essentials-of-ui-style-guide) of the project and make sure the new contributions are compatible with the rest of the design.
 
 - [ ] Make sure you have meet the acceptance criteria  
 
