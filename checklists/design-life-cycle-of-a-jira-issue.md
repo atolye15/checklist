@@ -27,7 +27,7 @@ It is always a good idea to brainstorm with the other designers on the team.
 - [ ] Keep the design consistent and accessible  
 You should follow the [UI Style Guide](/checklist/essentials-of-ui-style-guide) of the project and make sure the new contributions are compatible with the rest of the design.
 
-- [ ] Make sure you have meet the acceptance criteria  
+- [ ] Make sure you have met the acceptance criteria  
 
 - [ ] Design Review  
 Design review is a crucial part of our design workflow. Every design should be reviewed and approved by the other designers on the team, so after the last commit you should add other designers as reviewers(on Abstract).
