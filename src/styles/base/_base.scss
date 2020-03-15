@@ -58,6 +58,13 @@ body {
   text-align: left; // 1
 }
 
+// Selection Color
+
+::selection {
+  background-color: color-palette('primary', 200);
+  color: color-palette('primary', 50);
+}
+
 [role='button'] {
   cursor: pointer;
 }
