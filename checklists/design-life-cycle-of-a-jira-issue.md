@@ -10,7 +10,7 @@ description: This checklist covers the steps to follow when designing for an ong
 - [ ] Read the issue carefully  
 Understanding the briefing is a crucial step. You can always disucss the details with the team for better understanding the issue.
 
-- [ ] Give a time estimation to the task  
+- [ ] Give a time estimation to the task  
 Estimations are hard, that is why they are called estimations. You'll get better at it over time. 
 
 - [ ] Change the status of the Jira issue from “To-Do“ to “In-Progress“  
@@ -22,9 +22,9 @@ We use Abstract for version controlling and design handoffs. Create a branch nam
 - [ ] Provide the needs of the given task  
 It is always a good idea to brainstorm with the other designers on the team.
 
-- [ ] Commit early and often  
+- [ ] Commit early and often  
 
-- [ ] Keep the design consistent and accessible  
+- [ ] Keep the design consistent and accessible  
 You should follow the [UI Style Guide](/checklist/essentials-of-ui-style-guide) of the project and make sure the new contributions are compatible with the rest of the design.
 
 - [ ] Make sure you have met the acceptance criteria  
@@ -35,7 +35,7 @@ Design review is a crucial part of our design workflow. Every design should be r
 - [ ] Inform the design team  
 Inform the design team about the task you have worked on, give them contexts so that every designer on the team can be on the same page.
 
-- [ ] Merge the branch to master  
+- [ ] Merge the branch to master  
 Don't forget to apply the changes from design review if there was any.
 
 - [ ] Create an Abstract collection  
@@ -44,6 +44,6 @@ We use collections feature of Abstract, you should create a new collection named
 - [ ] Change the status of the Jira issue from “In-Progress“ to “Review“  
 Also please provide the Abstract collection link of the design. 
 
-- [ ] Assign the project's manager to the task  
+- [ ] Assign the project's manager to the task  
 
 - [ ] Stop your time tracker ✊  
