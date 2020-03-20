@@ -1,6 +1,6 @@
 ---
 title: Setting Up a New WSK Project 
-category: Front-End,
+category: Front-End
 date: "2020-03-20"
 tags: ['scss', 'html']
 description: Steps we follow to make WSK's initial setup is ready to start a new project. This checklist also covers how to import and start to use scss-starter with WSK.
