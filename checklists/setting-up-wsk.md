@@ -19,7 +19,7 @@ Create styles folder in `src` directory and clone [scss-starter](https://github.
 Remove all files except `scss` folder. Make sure you also removed the .git folder.
 
 - [ ] Extract the scss folder into the styles folder  
-The files we want need to stay in the styles folder, therefore, we can delete the scss folder after extracting all files.
+The files we want need to stay in the styles folder. Therefore, we can delete the scss folder after extracting all files.
 
 - [ ] Remove components and objects folders  
 Components and objects folders already exist in src/ directory so there is no need them to stay anymore. Also, don't forget to remove them from _main.scss file.
