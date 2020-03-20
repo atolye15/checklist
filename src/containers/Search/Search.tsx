@@ -60,7 +60,9 @@ const Search: FC<Props> = ({ id, className }) => {
           <Results>
             <Hits onClick={handleHitClick} />
             <div className="c-search__powered-by">
-              <img src={algolia} alt="Search by Algolia" width={112} height={16} />
+              <a href="https://www.algolia.com" target="_blank" rel="noopener noreferrer">
+                <img src={algolia} alt="Search by Algolia" width={112} height={16} />
+              </a>
             </div>
           </Results>
         )}
