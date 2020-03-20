@@ -16,7 +16,7 @@ Remove existing .git folder, initialize a new one and create your first commit.
 Create styles folder in `src` directory and clone [scss-starter](https://github.com/atolye15/scss-starter/) into it.
 
 - [ ] Clean up styles folder  
-Remove all files except scss/ folder. Make sure you also removed the .git folder.
+Remove all files except `scss` folder. Make sure you also removed the .git folder.
 
 - [ ] Extract the scss folder into the styles folder  
 The files we want need to stay in the styles folder, therefore, we can delete the scss folder after extracting all files.
