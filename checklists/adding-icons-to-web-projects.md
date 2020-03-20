@@ -20,7 +20,7 @@ Vector icons should be within the correct grid. Otherwise, ask the designer to p
 - [ ] Select all icons and press the "Generate SVG & More" button on IcoMoon
 
 - [ ] Press the download button to get the SVG icons  
-If the icoMoon project settings are not defined, press the settings icon to the right of the download button to configure the project settings.
+If the icoMoon project settings are not defined, press the settings icon on the right of the download button to configure the project settings.
 
 - [ ] Copy SVG icons to icons folder in your project
 
