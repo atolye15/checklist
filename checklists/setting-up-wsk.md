@@ -25,7 +25,7 @@ The files we want need to stay in the styles folder. Therefore, we can delete th
 Components and objects folders already exist in `src` directory, so there is no need for them to stay anymore. Also, don't forget to remove them from `_main.scss` file.
 
 - [ ] Import scss-starter to WSK  
-Import main.scss file in top app.scss file
+Import `main.scss` file in the top of `app.scss` file
 
 - [ ] Make sure you commit your changes
 
