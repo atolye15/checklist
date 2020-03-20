@@ -13,7 +13,7 @@ Simply clone [git repository](https://github.com/atolye15/web-starter-kit) to ge
 Remove existing .git folder, initialize a new one and create your first commit.
 
 - [ ] Clone scss-starter repository  
-Create styles folder in src/ directory and clone [scss-starter](https://github.com/atolye15/scss-starter/) into it.
+Create styles folder in `src` directory and clone [scss-starter](https://github.com/atolye15/scss-starter/) into it.
 
 - [ ] Clean up styles folder  
 Remove all files except scss/ folder. Make sure you also removed the .git folder.
