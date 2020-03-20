@@ -15,7 +15,7 @@ You can use [SVGO](https://jakearchibald.github.io/svgomg/) SVG optimizer.
 If there is icomoon project, you should create new project on [IcoMoon](https://icomoon.io/app/#/projects) or just simply import icon to the existing project.
 
 - [ ] Place the icon correctly on the provided grid by the designer on IcoMoon  
-If the vector icons should be within the correct grid. If not, ask the designer to place the icons correctly in a grid.
+Vector icons should be within the correct grid. Otherwise, ask the designer to place the icons correctly in a grid.
 
 - [ ] Select all icons and press the "Generate SVG & More" button on IcoMoon
 
