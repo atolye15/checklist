@@ -22,6 +22,6 @@ Vector icons should be within the correct grid. Otherwise, ask the designer to p
 - [ ] Press the download button to get the SVG icons  
 If the icoMoon project settings are not defined, press the settings icon on the right of the download button to configure the project settings.
 
-- [ ] Copy SVG icons to icons folder in your project
+- [ ] Import SVG icons to project's icons folders
 
 - [ ] Download the IcoMoon project settings file and copy it to the folder of Icon component
