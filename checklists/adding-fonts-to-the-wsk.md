@@ -2,12 +2,12 @@
 title: Adding Fonts to the WSK
 category: Front-End
 date: "2020-03-20"
-tags: ['font', 'scss']
+tags: ['font', 'scss', 'wsk']
 description: Here is the checklist that we follow to import fonts to our projects.
 ---
 
-- [ ] Get the fonts!  
-Search through the web but if you can't manage to find kindly ask your designer to provide you.
+- [ ] Get the fonts  
+If the project's font is free licence you can either download it from internet or have the designer to provide it for you.
 
 - [ ] Convert your fonts  
 We use fonts as 'woff', 'woff2' and 'ttf' formats in our projects so you need to convert your fonts into those. You can use 'fontplop' desktop app for it.
