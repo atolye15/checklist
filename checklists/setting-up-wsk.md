@@ -30,4 +30,4 @@ Import `main.scss` file in the top of `app.scss` file
 - [ ] Make sure you commit your changes
 
 - [ ] Start developing  
-Execute the "yarn" command to install dependencies and then the "yarn start". You are ready to develop!
+Execute the `yarn` command to install dependencies and then run `yarn start`. You are ready to develop!
