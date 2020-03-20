@@ -22,7 +22,7 @@ Remove all files except `scss` folder. Make sure you also removed the .git folde
 The files we want need to stay in the styles folder. Therefore, we can delete the scss folder after extracting all files.
 
 - [ ] Remove components and objects folders  
-Components and objects folders already exist in src/ directory so there is no need them to stay anymore. Also, don't forget to remove them from _main.scss file.
+Components and objects folders already exist in `src` directory, so there is no need for them to stay anymore. Also, don't forget to remove them from `_main.scss` file.
 
 - [ ] Import scss-starter to WSK  
 Import main.scss file in top app.scss file
