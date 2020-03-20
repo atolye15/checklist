@@ -6,7 +6,7 @@ tags: ['front-end', 'web', 'svg', 'icon', 'icoMoon']
 description: These are the steps of how to add vector icons correctly to a web project assumed that the project is utilizing SVG sprite.
 ---
 
-- [ ] Get vector icons from the designer
+- [ ] Get vector icons from the design team
 
 - [ ] Minify SVG code  
 You can use [SVGO](https://jakearchibald.github.io/svgomg/) SVG optimizer.
