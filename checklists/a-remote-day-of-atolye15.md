@@ -24,7 +24,7 @@ Yeah, wash them good!
 - [ ] Get on to your desk by 08:30  
 You might want to consider connecting to Slack a couple minutes before that to catch the morning joke around.
 
-- [ ] Join to your daily scrum meetings  
+- [ ] Join to your daily scrum meetings  
 Every scrum team has their morning meetings around 08:30
 
 - [ ] Get to work  
@@ -46,7 +46,7 @@ It's 13:00, that means there is another scrum meeting going on in your team's Sl
 Pretty straight-forward, huh? Good.
 
 - [ ] Check if it's ~16:45  
-If so, it's daily CRM time. Follow the CRM checklist (/checklist/daily-crm-reporting-checklist).
+If so, it's daily CRM time. Follow the [CRM Checklist](/checklist/daily-crm-reporting-checklist).
 
 - [ ] Check if you've wash your hands  
 Smell them, look at them idk... Boil 'em, mash 'em, stick 'em in a stew!
