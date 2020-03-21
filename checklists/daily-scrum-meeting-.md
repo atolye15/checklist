@@ -6,7 +6,7 @@ tags: ['scrum', 'agile']
 description: Go agile! 🚀 Daily Scrum Meetings are like a good-brewed coffee, don't forget it when you start a new work-day.
 ---
 
-- [ ] At fist, set a specific time and place for the daily meeting  
+- [ ] At first, set a specific time and place for the daily meeting  
 So that, it will be easier for the team to gain habit.
 
 - [ ] Check the time  
