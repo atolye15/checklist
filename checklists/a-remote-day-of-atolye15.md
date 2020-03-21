@@ -31,7 +31,7 @@ Every scrum team has their morning meetings around 08:30
 You might want to follow [Design Life-Cycle of a Jira Issue](/checklist/design-life-cycle-of-a-jira-issue) or [Coding Life-Cycle of a Jira Issue](/checklist/coding-life-cycle-of-a-jira-issue)
 
 - [ ] Prepare lunch  
-Since there is no Seço around :disappointed_relieved: , you should prepare your own lunch 
+Since there is no Seço around 😞, you should prepare your own lunch 
 
 - [ ] Wash your hands  
 This should be your at least 4th washing today.
