@@ -12,7 +12,7 @@ Actually, since there is no travel to work time involved, you can -and definitel
 - [ ] Air out your room  
 It is highly important to air out your room, they said.
 
-- [ ] Brew a good coffee  
+- [ ] Brew a good coffee  
 No day should start without a coffee, make one.
 
 - [ ] Make breakfast  
@@ -24,10 +24,10 @@ Yeah, wash them good!
 - [ ] Get on to your desk by 08:30  
 You might want to consider connecting to Slack a couple minutes before that to catch the morning joke around.
 
-- [ ] Join to your daily scrum meetings  
+- [ ] Join to your daily scrum meetings  
 Every scrum team has their morning meetings around 08:30
 
-- [ ] Get to work  
+- [ ] Get to work  
 You might want to follow [Design Life-Cycle of a Jira Issue](/checklist/design-life-cycle-of-a-jira-issue) or [Coding Life-Cycle of a Jira Issue](/checklist/coding-life-cycle-of-a-jira-issue)
 
 - [ ] Prepare lunch  
@@ -48,7 +48,7 @@ Pretty straight-forward, huh? Good.
 - [ ] Check if it's ~16:45  
 If so, it's daily CRM time. Follow the [CRM Checklist](/checklist/daily-crm-reporting-checklist).
 
-- [ ] Check if you've wash your hands  
+- [ ] Check if you've wash your hands  
 Smell them, look at them idk... Boil 'em, mash 'em, stick 'em in a stew!
 
 - [ ] Come back to this checklist tomorrow
