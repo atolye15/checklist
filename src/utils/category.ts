@@ -61,11 +61,11 @@ export const getDescription = (title: string): string => {
 };
 
 export const getMostUsedTags = (
-  nodes: Array<{ frontmatter: Maybe<Pick<MarkdownRemarkFrontmatter, 'tags'>> }>,
+  nodes?: Array<{ frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'tags'>> }>,
 ): string[] => {
   const items: Record<string, number> = {};
 
-  nodes.forEach(node => {
+  (nodes || []).forEach(node => {
     if (!node.frontmatter) {
       return;
     }

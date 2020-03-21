@@ -56,7 +56,7 @@ const Search: FC<Props> = ({ id, className }) => {
       <div className={cx('c-search', className)} ref={ref}>
         <Configure hitsPerPage={3} />
         <SearchInput onFocus={handleInputFocus} id={id} />
-        {query.trim().length > 0 && focus && (
+        {query && query.trim().length > 0 && focus && (
           <Results>
             <Hits onClick={handleHitClick} />
             <div className="c-search__powered-by">
