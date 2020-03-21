@@ -3,7 +3,7 @@ title: A Remote Day of Atolye15
 category: "General"
 date: "2020-03-21"
 tags: ['corona-virus', 'remote']
-description: You don't know what to do when working remotely? Just follow this checklist and look to my coming, at first light, on the fifth day. At dawn, look to the East.
+description: You don't know what to do when working remotely? Just follow this checklist and look to my coming, at first light, on the fifth day. At dawn, look to the East 🧙‍♂️
 ---
 
 - [ ] Wake up at usual time  
