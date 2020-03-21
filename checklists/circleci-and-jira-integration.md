@@ -25,4 +25,6 @@ description: CircleCI and Jira integration to send build status of each issue to
 - [ ] Create a new environment variable as CIRCLE_TOKEN
 
 - [ ] Paste token you just copied  
-Integration has been done!
+
+- [ ] Add the Jira orb and the configuration to project's CircleCI config file  
+You can find the related information from Jira orb [documentation](https://circleci.com/orbs/registry/orb/circleci/jira)
