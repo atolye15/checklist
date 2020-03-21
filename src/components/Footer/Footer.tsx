@@ -5,6 +5,7 @@ import FooterSocialMenu from './FooterSocialMenu';
 import LinkSecondary from '../links/LinkSecondary';
 
 import atolye15Logo from '../../images/atolye15-logo.svg';
+import netlifyLogo from '../../images/netlify.svg';
 
 import './c-footer.scss';
 import LinkLightAsAnchor from '../links/LinkLight/LinkLightAsAnchor';
@@ -37,6 +38,11 @@ const Footer: FC<Props> = ({ className }) => (
               Atolye15 Social Menu
             </h2>
             <FooterSocialMenu />
+            <div className="u-margin-top-medium">
+              <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">
+                <img src={netlifyLogo} alt="Deploys by Netlify" />
+              </a>
+            </div>
           </nav>
         </div>
         <div className="col col--sm-6 col--md-3 u-padding-ends">
