@@ -7,7 +7,7 @@ description: Here you can find how we create a classic scrum project on Jira.
 ---
 
 - [ ] Check your role on Jira  
-You must be a Jira admin in order to open a classic project. Otherwise, you can choose to continue with Next-Gen Project.
+You must be a Jira admin in order to open a classic project. Otherwise, you can choose to continue with [Next-Gen Project](https://checklist.atolye15.com/checklist/creating-next-gen-project-on-jira).
 
 - [ ] Navigate to the "Projects" page and click on the "Create Project" button   
 You should continue with selecting "Classic Project".
