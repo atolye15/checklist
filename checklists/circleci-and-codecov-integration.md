@@ -16,6 +16,7 @@ The pattern is like https://codecov.io/gh/{organization}/{repo-name}
 - [ ] Add an environment variable named CODECOV_TOKEN and paste the token as value
 
 - [ ] Add Codecov orb and its configuration to project's CircleCI config file
+
 You can find the related information from Codecov orb [documentation](https://circleci.com/orbs/registry/orb/codecov/codecov)
 
 - [ ] Upload the coverage results after coverage job has been executed  
