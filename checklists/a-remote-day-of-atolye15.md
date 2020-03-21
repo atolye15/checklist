@@ -9,28 +9,28 @@ description: You don't know what to do when working remotely? Just follow this c
 - [ ] Wake up at usual time  
 Actually, since there is no travel to work time involved, you can -and definitely should- skip your first couple alarms.
 
-- [ ] Air out your room  
+- [ ] Air out your room  
 It is highly important to air out your room, they said.
 
-- [ ] Brew a good coffee  
+- [ ] Brew a good coffee  
 No day should start without a coffee, make one.
 
-- [ ] Make breakfast  
+- [ ] Make breakfast  
 Or not, not everyone eats breakfast. And it's okay.
 
 - [ ] Wash your hands  
 Yeah, wash them good!
 
-- [ ] Get on to your desk by 08:30  
+- [ ] Get on to your desk by 08:30  
 You might want to consider connecting to Slack a couple minutes before that to catch the morning joke around.
 
 - [ ] Join to your daily scrum meetings  
 Every scrum team has their morning meetings around 08:30
 
-- [ ] Get to work  
-You might want to follow [Design Life-Cycle of a Jira Issue](/checklist/design-life-cycle-of-a-jira-issue) or Coding Life-Cycle of a Jira Issue](/checklist/coding-life-cycle-of-a-jira-issue)
+- [ ] Get to work  
+You might want to follow [Design Life-Cycle of a Jira Issue](/checklist/design-life-cycle-of-a-jira-issue) or [Coding Life-Cycle of a Jira Issue](/checklist/coding-life-cycle-of-a-jira-issue)
 
-- [ ] Prepare lunch  
+- [ ] Prepare lunch  
 Since there is no Seço around :disappointed_relieved: , you should prepare your own lunch 
 
 - [ ] Wash your hands  
@@ -48,7 +48,7 @@ Pretty straight-forward, huh? Good.
 - [ ] Check if it's ~16:45  
 If so, it's daily CRM time. Follow the CRM checklist (/checklist/daily-crm-reporting-checklist).
 
-- [ ] Check if you've wash your hands  
+- [ ] Check if you've wash your hands  
 Smell them, look at them idk... Boil 'em, mash 'em, stick 'em in a stew!
 
 - [ ] Come back to this checklist tomorrow
