@@ -43,7 +43,7 @@ const Home: FC<Props> = ({ data, pageContext }) => {
             className="o-suggest-a-checklist"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://git.io/Jv6Wv"
+            href="https://git.io/JvDaH"
           >
             Suggest a Checklist{' '}
             <Icon className="o-suggest-a-checklist__icon" name="external-link" ariaHidden />

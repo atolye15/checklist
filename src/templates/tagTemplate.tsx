@@ -31,7 +31,7 @@ const TagTemplate: FC<Props> = ({ data, pageContext }) => {
       <div className="u-padding-ends-xlarge@md-up u-padding-ends-large@sm-down">
         <div className="o-checklists-heading">
           <h2 className="u-margin-bottom-0">#{tag}</h2>
-          <LinkLightAsAnchor className="o-suggest-a-checklist" href="https://git.io/Jv6Wv">
+          <LinkLightAsAnchor className="o-suggest-a-checklist" href="https://git.io/JvDaH">
             Suggest a Checklist{' '}
             <Icon className="o-suggest-a-checklist__icon" name="external-link" ariaHidden />
           </LinkLightAsAnchor>
