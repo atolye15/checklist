@@ -33,6 +33,7 @@
     "react-helmet": "^5.2.1",
     "react-instantsearch-core": "^6.4.0",
     "react-instantsearch-dom": "^6.4.0",
+    "react-scroll": "^1.7.16",
     "rehype-react": "^5.0.0",
     "slug": "^2.1.1"
   },
@@ -54,6 +55,7 @@
     "@types/react-helmet": "^5.0.15",
     "@types/react-instantsearch-core": "^5.2.9",
     "@types/react-instantsearch-dom": "^5.2.6",
+    "@types/react-scroll": "^1.5.4",
     "@types/react-test-renderer": "^16.9.2",
     "@types/rehype-react": "^4.0.0",
     "@types/slug": "^0.9.1",

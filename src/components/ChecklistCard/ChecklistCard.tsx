@@ -6,6 +6,8 @@ import TagList from '../TagList';
 import LinkCategory from '../links/LinkCategory';
 import Card, { CardHeader, CardTitle, CardFooter } from '../Card';
 
+import featuredImage from '../../images/featured.svg';
+
 import './c-checklist-card.scss';
 
 type Props = {
@@ -17,6 +19,7 @@ type Props = {
   slug: string;
   description: string;
   tags: string[];
+  featured: boolean;
 };
 
 const ChecklistCard: FC<Props> = ({
@@ -28,6 +31,7 @@ const ChecklistCard: FC<Props> = ({
   description,
   slug,
   tags,
+  featured,
 }) => (
   <Card
     className={cx('c-checklist-card', className)}
@@ -47,6 +51,15 @@ const ChecklistCard: FC<Props> = ({
       </div>
 
       <CardTitle className="c-checklist-card__title" to={`/checklist/${slug}`}>
+        {featured && (
+          <>
+            <img
+              src={featuredImage}
+              className="c-checklist-card__featured"
+              alt="Featured checklist"
+            />
+          </>
+        )}
         {title}
       </CardTitle>
     </CardHeader>

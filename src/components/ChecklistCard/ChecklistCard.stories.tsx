@@ -19,5 +19,6 @@ export const defaultView = () => (
   nostris inesse notionem."
     tags={['css', 'buttono']}
     slug="slug"
+    featured
   />
 );
