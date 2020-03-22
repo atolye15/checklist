@@ -28,7 +28,7 @@ If a button is interactable it should also have it's disabled state ready.
 Not every button but some buttons also need to have; loading, success, warning and info states. Be sure to cover those states if needed. 
 
 - [ ] Be sure that every state is accessible  
-You can use online tools like [WebAIM's Contrast Checker](https://webaim.org/resources/contrastchecker/), [Color.Review](https://color.review/) or plugins e.g. [Color Contrast Analyser](https://github.com/getflourish/Sketch-Color-Contrast-Analyser)for Sketch and [A11y](https://www.figma.com/community/plugin/733159460536249875/A11y---Color-Contrast-Checker) for Figma.
+You can use online tools like [WebAIM's Contrast Checker](https://webaim.org/resources/contrastchecker/), [Color.Review](https://color.review/) or plugins e.g. [Color Contrast Analyser](https://github.com/getflourish/Sketch-Color-Contrast-Analyser) for Sketch and [A11y](https://www.figma.com/community/plugin/733159460536249875/A11y---Color-Contrast-Checker) for Figma.
 
 - [ ] Name the buttons and every states properly  
 We are a huge fan of labelling things properly, here is a common naming convention we follow for our projects: Buttons / Ghost / Success
