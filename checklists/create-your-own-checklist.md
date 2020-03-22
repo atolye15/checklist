@@ -1,5 +1,5 @@
 ---
-title: Create Your Own Checklist
+title: Create Your Own Checklist Project
 category: General
 date: "2020-03-21"
 tags: ['checklist']
@@ -11,14 +11,14 @@ description: Do you want to create your own Checklist project? Follow the steps 
 - [ ] Create a .env file with your own values
 
 - [ ] Update the CONTRIBUTING.md with your own rules  
-You can update the categories too surely
+You can update the categories too, surely
 
 - [ ] Update the CODE_OF_CONDUCT.md with your own rules  
 
 - [ ] Update the README.md if you prefer  
 
 - [ ] Update .github folder's content  
-If you want to use the bots we installed, you also need to install them to your organization. After that, you can update the bot's sayings via updating `.github/config.yml`
+If you want to use the bots we installed, you also need to install them to your organization. After that, you can update the bot's sayings by updating `.github/config.yml`
 
 - [ ] Remove our checklists  
 You can remove all the files in the `checklists` directory
