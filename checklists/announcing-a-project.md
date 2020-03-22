@@ -12,17 +12,17 @@ E.g. If it's an Open-Source project you might want to refer to [Launching an Ope
 - [ ] Share on Twitter
 For the social medias you need to follow [Posting on Social Media](/checklist/posting-on-social-media) Checklist.
 
-- [ ] Share on Facebook  
+- [ ] Share on Facebook
 
-- [ ] Share on Instagram  
+- [ ] Share on Instagram  
 
-- [ ] Share on LinkedIn  
+- [ ] Share on LinkedIn
 
-- [ ] Share on HackerNews & Reddit  
+- [ ] Share on HackerNews & Reddit  
 Some projects may need to be published on HackerNews & Reddit too. 
 
-- [ ] Publish on Product Hunt  
+- [ ] Publish on Product Hunt  
 Publishing on Product Hunt depends on the project, you should discuss with your team about whether or not the project is going to be live on Product Hunt.
 
-- [ ] Update Atolye15's portfolios  
+- [ ] Update Atolye15's portfolios  
 For some projects you only need to update our profiles on [Clutch](https://clutch.co/profile/atolye15), [Top Developers](https://www.topdevelopers.co/profile/atolye15) or [Goodfirms](https://www.goodfirms.co/company/atolye15) and for some projects you also need to update our design portfolios; [Dribbble](https://dribbble.com/atolye15) and [Behance](https://behance.net/atolye15). 
