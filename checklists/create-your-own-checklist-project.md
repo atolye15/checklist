@@ -14,7 +14,7 @@ featured: true
 - [ ] Update the CONTRIBUTING.md with your own rules  
 You can update the categories too, surely
 
-- [ ] Update the CODE_OF_CONDUCT.md with your own rules  
+- [ ] Update the CODE\_OF\_CONDUCT.md with your own rules  
 
 - [ ] Update the README.md if you prefer  
 
@@ -43,5 +43,5 @@ Of course you have your own social media and links. Don't hesitate to replace th
 - [ ] Make sure you didn't remove the Netlify logo  
 If you think to deploy somewhere else, then you can remove
 
-- [ ] Don't forget to notify us!
+- [ ] Don't forget to notify us!  
 We glad to hear someone else use the Checklist!
