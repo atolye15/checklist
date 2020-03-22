@@ -27,7 +27,7 @@ const HeaderNavbarMenu: FC<Props> = ({ className }) => (
     <li className="c-header-navbar-menu__item">
       <LinkSecondaryAsAnchor
         className="c-header-navbar-menu__link"
-        href="https://github.com/atolye15/checklist/"
+        href={process.env.GATSBY_GITHUB_LINK}
         target="_blank"
         rel="noopener noreferrer"
       >

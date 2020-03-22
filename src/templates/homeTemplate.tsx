@@ -43,7 +43,7 @@ const Home: FC<Props> = ({ data, pageContext }) => {
             className="o-suggest-a-checklist"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://git.io/JvDaH"
+            href={process.env.GATSBY_SUGGEST_LINK}
           >
             Suggest a Checklist{' '}
             <Icon className="o-suggest-a-checklist__icon" name="external-link" ariaHidden />
@@ -62,7 +62,7 @@ const Home: FC<Props> = ({ data, pageContext }) => {
 export const pageQuery = graphql`
   query HomePageQuery($skip: Int!, $limit: Int!) {
     checklists: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___featured, frontmatter___date], order: [ASC, DESC] }
       limit: $limit
       skip: $skip
     ) {

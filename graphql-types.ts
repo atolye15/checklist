@@ -697,6 +697,7 @@ export type FileFieldsEnum =
   'childMarkdownRemark___frontmatter___date' |
   'childMarkdownRemark___frontmatter___tags' |
   'childMarkdownRemark___frontmatter___description' |
+  'childMarkdownRemark___frontmatter___featured' |
   'childMarkdownRemark___excerpt' |
   'childMarkdownRemark___rawMarkdownBody' |
   'childMarkdownRemark___fileAbsolutePath' |
@@ -1474,6 +1475,7 @@ export type MarkdownRemarkFieldsEnum =
   'frontmatter___date' |
   'frontmatter___tags' |
   'frontmatter___description' |
+  'frontmatter___featured' |
   'excerpt' |
   'rawMarkdownBody' |
   'fileAbsolutePath' |
@@ -1610,6 +1612,7 @@ export type MarkdownRemarkFrontmatter = {
   date?: Maybe<Scalars['Date']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
   description?: Maybe<Scalars['String']>;
+  featured?: Maybe<Scalars['Boolean']>;
 };
 
 
@@ -1626,6 +1629,7 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   date?: Maybe<DateQueryOperatorInput>;
   tags?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
+  featured?: Maybe<BooleanQueryOperatorInput>;
 };
 
 export type MarkdownRemarkGroupConnection = {

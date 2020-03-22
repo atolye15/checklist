@@ -15,7 +15,7 @@ const defaultDescription =
   'Checklist contains the protocols followed by Atolye15 for software development, design, project management and administrative affairs.';
 const defaultImage = ogImage;
 const defaultType = 'website';
-const siteUrl = 'https://checklist.atolye15.com';
+const siteUrl = process.env.GATSBY_PROJECT_LINK;
 
 const SEO: FC<Props> = ({ title, description, type, image }) => {
   const seo = {

@@ -15,35 +15,35 @@ interface Node {
 type Directory implements Node {
   absolutePath: String!
   accessTime(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date!
   atime(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date!
   atimeMs: Float!
   base: String!
   birthTime(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date!
   birthtime: Date @deprecated(reason : "Use `birthTime` instead")
@@ -51,24 +51,24 @@ type Directory implements Node {
   blksize: Int
   blocks: Int
   changeTime(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date!
   children: [Node!]!
   ctime(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date!
   ctimeMs: Float!
@@ -82,23 +82,23 @@ type Directory implements Node {
   internal: Internal!
   mode: Int!
   modifiedTime(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date!
   mtime(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date!
   mtimeMs: Float!
@@ -142,35 +142,35 @@ type DirectoryGroupConnection {
 type File implements Node {
   absolutePath: String!
   accessTime(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date!
   atime(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date!
   atimeMs: Float!
   base: String!
   birthTime(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date!
   birthtime: Date @deprecated(reason : "Use `birthTime` instead")
@@ -178,26 +178,26 @@ type File implements Node {
   blksize: Int
   blocks: Int
   changeTime(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date!
   childImageSharp: ImageSharp
   childMarkdownRemark: MarkdownRemark
   children: [Node!]!
   ctime(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date!
   ctimeMs: Float!
@@ -211,23 +211,23 @@ type File implements Node {
   internal: Internal!
   mode: Int!
   modifiedTime(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date!
   mtime(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date!
   mtimeMs: Float!
@@ -289,7 +289,7 @@ type ImageSharp implements Node {
     quality: Int,
     rotate: Int = 0,
     sizes: String = "",
-    #A list of image widths to be generated. Example: [ 200, 340, 520, 890 ]
+    "A list of image widths to be generated. Example: [ 200, 340, 520, 890 ]"
     srcSetBreakpoints: [Int] = [],
     toFormat: ImageFormat = NO_CHANGE,
     toFormatBase64: ImageFormat = NO_CHANGE,
@@ -302,7 +302,7 @@ type ImageSharp implements Node {
   original: ImageSharpOriginal
   parent: Node
   resize(background: String = "rgba(0,0,0,1)", base64: Boolean = false, cropFocus: ImageCropFocus = ATTENTION, duotone: DuotoneGradient, fit: ImageFit = COVER, grayscale: Boolean = false, height: Int, jpegProgressive: Boolean = true, jpegQuality: Int, pngCompressionLevel: Int = 9, pngCompressionSpeed: Int = 4, pngQuality: Int, quality: Int, rotate: Int = 0, toFormat: ImageFormat = NO_CHANGE, traceSVG: Potrace, trim: Float = 0.0, webpQuality: Int, width: Int): ImageSharpResize
-  resolutions(background: String = "rgba(0,0,0,1)", base64Width: Int, cropFocus: ImageCropFocus = ATTENTION, duotone: DuotoneGradient, fit: ImageFit = COVER, grayscale: Boolean = false, height: Int, jpegProgressive: Boolean = true, jpegQuality: Int, pngCompressionSpeed: Int = 4, pngQuality: Int, quality: Int, rotate: Int = 0, toFormat: ImageFormat = NO_CHANGE, toFormatBase64: ImageFormat = NO_CHANGE, traceSVG: Potrace, trim: Float = 0.0, webpQuality: Int, width: Int): ImageSharpResolutions @deprecated(reason : "Resolutions was deprecated in Gatsby v2. It's been renamed to \"fixed\" https:\/\/example.com\/write-docs-and-fix-this-example-link")
+  resolutions(background: String = "rgba(0,0,0,1)", base64Width: Int, cropFocus: ImageCropFocus = ATTENTION, duotone: DuotoneGradient, fit: ImageFit = COVER, grayscale: Boolean = false, height: Int, jpegProgressive: Boolean = true, jpegQuality: Int, pngCompressionSpeed: Int = 4, pngQuality: Int, quality: Int, rotate: Int = 0, toFormat: ImageFormat = NO_CHANGE, toFormatBase64: ImageFormat = NO_CHANGE, traceSVG: Potrace, trim: Float = 0.0, webpQuality: Int, width: Int): ImageSharpResolutions @deprecated(reason : "Resolutions was deprecated in Gatsby v2. It's been renamed to \"fixed\" https://example.com/write-docs-and-fix-this-example-link")
   sizes(
     background: String = "rgba(0,0,0,1)",
     base64Width: Int,
@@ -319,14 +319,14 @@ type ImageSharp implements Node {
     quality: Int,
     rotate: Int = 0,
     sizes: String = "",
-    #A list of image widths to be generated. Example: [ 200, 340, 520, 890 ]
+    "A list of image widths to be generated. Example: [ 200, 340, 520, 890 ]"
     srcSetBreakpoints: [Int] = [],
     toFormat: ImageFormat = NO_CHANGE,
     toFormatBase64: ImageFormat = NO_CHANGE,
     traceSVG: Potrace,
     trim: Float = 0.0,
     webpQuality: Int
-  ): ImageSharpSizes @deprecated(reason : "Sizes was deprecated in Gatsby v2. It's been renamed to \"fluid\" https:\/\/example.com\/write-docs-and-fix-this-example-link")
+  ): ImageSharpSizes @deprecated(reason : "Sizes was deprecated in Gatsby v2. It's been renamed to \"fluid\" https://example.com/write-docs-and-fix-this-example-link")
 }
 
 type ImageSharpConnection {
@@ -484,16 +484,17 @@ type MarkdownRemarkFields {
 type MarkdownRemarkFrontmatter {
   category: String
   date(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date
   description: String
+  featured: Boolean
   tags: [String]
   title: String
 }
@@ -543,13 +544,13 @@ type Query {
 
 type Site implements Node {
   buildTime(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date
   children: [Node!]!
@@ -565,13 +566,13 @@ type Site implements Node {
 
 type SiteBuildMetadata implements Node {
   buildTime(
-    #Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".
+    "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
     difference: String,
-    #Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.
+    "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens."
     formatString: String,
-    #Returns a string generated with Moment.js' `fromNow` function
+    "Returns a string generated with Moment.js' `fromNow` function"
     fromNow: Boolean,
-    #Configures the locale Moment.js will use to format the date.
+    "Configures the locale Moment.js will use to format the date."
     locale: String
   ): Date
   children: [Node!]!
@@ -1032,6 +1033,7 @@ enum FileFieldsEnum {
   childMarkdownRemark___frontmatter___category
   childMarkdownRemark___frontmatter___date
   childMarkdownRemark___frontmatter___description
+  childMarkdownRemark___frontmatter___featured
   childMarkdownRemark___frontmatter___tags
   childMarkdownRemark___frontmatter___title
   childMarkdownRemark___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1197,6 +1199,8 @@ enum ImageFit {
   CONTAIN
   COVER
   FILL
+  INSIDE
+  OUTSIDE
 }
 
 enum ImageFormat {
@@ -1413,6 +1417,7 @@ enum MarkdownRemarkFieldsEnum {
   frontmatter___category
   frontmatter___date
   frontmatter___description
+  frontmatter___featured
   frontmatter___tags
   frontmatter___title
   headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -2284,6 +2289,7 @@ input MarkdownRemarkFrontmatterFilterInput {
   category: StringQueryOperatorInput
   date: DateQueryOperatorInput
   description: StringQueryOperatorInput
+  featured: BooleanQueryOperatorInput
   tags: StringQueryOperatorInput
   title: StringQueryOperatorInput
 }
