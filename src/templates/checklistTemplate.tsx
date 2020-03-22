@@ -78,7 +78,7 @@ const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
 
   const handleReset = () => {
     setTodos([]);
-    Scroll.animateScroll.scrollToTop();
+    Scroll.animateScroll.scrollToTop({ duration: 250 });
   };
 
   return (
