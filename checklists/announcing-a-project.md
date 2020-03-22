@@ -3,7 +3,7 @@ title: Announcing a Project
 category: "General"
 date: "2020-03-22"
 tags: ['social-media', 'launch']
-description: When a project goes live there is only one to-do left, announcing it! 📣 One last checklist before announcing a project.  
+description: When a project goes live there is only one checklist left, announcing checklist! 📣 One last checklist before announcing a project.  
 ---
 
 - [ ] Make sure the project covers all the related checklists  
