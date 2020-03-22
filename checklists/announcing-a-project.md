@@ -12,11 +12,11 @@ E.g. If it's an Open-Source project you might want to refer to [Launching an Ope
 - [ ] Share on Twitter
 For the social medias you need to follow [Posting on Social Media](/checklist/posting-on-social-media) Checklist.
 
-- [ ] Share on Facebook
+- [ ] Share on Facebook  
 
-- [ ] Share on Instagram
+- [ ] Share on Instagram  
 
-- [ ] Share on LinkedIn
+- [ ] Share on LinkedIn  
 
 - [ ] Share on HackerNews & Reddit  
 Some projects may need to be published on HackerNews & Reddit too. 
