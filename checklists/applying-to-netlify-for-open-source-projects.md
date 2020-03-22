@@ -13,5 +13,5 @@ description: You can follow these steps if you want to apply Netlify's open-sour
 - [ ] Put Netlify logo to website  
 Must of time footer is the best place. You can use your own custom image or one from [here](https://www.netlify.com/press/#badges)
 
-- [ ] Apply!
+- [ ] Apply!  
 You can apply from [this link](https://opensource-form.netlify.com/)
