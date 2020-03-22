@@ -11,5 +11,5 @@ description: You can follow these steps if you want to apply Algolia's open-sour
 - [ ] Put Algolia logo to search results  
 You need to add a link to [Algolia](https://algolia.com)
 
-- [ ] Apply!
+- [ ] Apply!  
 You can apply from [this link](https://www.algolia.com/for-open-source/)
