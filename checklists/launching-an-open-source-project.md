@@ -18,7 +18,7 @@ You can use [this manifesto](https://www.contributor-covenant.org/version/1/4/co
 Prefer MIT license if you don't have any reason to not to use
 
 - [ ] Set GitHub issue templates  
-GitHub has a beatiful [documentation](https://help.github.com/en/github/building-a-strong-community/configuring-issue-templates-for-your-repository) for this to-odo
+GitHub has a beautiful [documentation](https://help.github.com/en/github/building-a-strong-community/configuring-issue-templates-for-your-repository) for this to-do
 
 - [ ] Install Welcome bot and configure it  
 You can look at it from [here](https://probot.github.io/apps/welcome/)
@@ -42,4 +42,4 @@ You can use [Netlify](https://netlify.com) for this to-do
 Of course, this is valid in case you need a search feature
 
 - [ ] Announce it 📣  
-You can check the [Announcing a Project](/checklist/announcing-a-checklist) checklist
+You can check the [Announcing a Project](/checklist/announcing-a-project) checklist
