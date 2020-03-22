@@ -11,7 +11,7 @@ Don't forget to include relevant badges
 
 - [ ] Add CONTRIBUTING.md
 
-- [ ] Add CODE_OF_CONDUCT.md  
+- [ ] Add CODE\_OF\_CONDUCT.md  
 You can use [this manifesto](https://www.contributor-covenant.org/version/1/4/code-of-conduct/) as starting point
 
 - [ ] Add LICENSE file  
@@ -33,7 +33,7 @@ You can take a look to [Branch Settings Checklist](/checklist/branch-settings-on
 
 - [ ] Add a link to CONTRIBUTING.md if the project has a website
 
-- [ ] Add a link to CODE_OF_CONDUCT.md if the project has a website
+- [ ] Add a link to CODE\_OF\_CONDUCT.md if the project has a website
 
 - [ ] Create a deployment process if the project needs a deployment  
 You can use [Netlify](https://netlify.com) for this to-do
