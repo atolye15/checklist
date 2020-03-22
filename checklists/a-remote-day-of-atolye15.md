@@ -49,7 +49,7 @@ Pretty straight-forward, huh? Good.
 - [ ] Check if it's ~16:45  
 If so, it's daily CRM time. Follow the [CRM Checklist](/checklist/daily-crm-reporting-checklist).
 
-- [ ] Check if you've wash your hands  
+- [ ] Check if you've washed your hands  
 Smell them, look at them idk... Boil 'em, mash 'em, stick 'em in a stew!
 
 - [ ] Come back to this checklist tomorrow
