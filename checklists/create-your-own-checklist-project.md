@@ -4,6 +4,7 @@ category: General
 date: "2020-03-21"
 tags: ['checklist']
 description: Do you want to create your own Checklist project? Follow the steps 🤝
+featured: true
 ---
 
 - [ ] Fork this repo  

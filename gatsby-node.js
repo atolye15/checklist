@@ -54,7 +54,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { edges: checklists } = result.data.checklists;
 
   // Home pagination
-  const checklistPerPage = 15;
+  const checklistPerPage = 16;
   const totalPages = Math.ceil(checklists.length / checklistPerPage);
 
   Array.from({ length: totalPages }).forEach((_, i) => {

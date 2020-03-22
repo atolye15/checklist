@@ -33,6 +33,13 @@
     margin-bottom: gap(xsmall);
   }
 
+  &__featured {
+    width: px-to-rem(24px);
+    height: px-to-rem(24px);
+    margin-right: gap(xsmall);
+    vertical-align: text-bottom;
+  }
+
   &__description {
     margin-top: 0;
   }

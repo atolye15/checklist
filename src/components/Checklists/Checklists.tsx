@@ -18,6 +18,7 @@ export const checklistDetailFragment = graphql`
       category
       tags
       description
+      featured
     }
     fields {
       slug
@@ -43,6 +44,7 @@ const Checklists: FC<Props> = ({ className, items }) => (
           title={checklist.frontmatter?.title || ''}
           todoCount={checklist.fields?.todoCount || 0}
           categorySlug={checklist.fields?.categorySlug as Category}
+          featured={checklist.frontmatter?.featured || false}
         />
       </div>
     ))}

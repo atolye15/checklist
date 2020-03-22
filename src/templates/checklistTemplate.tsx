@@ -1,6 +1,7 @@
 import React, { FC, useContext, useLayoutEffect } from 'react';
 import { graphql } from 'gatsby';
 import RehypeReact from 'rehype-react';
+import * as Scroll from 'react-scroll';
 
 import { ChecklistDetailQuery } from '../../graphql-types';
 import { categoryTheme, Category } from '../utils/category';
@@ -45,6 +46,7 @@ interface Props {
 const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
   const { activeChecklist, setActiveChecklist } = useContext(activeChecklistContext);
   const { setTodos } = useContext(todosContext);
+
   const { markdownRemark, relatedChecklists } = data;
   const { slug } = pageContext;
 
@@ -76,7 +78,7 @@ const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
 
   const handleReset = () => {
     setTodos([]);
-    window.scrollTo(0, 0);
+    Scroll.animateScroll.scrollToTop();
   };
 
   return (
@@ -108,7 +110,7 @@ const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
             <div className="col u-width-auto@md-up u-margin-top-small@sm-down">
               <ButtonAsAnchor
                 theme="secondary"
-                href={`https://github.com/atolye15/checklist/edit/master/${fields.filePath}`}
+                href={`${process.env.GATSBY_GITHUB_LINK}/edit/master/${fields.filePath}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="u-width-100%@sm-down"
