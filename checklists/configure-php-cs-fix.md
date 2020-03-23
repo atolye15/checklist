@@ -3,7 +3,7 @@ title: Configure PHP CS Fixer
 category: Back-End
 date: "2020-03-23"
 tags: ['php', 'symfony', 'configure']
-description: Sometimes, we mess up the basic rules of code style. So we need a friend to cover our back! With PHP we are using PHP CS Fixer and to configure it we follow the steps below.
+description: Sometimes, we mess up the basic rules of code style. So we need a friend to cover our back! With PHP we are using PHP CS Fixer by to configure it we follow the steps below.
 ---
 
 - [ ] Make sure PHP CS Fixer installed for the development environment only  
