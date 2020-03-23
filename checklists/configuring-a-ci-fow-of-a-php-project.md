@@ -3,11 +3,11 @@ title: Configuring a CI Flow of a PHP Project
 category: Back-End
 date: "2020-03-11"
 tags: ['ci', 'php', 'symfony']
-description: CI Flow we commonly used in our PHP projects. We usually use CircleCI for run our checks. You can rearrange the order of To-do's, we usually use it this way.
+description: CI Flow we commonly use in our PHP projects. We usually use CircleCI for run our checks. You can rearrange the orders of the to-do's, we usually follow them this way.
 ---
 
-- [ ] Code style first!  
-Of course, if the project has some terribly ugly styled codes, no need to continue. PHP CS fixer, `Twig` and `YML` linters (for Symfony), `JS` and `CSS` linters (if repo contains also the frontend project) should be run
+- [ ] Code style first  
+Of course, if the project has some terribly ugly styled codes, no need to continue. PHP CS fixer, `Twig` and `YML` linters (for Symfony), `JS` and `CSS` linters (if repo contains also the front-end project) should be run
 
 - [ ] Static analysis  
 The static analysis tool PHPStan that previously configurated should be run
