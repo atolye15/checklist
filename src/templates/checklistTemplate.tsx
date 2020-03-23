@@ -21,6 +21,7 @@ import todoStore from '../store/todo';
 
 import './o-checklist-detail-section.scss';
 import './o-related-checklists-section.scss';
+import './o-checklist-content.scss';
 
 const ChecklistLink: FC<JSX.IntrinsicElements['a']> = ({ children, ...otherProps }) => (
   // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
@@ -100,7 +101,9 @@ const ChecklistTemplate: FC<Props> = ({ data, pageContext }) => {
             {frontmatter.description}
           </p>
 
-          <div className="u-padding-ends-xlarge@xl-up u-padding-ends-large@lg-down">{html}</div>
+          <div className="u-padding-ends-xlarge@xl-up u-padding-ends-large@lg-down o-checklist-content">
+            {html}
+          </div>
           <div className="row">
             <div className="col u-width-auto@md-up">
               <Button className="u-width-100%@sm-down" onClick={handleReset}>

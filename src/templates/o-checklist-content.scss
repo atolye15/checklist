@@ -1,0 +1,15 @@
+@import '../styles/abstracts/index';
+
+//
+// Checklist Content Section
+//
+
+.o-checklist-content {
+  h1,
+  h2,
+  h3 {
+    margin-top: gap(xlarge);
+    margin-bottom: gap(medium);
+    color: $color-polo-blue;
+  }
+}
