@@ -2,7 +2,7 @@
 title: Organizing Atolye15 Talks
 category: Marketing
 date: "2020-03-03"
-tags: ['meetup' 'talks']
+tags: ['meetup', 'talks']
 description: The action plan we need to take when organizing in-house meetups.  
 ---
 - [ ] Define current trend topics initially  
