@@ -18,5 +18,5 @@ You can find all CS rules on [this](https://mlocati.github.io/php-cs-fixer-confi
 - [ ] Final check for risky rules  
 If this is a greenfield project then enable risky rules without worries, otherwise, disable risky rules or make sure applied rules do not cause any side effects.
 
-- [ ] Run the PHP CS Fixer command to see the result
+- [ ] Run the PHP CS Fixer command to see the result  
 If the behavior is as expected, then let's build some bigger projects 😎
