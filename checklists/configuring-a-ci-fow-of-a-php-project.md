@@ -1,7 +1,7 @@
 ---
 title: Configuring a CI Flow of a PHP Project
 category: Back-End
-date: "2020-03-11"
+date: "2020-03-23"
 tags: ['ci', 'php', 'symfony']
 description: CI Flow we commonly use in our PHP projects. We usually use CircleCI for run our checks. You can rearrange the orders of the to-do's, we usually follow them this way.
 ---
