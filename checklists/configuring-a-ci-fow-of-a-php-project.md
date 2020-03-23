@@ -22,7 +22,7 @@ Creating a migration for the latest schema updates shouldn't be forgotten
 There is no easy way to catch all errors caused by translations in runtime at this step. Therefore, at least, static ones should be checked
 
 - [ ] Run tests  
-The tests, which cover close to 100% of the codebase, should be pass 😬
+The tests, which cover close to 100% of the codebase, should be passed 😬
 
 - [ ] Notify jira about the workflow status  
 For CircleCI, you can read the further information from [CircleCI & Jira Integration](/checklist/circleci-and-jira-integration) checklist
