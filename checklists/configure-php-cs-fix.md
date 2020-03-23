@@ -6,7 +6,7 @@ tags: ['php', 'symfony', 'configure']
 description: Sometimes, we mess up the basic rules of code style. So we need a friend to cover our back! With PHP we are using PHP CS Fixer and to configure it we follow the steps below.
 ---
 
-- [ ] Make sure PHP CS Fixer installed for the development environment only
+- [ ] Make sure PHP CS Fixer installed for the development environment only  
 We do not need or we needn't have CS Fixer on any other environment.
 
 - [ ] Make sure to exclude auto-generated files
