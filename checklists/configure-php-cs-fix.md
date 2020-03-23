@@ -12,7 +12,7 @@ We do not need or we needn't have CS Fixer on any other environment.
 - [ ] Make sure to exclude auto-generated files  
 Strongly recommended to exclude auto-generated files like Migrations for example. That kind of file may be risky to overwrite.
 
-- [ ] Set correct CS rules based on project needs
+- [ ] Set correct CS rules based on project needs  
 You can find all CS rules on [this](https://mlocati.github.io/php-cs-fixer-configurator) repository.
 
 - [ ] Final check for risky rules
