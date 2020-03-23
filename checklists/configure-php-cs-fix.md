@@ -15,7 +15,7 @@ Strongly recommended to exclude auto-generated files like Migrations for example
 - [ ] Set correct CS rules based on project needs  
 You can find all CS rules on [this](https://mlocati.github.io/php-cs-fixer-configurator) repository.
 
-- [ ] Final check for risky rules
+- [ ] Final check for risky rules  
 If this is a greenfield project then enable risky rules without worries, otherwise, disable risky rules or make sure applied rules do not cause any side effects.
 
 - [ ] Run the PHP CS Fixer command to see the result
