@@ -9,7 +9,7 @@ description: Sometimes, we mess up the basic rules of code style. So we need a f
 - [ ] Make sure PHP CS Fixer installed for the development environment only  
 We do not need or we needn't have CS Fixer on any other environment.
 
-- [ ] Make sure to exclude auto-generated files
+- [ ] Make sure to exclude auto-generated files  
 Strongly recommended to exclude auto-generated files like Migrations for example. That kind of file may be risky to overwrite.
 
 - [ ] Set correct CS rules based on project needs
