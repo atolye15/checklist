@@ -12,7 +12,7 @@ description: A checklist by WOSPM organization for project owners to measure the
 - [ ] Project has a README file.
 - [ ] Project has a LICENSE.
 - [ ] Project has a CONTRIBUTING file.
-- [ ] Project has a CODE_OF_CONDUCT file.
+- [ ] Project has a CODE\_OF\_CONDUCT file.
 
 ### README
 
