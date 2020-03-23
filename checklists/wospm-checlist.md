@@ -21,7 +21,7 @@ description: A checklist by WOSPM organization for project owners to measure the
 - [ ] README explains how to install.
 - [ ] README explains how users get started.
 - [ ] README has link to CONTRIBUTING file.
-- [ ] README has link to CODE_OF_CONDUCT file.
+- [ ] README has link to CODE\_OF\_CONDUCT file.
 - [ ] README explains where the users can get help when needed.
 - [ ] README has a table of contents (ToC) at very top of the file.
 
