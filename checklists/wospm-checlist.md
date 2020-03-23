@@ -38,8 +38,8 @@ description: A checklist by WOSPM organization for project owners to measure the
 
 ### Code of Conduct
 
-- [ ] CODE_OF_CONDUCT explains where the code of conduct takes effect.
-- [ ] CODE\_\OF_CONDUCT explains whom the code of conduct applies to.
+- [ ] CODE\_OF\_CONDUCT explains where the code of conduct takes effect.
+- [ ] CODE\_OF\_CONDUCT explains whom the code of conduct applies to.
 - [ ] CODE\_OF\_CONDUCT explains what happens if someone violates the code of conduct.
 - [ ] CODE\_OF\_CONDUCT explains how someone can report violations.
 
