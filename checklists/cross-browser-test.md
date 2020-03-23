@@ -1,7 +1,7 @@
 ---
 title: Cross-Browser Test
 category: Project Management
-date: "2020-03-23"
+date: "2020-02-23"
 tags: ['test', 'responsive']
 description: Complete the cross-browser test to check if your project works correctly in different types of devices and browsers.
 ---
