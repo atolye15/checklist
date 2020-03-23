@@ -283,7 +283,7 @@ const About: FC<Props> = ({ data }) => (
         <p>
           We love to automate anything if it can be automated. For the things we can’t automate
           (yet) we have a protocol. These protocols standardise our workflow so that everyone in
-          Atölye15 works on a standard.
+          Atolye15 works on a standard.
         </p>
 
         <p>

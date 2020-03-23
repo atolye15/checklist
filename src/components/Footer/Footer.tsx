@@ -26,7 +26,7 @@ const Footer: FC<Props> = ({ className }) => (
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img className="c-footer__brand-logo" src={atolye15Logo} alt="Atölye15" />
+            <img className="c-footer__brand-logo" src={atolye15Logo} alt="Atolye15" />
           </LinkLightAsAnchor>
 
           <div className="u-font-weight-500">

@@ -43,7 +43,7 @@ const HeaderNavbarMenu: FC<Props> = ({ className }) => (
         rel="noopener noreferrer"
       >
         <Icon name="atolye15-logo" className="c-header-navbar-menu__link-icon" ariaHidden />
-        <span className="c-header-navbar-menu__link-label">Atölye15</span>
+        <span className="c-header-navbar-menu__link-label">Atolye15</span>
       </LinkBrandAsAnchor>
     </li>
   </ul>
