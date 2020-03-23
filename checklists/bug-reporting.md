@@ -1,7 +1,7 @@
 ---
 title: Bug Reporting
 category: Project Management
-date: "2020-02-24"
+date: "2020-03-23"
 tags: ['jira', 'bug', 'issue']
 description: The protocol we follow when we report a bug. This checklist is vital for assignee to understand the problem and reproduce it.
 ---

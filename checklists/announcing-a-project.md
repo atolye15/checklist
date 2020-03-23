@@ -9,7 +9,7 @@ description: When a project goes live there is only one checklist left, announci
 - [ ] Make sure the project covers all the related checklists  
 E.g. If it's an Open-Source project you might want to refer to [Launching an Open-Source Project](/checklist/launching-an-open-source-project) Checklist.
 
-- [ ] Share on Twitter
+- [ ] Share on Twitter  
 For the social medias you need to follow [Posting on Social Media](/checklist/posting-on-social-media) Checklist.
 
 - [ ] Share on Facebook
