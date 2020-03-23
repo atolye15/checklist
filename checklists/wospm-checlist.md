@@ -3,7 +3,7 @@ title: WOSPM Checklist
 category: "General"
 date: "2020-03-23"
 tags: ['open-source', 'open-source-maintainers']
-description: A checklist by [WOSPM](https://wospm.info/) organization for project owners to measure their open source project if it is a welcoming project or not. The checklist is created based on the [Open Source Guides](https://opensource.guide/).
+description: A checklist by WOSPM organization for project owners to measure their open source project if it is a welcoming project or not. The checklist is created based on the Open Source Guides.
 ---
 
 ### Basic
