@@ -1,7 +1,7 @@
 ---
 title: Marketing Sprint for Projects
 category: Marketing
-date: "2020-02-24"
+date: "2020-03-23"
 tags: ['case-study', 'social-media', 'portfolio']
 description: The steps we follow after each and every project goes live. We have an additional marketing sprint for the projects in which we follow below-mentioned steps to cover our to-do's.
 ---
