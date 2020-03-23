@@ -1,7 +1,7 @@
 ---
 title: Essentials of UI Style Guide
 category: Design
-date: "2020-03-10"
+date: "2020-03-23"
 tags: ['components', 'style-guide', 'buttons', 'colors', 'icons', 'typography']
 description: After wireframing there comes the UI design and every UI needs a style guide. Essential checklist for Essentials of UI Style Guide, be sure to have these on your style guide!
 ---
@@ -18,7 +18,7 @@ We generally use 12 column grids with 8 or 16 gutters on each side.
 - [ ] Button Themes  
 Designer should define and properly label the states of every button on the style guide.
 
-- [ ] Iconogprahy  
+- [ ] Iconography  
 Every icon used on the UI should be shown in the style guide.
 
 - [ ] Form Elements  
