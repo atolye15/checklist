@@ -1,6 +1,6 @@
 ---
 title: Create a New React-Native Project
-category: Front-End
+category: Mobile
 date: "2020-03-22"
 tags: ['react-native']
 description: Since we already have crna-recipe you only need to follow just a few steps from this checklist.

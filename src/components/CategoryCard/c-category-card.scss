@@ -5,11 +5,19 @@
 //
 
 .c-category-card {
-  --c-card-padding-sides: #{pad(small)};
-
   $z-index-level-1: 1;
 
-  min-height: px-to-rem(350px);
+  @include media-breakpoint-up(lg) {
+    --c-card-padding-sides: #{pad(small)};
+  }
+
+  @include media-breakpoint-up(md) {
+    min-height: px-to-rem(350px);
+  }
+
+  @include media-breakpoint-down(md) {
+    --c-card-padding-sides: #{pad(xsmall)};
+  }
 
   //
   // Elements

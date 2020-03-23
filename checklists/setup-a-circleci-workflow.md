@@ -1,7 +1,7 @@
 ---
 title: Setup a CircleCI Workflow
 category: DevOps
-date: "2020-03-21"
+date: "2020-03-23"
 tags: ['circleci', 'orb']
 description: Steps to configure a CircleCI workflow
 ---

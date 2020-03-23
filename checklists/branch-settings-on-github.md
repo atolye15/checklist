@@ -1,7 +1,7 @@
 ---
 title: Branch Settings on GitHub
 category: DevOps
-date: "2020-03-11"
+date: "2020-03-23"
 tags: ['github', 'branch', 'kickoff']
 description: Branch settings you should make when you create a new repository on GitHub
 ---

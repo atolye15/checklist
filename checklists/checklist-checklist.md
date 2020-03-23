@@ -31,7 +31,7 @@ The to-do's should remain direct and simple for everyone to easily understand an
 Use of tags is encouraged but shouldn't be used needlessly.
 ​
 - [ ] Use of '#' on tags is unnecessary  
-We automaticly add # to the tags.
+We automatically add # to the tags.
 ​
 - [ ] Tags should be consist of one word only  
 If it really needs to have two or more words then please use a dash(-) to divide the words.
