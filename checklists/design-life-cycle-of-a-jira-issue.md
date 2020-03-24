@@ -19,7 +19,7 @@ It means you also need to start tracking your time, some use [Clockify](https://
 - [ ] Create a branch on Abstract  
 We use Abstract for version controlling and design handoffs. Create a branch named with the jira issue id (e.g. CHECK-54/Add-New-Category). 
 
-- [ ] Provide the needs of the given task  
+- [ ] Provide the needs of the given task  
 It is always a good idea to brainstorm with the other designers on the team.
 
 - [ ] Commit early and often  
@@ -41,9 +41,9 @@ Don't forget to apply the changes from design review if there was any.
 - [ ] Create an Abstract collection  
 We use collections feature of Abstract, you should create a new collection named with the Jira issue #id-number and add related artboards to it.
 
-- [ ] Change the status of the Jira issue from “In-Progress“ to “Review“  
+- [ ] Change the status of the Jira issue from “In-Progress“ to “Review“  
 Also please provide the Abstract collection link of the design. 
 
-- [ ] Assign the project's manager to the task  
+- [ ] Assign the project's manager to the task  
 
 - [ ] Stop your time tracker ✊  
