@@ -1,9 +1,9 @@
 ---
-title: "Html Head tag Checklist"
+title: "Html Head Tag Checklist"
 category: "Front-End"
 date: "2020-04-12"
-tags: ['html', 'meta', 'css', 'favicons', 'head', 'html']
-description: Html Head tag Checklist based on https://frontendchecklist.io/
+tags: ['html', 'meta']
+description: Html head tag checklist based on https://frontendchecklist.io/
 ---
 
 - [ ] Doctype   
@@ -54,6 +54,8 @@ The inline critical CSS is correctly injected in the HEAD.
 - [ ] CSS order   
 All CSS files are loaded before any JavaScript files in the HEAD
 
-- [ ] Facebook Open Graph
+- [ ] Facebook Open Graph  
+You can look at [https://checklist.atolye15.com/checklist/setting-up-meta-tags](this) checklist for further information
 
-- [ ] Twitter Card
+- [ ] Twitter Card  
+You can look at [https://checklist.atolye15.com/checklist/setting-up-meta-tags](this) checklist for further information
