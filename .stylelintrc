@@ -1,3 +1,0 @@
-{
-  "extends": ["@atolye15/stylelint-config", "stylelint-prettier/recommended"]
-}

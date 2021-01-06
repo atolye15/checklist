@@ -1,3 +1,7 @@
-.cache
-public
-graphql-types.ts
+ios
+android
+build
+coverage
+
+# Storybook
+storybook/storyLoader.js

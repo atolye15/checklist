@@ -1,2 +1,0 @@
-[context.production.environment]
-  ALGOLIA_SKIP_INDEX = "false"

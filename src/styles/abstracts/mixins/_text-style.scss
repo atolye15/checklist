@@ -1,7 +1,0 @@
-@mixin text-style($name) {
-  $styles: map-get($g-text-styles, $name);
-
-  @each $key, $value in $styles {
-    #{$key}: $value;
-  }
-}
