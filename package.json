@@ -16,6 +16,7 @@
     "coverage": "yarn run test --coverage"
   },
   "dependencies": {
+    "@callstack/react-theme-provider": "^2.1.0",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.8.10",
     "@react-navigation/stack": "^5.12.8",

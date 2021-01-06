@@ -727,6 +727,14 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
+"@callstack/react-theme-provider@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@callstack/react-theme-provider/-/react-theme-provider-2.1.0.tgz#a460f5c654c7b3db79f65975a34afea8ac722e8b"
+  integrity sha512-QScjktxZsiS/Ow0HQiMXwUg/TMpy6FEfGw+WC6C9fotafk/pmGYvJYvsewBvrdOA8jR/2KIrd6X2JfzXfcA9pg==
+  dependencies:
+    deepmerge "^3.2.0"
+    hoist-non-react-statics "^3.3.0"
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.4.tgz#f864ae85004d0fcab6f50be9141c4da368d1656a"
