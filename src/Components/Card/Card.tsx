@@ -2,6 +2,7 @@ import React from 'react';
 import {View, Image} from 'react-native';
 import {withTheme, ThemeType} from '../../Theming';
 import Text from '../Text/Text';
+import Chip from '../Chip/Chip';
 import styles from './styles';
 
 interface Props {
@@ -47,11 +48,7 @@ const Card: React.FC<Props> = (props) => {
 
         <View style={styles.tags}>
           {tags.map((tag) => (
-            <View style={styles.tag}>
-              <Text light weight="bold" style={[styles.tagText, {backgroundColor: color}]}>
-                #{tag}
-              </Text>
-            </View>
+            <Chip key={tag} color={color} title={tag} />
           ))}
         </View>
       </View>

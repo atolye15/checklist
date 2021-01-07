@@ -41,15 +41,6 @@ const styles = StyleSheet.create({
     marginTop: 28,
     flexDirection: 'row',
   },
-  tag: {
-    paddingHorizontal: 4,
-  },
-  tagText: {
-    paddingVertical: 3,
-    paddingHorizontal: 6,
-    borderRadius: 3,
-    fontSize: 12,
-  },
 });
 
 export default styles;
