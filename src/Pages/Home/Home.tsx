@@ -1,6 +1,6 @@
 import React from 'react';
 import {View} from 'react-native';
-import {Text, Card} from '../../Components';
+import {Text, Card, Button} from '../../Components';
 import styles from './styles';
 
 const Home: React.FC = () => {
@@ -18,6 +18,20 @@ const Home: React.FC = () => {
         withLogo
         description="You don't know what to do when working remotely? Just follow this checklist and look to my coming, at first light, on the fifth day. At dawn, look to the East 🧙‍♂️"
         tags={['corona-virus', 'remote', 'covid-19']}
+      />
+
+      <Button
+        label="Reset"
+        onPress={() => {
+          console.log('pressed');
+        }}
+      />
+
+      <Button
+        label="Improve this Checklist"
+        onPress={() => {
+          console.log('pressed');
+        }}
       />
     </View>
   );
