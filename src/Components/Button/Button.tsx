@@ -1,5 +1,11 @@
 import React, {useState} from 'react';
-import {View, TouchableOpacity, TouchableOpacityProps, StyleSheet} from 'react-native';
+import {
+  View,
+  TouchableOpacity,
+  TouchableOpacityProps,
+  ActivityIndicator,
+  StyleSheet,
+} from 'react-native';
 import {withTheme, ThemeType} from '../../Theming';
 import Text from '../Text/Text';
 
@@ -7,18 +13,32 @@ interface Props extends TouchableOpacityProps {
   theme: ThemeType;
   label: string;
   onPress: () => unknown;
+  loadable?: boolean;
 }
 
 const Button: React.FC<Props> = (props) => {
-  const {theme, label, onPress} = props;
+  const {theme, label, onPress, loadable} = props;
+  const [loading, setLoading] = useState(false);
+
+  const onButtonPress = async () => {
+    if (loadable) setLoading(true);
+    await onPress();
+    if (loadable) setLoading(false);
+  };
 
   return (
     <View style={styles.container}>
       <TouchableOpacity
         style={[styles.buttonContainer, {backgroundColor: theme.colors.buttonBackground}]}
-        onPress={onPress}
+        onPress={onButtonPress}
       >
         <View style={styles.buttonInner}>
+          {loadable && loading ? (
+            <ActivityIndicator color={theme.colors.textLight} size={18} style={styles.loader} />
+          ) : (
+            <></>
+          )}
+
           <Text light weight="bold" style={styles.buttonText}>
             {label}
           </Text>
@@ -49,6 +69,11 @@ const styles = StyleSheet.create({
   },
   buttonInner: {
     flexDirection: 'row',
+  },
+  loader: {
+    position: 'absolute',
+    left: -24,
+    top: 4,
   },
 });
 

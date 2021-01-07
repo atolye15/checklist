@@ -22,8 +22,11 @@ const Home: React.FC = () => {
 
       <Button
         label="Reset"
-        onPress={() => {
+        loadable
+        onPress={async () => {
           console.log('pressed');
+          await new Promise((resolve) => setTimeout(resolve, 500));
+          console.log('done');
         }}
       />
 
