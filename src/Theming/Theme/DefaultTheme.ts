@@ -1,5 +1,7 @@
 import {Theme} from '../Types';
 
+// TODO: semi-bold font doesn't work, don't know why yet. Probably wrong font file
+
 export const LightTheme: Theme = {
   dark: false,
   fonts: {
