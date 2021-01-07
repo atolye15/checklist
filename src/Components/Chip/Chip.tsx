@@ -12,11 +12,11 @@ interface Props {
 const Chip: React.FC<Props> = (props) => {
   const {color, title} = props;
 
-  const chipTextStlyes = getChipTextStyles(color);
+  const chipTextStyles = getChipTextStyles(color);
 
   return (
     <View style={styles.chip}>
-      <Text light weight="bold" style={chipTextStlyes}>
+      <Text light weight="bold" style={chipTextStyles}>
         #{title}
       </Text>
     </View>
