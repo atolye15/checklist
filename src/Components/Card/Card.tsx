@@ -1,7 +1,8 @@
 import React from 'react';
-import {View, Image, StyleSheet} from 'react-native';
+import {View, Image} from 'react-native';
 import {withTheme, ThemeType} from '../../Theming';
 import Text from '../Text/Text';
+import styles from './styles';
 
 interface Props {
   theme: ThemeType;
@@ -57,57 +58,5 @@ const Card: React.FC<Props> = (props) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  cardContainer: {
-    flexDirection: 'row',
-  },
-  card: {
-    flex: 1,
-    borderTopWidth: 6,
-    borderRadius: 4,
-    padding: 16, // 24
-    margin: 12, // 16
-    marginBottom: 0,
-  },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  headerCategory: {
-    fontSize: 18,
-    flex: 1,
-  },
-  title: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: 16,
-    marginBottom: 12,
-  },
-  titleText: {
-    fontSize: 18,
-  },
-  titleLogo: {
-    width: 24,
-    height: 24,
-    marginRight: 6,
-  },
-  description: {
-    fontSize: 16,
-  },
-  tags: {
-    marginTop: 28,
-    flexDirection: 'row',
-  },
-  tag: {
-    paddingHorizontal: 4,
-  },
-  tagText: {
-    paddingVertical: 3,
-    paddingHorizontal: 6,
-    borderRadius: 3,
-    fontSize: 12,
-  },
-});
 
 export default React.memo(withTheme(Card));
