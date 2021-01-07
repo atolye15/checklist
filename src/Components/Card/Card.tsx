@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Image} from 'react-native';
+import memoizeOne from 'memoize-one';
 import {withTheme, ThemeType} from '../../Theming';
 import Text from '../Text/Text';
 import Chip from '../Chip/Chip';
@@ -10,7 +11,7 @@ interface Props {
   color: string;
   category: string;
   todoCount: number;
-  title: React.ReactNode;
+  title: string;
   description: string;
   tags: Array<string>;
   withLogo?: boolean;
@@ -19,9 +20,13 @@ interface Props {
 const Card: React.FC<Props> = (props) => {
   const {theme, color, category, todoCount, title, withLogo, description, tags} = props;
 
+  const cardStyles = getCardStyles(color, theme);
+
+  const renderTags = (tag: string) => <Chip key={tag} color={color} title={tag} />;
+
   return (
     <View style={[styles.cardContainer]}>
-      <View style={[styles.card, {borderTopColor: color, backgroundColor: theme.colors.surface}]}>
+      <View style={cardStyles}>
         <View style={styles.header}>
           <Text weight="medium" style={styles.headerCategory}>
             {category}
@@ -46,14 +51,15 @@ const Card: React.FC<Props> = (props) => {
 
         <Text style={styles.description}>{description}</Text>
 
-        <View style={styles.tags}>
-          {tags.map((tag) => (
-            <Chip key={tag} color={color} title={tag} />
-          ))}
-        </View>
+        <View style={styles.tags}>{tags.map(renderTags)}</View>
       </View>
     </View>
   );
 };
+
+const getCardStyles = memoizeOne((color, theme) => [
+  styles.card,
+  {borderTopColor: color, backgroundColor: theme.colors.surface},
+]);
 
 export default React.memo(withTheme(Card));
