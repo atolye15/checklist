@@ -1,13 +1,9 @@
 import React, {useState} from 'react';
-import {
-  View,
-  TouchableOpacity,
-  TouchableOpacityProps,
-  ActivityIndicator,
-  StyleSheet,
-} from 'react-native';
+import {View, TouchableOpacity, TouchableOpacityProps, ActivityIndicator} from 'react-native';
+import memoizeOne from 'memoize-one';
 import {withTheme, ThemeType} from '../../Theming';
 import Text from '../Text/Text';
+import styles from './styles';
 
 interface Props extends TouchableOpacityProps {
   theme: ThemeType;
@@ -27,22 +23,17 @@ const Button: React.FC<Props> = (props) => {
     if (loadable) setLoading(false);
   };
 
+  const buttonStyle = getButtonStyle(primary, theme);
+
   return (
     <View style={styles.container}>
-      <TouchableOpacity
-        style={[
-          styles.buttonContainer,
-          {backgroundColor: primary ? theme.colors.primary : theme.colors.buttonBackground},
-        ]}
-        onPress={onButtonPress}
-      >
+      <TouchableOpacity style={buttonStyle} onPress={onButtonPress}>
         <View style={styles.buttonInner}>
           {loadable && loading ? (
             <ActivityIndicator color={theme.colors.textLight} size={18} style={styles.loader} />
           ) : (
             <></>
           )}
-
           <Text light weight="bold" style={styles.buttonText}>
             {label}
           </Text>
@@ -52,33 +43,9 @@ const Button: React.FC<Props> = (props) => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: 'row',
-  },
-  buttonContainer: {
-    marginHorizontal: 12,
-    marginTop: 16,
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    minHeight: 56,
-    borderRadius: 4,
-  },
-  buttonText: {
-    fontSize: 17,
-    lineHeight: 24,
-  },
-  buttonInner: {
-    flexDirection: 'row',
-  },
-  loader: {
-    position: 'absolute',
-    left: -24,
-    top: 4,
-  },
-});
+const getButtonStyle = memoizeOne((primary: Props['primary'], theme: Props['theme']) => [
+  styles.buttonContainer,
+  {backgroundColor: primary ? theme.colors.primary : theme.colors.buttonBackground},
+]);
 
 export default React.memo(withTheme(Button));
