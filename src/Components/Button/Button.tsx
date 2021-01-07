@@ -14,10 +14,11 @@ interface Props extends TouchableOpacityProps {
   label: string;
   onPress: () => unknown;
   loadable?: boolean;
+  primary?: boolean;
 }
 
 const Button: React.FC<Props> = (props) => {
-  const {theme, label, onPress, loadable} = props;
+  const {theme, label, onPress, loadable, primary} = props;
   const [loading, setLoading] = useState(false);
 
   const onButtonPress = async () => {
@@ -29,7 +30,10 @@ const Button: React.FC<Props> = (props) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity
-        style={[styles.buttonContainer, {backgroundColor: theme.colors.buttonBackground}]}
+        style={[
+          styles.buttonContainer,
+          {backgroundColor: primary ? theme.colors.primary : theme.colors.buttonBackground},
+        ]}
         onPress={onButtonPress}
       >
         <View style={styles.buttonInner}>

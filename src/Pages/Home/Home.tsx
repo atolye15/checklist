@@ -22,6 +22,7 @@ const Home: React.FC = () => {
 
       <Button
         label="Reset"
+        primary
         loadable
         onPress={async () => {
           console.log('pressed');
