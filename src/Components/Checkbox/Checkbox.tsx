@@ -1,7 +1,7 @@
-/* eslint-disable react-native/no-color-literals */
 import React from 'react';
-import {TouchableOpacity, TouchableOpacityProps, Image, StyleSheet} from 'react-native';
+import {TouchableOpacity, TouchableOpacityProps, Image} from 'react-native';
 import {withTheme, ThemeType} from '../../Theming';
+import styles from './styles';
 
 interface Props extends TouchableOpacityProps {
   theme: ThemeType;
@@ -20,28 +20,5 @@ const Checkbox: React.FC<Props> = (props) => {
     </TouchableOpacity>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    borderWidth: 1,
-    borderRadius: 24,
-    borderColor: 'white',
-    backgroundColor: 'transparent',
-    marginTop: 2,
-    overflow: 'hidden',
-  },
-  containerChecked: {
-    borderColor: 'red',
-    backgroundColor: 'red',
-  },
-  tick: {
-    width: 22,
-    height: 22,
-    tintColor: 'transparent',
-  },
-  tickChecked: {
-    tintColor: 'white',
-  },
-});
 
 export default React.memo(withTheme(Checkbox));
