@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useCallback, useState} from 'react';
 import {View} from 'react-native';
-import {Text, Card, Button} from '../../Components';
+import {Text, Card, Button, Checkbox} from '../../Components';
 import styles from './styles';
 
 const Home: React.FC = () => {
+  const [checked, setChecked] = useState(false);
+  const toggleCheckbox = useCallback(() => {
+    setChecked(!checked);
+  }, [checked]);
+
   return (
     <View style={styles.container}>
       <Text light weight="bold">
@@ -37,6 +42,8 @@ const Home: React.FC = () => {
           console.log('pressed');
         }}
       />
+
+      <Checkbox checked={checked} onPress={toggleCheckbox} />
     </View>
   );
 };
