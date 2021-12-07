@@ -22,6 +22,9 @@ Or not, not everyone eats breakfast. And it's okay.
 - [ ] Wash your hands  
 Yeah, wash them good!
 
+- [ ] Keep calm and drink water  
+Yes, glowing skin and healthy body! Yes, natural Instagram filters
+
 - [ ] Get on to your desk by 08:30  
 You might want to consider connecting to Slack a couple minutes before that to catch the morning joke around.
 
@@ -34,7 +37,7 @@ You might want to follow [Design Life-Cycle of a Jira Issue](/checklist/design-l
 - [ ] Prepare lunch  
 Since there is no Seço around 😞, you should prepare your own lunch 
 
-- [ ] Wash your hands, again    
+- [ ] Wash your hands and drink water, again    
 This should be your at least 4th washing today.
 
 - [ ] Check Slack for some more joke around  
