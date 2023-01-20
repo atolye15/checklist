@@ -24,10 +24,10 @@ const FooterSocialMenu: FC<Props> = ({ className }) => (
     </li>
     <li className="c-footer-social-menu__item">
       <LinkSecondaryAsAnchor
-        href="https://www.linkedin.com/company/at-lye15/"
+        href="https://www.linkedin.com/company/atolye15/"
+        aria-label="LinkedIn"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="LinkedIn"
       >
         <Icon className="u-display-block" name="linkedin" ariaHidden />
       </LinkSecondaryAsAnchor>
